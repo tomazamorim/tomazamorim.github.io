@@ -324,13 +324,17 @@
                     <h2 class="text-2xl font-bold border-b pb-2 mb-6" style="border-color: var(--border-color);">Former Projects & Roles</h2>
                     <!-- Card do Mecila (Redesenhado com Imagem) -->
                     <div class="content-card">
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 items-start">
-                            <!-- Imagem do Mecila com tamanho aumentado + cache-busting -->
-                            <div class="sm:col-span-1 flex justify-center items-center">
-                                <img src="images/mecila-marca-pref-rgb_2.jpg?v=1.1" alt="Mecila Logo" class="rounded-lg max-w-[200px] object-contain">
+                        <!-- MUDANÇA: de 'grid' para 'flex' para melhor controle de altura e alinhamento vertical -->
+                        <div class="flex flex-col sm:flex-row gap-5 items-center"> <!-- MUDANÇA: items-center -->
+                            <!-- Imagem do Mecila com tamanho ajustado para layout horizontal -->
+                            <div class="flex-shrink-0"> <!-- Impede a imagem de encolher -->
+                                <img src="images/mecila-marca-pref-rgb_2.jpg?v=1.1" alt="Mecila Logo" class="rounded-lg w-full max-w-[150px] sm:max-w-[120px] object-contain">
                             </div>
-                            <div class="sm:col-span-2">
-                                <h3 class="text-xl font-bold">Mecila (Maria Sibylla Merian Centre Conviviality-Inequality in Latin America)</h3>
+                            <div class="flex-1"> <!-- Ocupa o espaço restante -->
+                                <!-- MUDANÇA: Título agora é um link -->
+                                <a href="https://mecila.net/" target="_blank" rel="noopener">
+                                    <h3 class="text-xl font-bold">Mecila (Maria Sibylla Merian Centre Conviviality-Inequality in Latin America)</h3>
+                                </a>
                                 <p class="font-medium mt-1">Role: Academic Manager</p>
                                 <div class="mt-4 space-y-4">
                                      <p>
@@ -418,11 +422,13 @@
             <!-- ======================================= -->
             <div id="content-society" class="hidden space-y-12">
 
-                <!-- Seção: Podcasts -->
-                <section>
-                    <h2 class="text-2xl font-bold border-b pb-2 mb-6" style="border-color: var(--border-color);">Podcasts</h2>
-                    <!-- NOVO LAYOUT COMPACTO (HORIZONTAL) PARA PODCASTS -->
+                <!-- NOVA SEÇÃO: Grid de 2 colunas para Podcasts e Activism -->
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Coluna 1: Podcasts -->
                     <div class="space-y-6">
+                        <h2 class="text-2xl font-bold border-b pb-2" style="border-color: var(--border-color);">Podcasts</h2>
+                        
                         <!-- Card 1: Sonhos intranquilos (Layout Horizontal) -->
                         <div class="content-card !p-5">
                             <div class="flex flex-col sm:flex-row gap-5 items-start">
@@ -451,7 +457,28 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Coluna 2: Activism (NOVA SEÇÃO) -->
+                    <div class="space-y-6">
+                        <h2 class="text-2xl font-bold border-b pb-2" style="border-color: var(--border-color);">Activism</h2>
+
+                        <!-- Card 1: Uneafro Brasil -->
+                        <div class="content-card !p-5">
+                            <div class="flex flex-col sm:flex-row gap-5 items-start">
+                                <img src="images/uneafro.jpeg?v=1.1" alt="Uneafro Brasil – 12 anos de luta book cover" class="rounded-lg w-full sm:w-32 aspect-square object-cover">
+                                <div class="flex flex-col flex-1 h-full">
+                                    <h3 class="text-xl font-bold">"Uneafro Brasil – 12 anos de luta" [Org.]</h3>
+                                    <p class="text-sm my-2">Book telling the story of the UNEAFRO Brasil, a social movement and network in which I have been participating for the last ten years and which advocates for popular education and anti-racism in Brazil.</p>
+                                    <a href="https://rosalux.org.br/uneafro-brasil-12-anos-de-luta/" target="_blank" rel="noopener" class="mt-auto sm:mt-2">
+                                        Read the book (PT-BR) &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </section>
+                <!-- FIM DA SEÇÃO DE GRID -->
 
 
                 <!-- Seção: YouTube Channel & Media -->
