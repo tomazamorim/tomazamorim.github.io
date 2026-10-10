@@ -28,6 +28,7 @@ const research = [
     <nav aria-label="Main">
       {main.map((m) => <a href={m.href} aria-current={nav === m.id ? 'page' : undefined}>{m.label}</a>)}
       {hasResearch() && <a class="research" href={researchHref()} aria-current={nav === 'research' ? 'page' : undefined}>Research</a>}
+      <a href="/blog/" aria-current={nav === 'blog' ? 'page' : undefined}>Blog</a>
       {more.length > 0 && (
         <details class="more-menu" open={moreActive}>
           <summary class:list={['more-trigger', moreActive ? 'active' : '']}>More</summary>

@@ -1,0 +1,123 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base
+  title="Extractive Aesthetics"
+  description="A research blog on the subterranean relations between literature, infrastructure, and extraction in Latin America."
+  path="/blog/"
+  nav="blog"
+>
+  <section class="row blog-intro">
+    <div class="pl"></div>
+    <div class="bed">
+      <p class="sc blog-kicker">Research blog</p>
+      <h1 class="title">Extractive Aesthetics</h1>
+      <p class="lead blog-subtitle">Material and Symbolic Infrastructures in Latin American Literature</p>
+      <p class="blog-platform">This research blog is being developed for <a href="https://hypotheses.org/">Hypotheses</a>, an academic blogging platform for the humanities and social sciences. This page will introduce the project and, as the blog takes shape, point readers to its publications.</p>
+    </div>
+    <div class="pr"></div>
+  </section>
+
+  <section class="row blog-section">
+    <div class="pl"></div>
+    <div class="bed">
+      <h2 class="cv-h">The project</h2>
+      <p><em>Extractive Aesthetics</em> explores the subterranean relations between literature, infrastructure, and extraction in Latin America. How have the transformation of land into a resource, the circulation of commodities and people, and the infrastructures that sustain them shaped not only territories and economies, but also the ways we perceive and imagine the world?</p>
+      <p>Rather than treating literature simply as a record of these processes, the project reads it as a space where they take form and become contested. In dialogue with earlier and contemporary writing, Brazilian modernism offers a vantage point from which to examine the extractive gaze: promises of progress and their material costs, the coexistence of different temporalities, and the aesthetic forms through which histories of extraction enter the text. From the Global South and its peripheral position in relation to modernity, literature can reproduce extractive relations, but it can also expose their hidden connections and unsettle the worlds they produce.</p>
+    </div>
+    <div class="pr"></div>
+  </section>
+
+  <section class="row blog-section">
+    <div class="pl"></div>
+    <div class="bed">
+      <h2 class="cv-h">A research diary, and more</h2>
+      <p>The blog will bring together a research diary, essays, reading notes, theoretical reflections, archival discoveries, historical documents, photographs, maps, and other visual materials. It will also feature conversations with researchers, writers, artists, activists, Indigenous and Quilombola thinkers, and people involved in struggles for land, territorial rights, and environmental protection.</p>
+      <p>These conversations are not meant simply to illustrate an argument. They can question its assumptions and bring different forms of knowledge into the research. A central concern is the tension between seeing land as a reserve of resources and understanding territory as a field of historical, social, and more-than-human relations. Alongside the material infrastructures of extraction, the blog will attend to the symbolic operations that make them seem natural, inevitable, or desirable—and to the ways communities resist these relations and imagine other ways of inhabiting the territory.</p>
+      <p>The project speaks to readers of Latin American literature, literary and cultural theory, modernism, infrastructure studies, and political ecology, as well as to writers, artists, activists, and others concerned with environmental and territorial struggles in the region and their planetary connections.</p>
+    </div>
+    <div class="pr"></div>
+  </section>
+
+  <section class="row blog-status" aria-labelledby="blog-status-title">
+    <div class="pl"></div>
+    <div class="bed">
+      <p class="sc">Coming soon</p>
+      <h2 id="blog-status-title" class="blog-status-title">Under<br class="status-break"> construction</h2>
+      <p class="blog-status-note">The blog is still being set up. Posts and interviews will appear here as the project develops.</p>
+    </div>
+    <div class="pr"></div>
+  </section>
+</Base>
+
+<style>
+  .blog-intro {
+    padding-top: var(--s-7);
+    padding-bottom: var(--s-5);
+  }
+  .blog-kicker {
+    margin-bottom: var(--s-2);
+  }
+  .blog-intro h1.title {
+    margin-bottom: var(--s-2);
+  }
+  .blog-subtitle {
+    max-width: 34em;
+    margin: 0 0 var(--s-5);
+  }
+  .blog-platform {
+    font-family: var(--f-note);
+    font-size: var(--t-body-s);
+    line-height: var(--lh-body-s);
+    max-width: 44em;
+    margin: 0;
+    color: var(--c-muted);
+  }
+  .blog-platform a {
+    color: var(--c-ink);
+  }
+  .blog-section {
+    padding-top: var(--s-3);
+    padding-bottom: var(--s-5);
+  }
+  .blog-section .cv-h {
+    margin-bottom: var(--s-3);
+  }
+  .blog-section p {
+    font-size: var(--t-body-s);
+    line-height: 1.62;
+    margin: 0 0 var(--s-4);
+    max-width: 43em;
+  }
+  .blog-section p:last-child {
+    margin-bottom: 0;
+  }
+  .blog-status {
+    background: var(--c-cheia-1);
+    padding-top: var(--s-7);
+    padding-bottom: var(--s-8);
+    margin-top: var(--s-3);
+  }
+  .blog-status-title {
+    font-weight: 300;
+    font-size: clamp(42px, 7vw, 86px);
+    line-height: .96;
+    letter-spacing: -.035em;
+    margin: var(--s-3) 0 var(--s-4);
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+  }
+  .blog-status-note {
+    max-width: 35em;
+    margin: 0;
+    font-size: var(--t-body-s);
+    line-height: var(--lh-body-s);
+  }
+  @media (max-width: 760px) {
+    .blog-intro { padding-top: var(--s-6); }
+    .blog-section { padding-bottom: var(--s-4); }
+    .blog-status { padding-top: var(--s-6); padding-bottom: var(--s-6); }
+    .blog-status-title { font-size: clamp(38px, 11vw, 64px); }
+  }
+</style>

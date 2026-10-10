@@ -14,6 +14,7 @@ export const GET = () => {
     '/teaching/',
     '/colophon/',
     ...(projectPublishable() ? ['/research/'] : []),
+    '/blog/',
     ...(visibleBios().length > 0 || gateOpen('PHOTO') ? ['/for-organizers/'] : []),
   ];
 
