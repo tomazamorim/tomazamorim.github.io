@@ -32,6 +32,14 @@ const robots = isPreview || noindex ? 'noindex, nofollow' : null;
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{fullTitle}</title>
   {description && <meta name="description" content={description}>}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content={site.name}>
+  <meta property="og:title" content={fullTitle}>
+  {description && <meta property="og:description" content={description}>}
+  {canonical && <meta property="og:url" content={absoluteUrl(path)}>}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content={fullTitle}>
+  {description && <meta name="twitter:description" content={description}>}
   {robots && <meta name="robots" content={isPreview ? 'noindex' : robots}>}
   {canonical && <link rel="canonical" href={absoluteUrl(path)}>}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
