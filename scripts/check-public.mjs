@@ -28,9 +28,9 @@ if(!joined.includes('Still under construction.'))fail('Research under-constructi
 if(!joined.includes('https://biblioteca-repositorio.clacso.edu.ar/bitstreams/15f7ea6f-6c78-4949-8004-9b4414b9c26c/download'))fail('CLACSO introduction PDF endpoint missing');
 if(fs.existsSync(path.join(root,'research/keywords/index.html')))fail('Keywords index must be hidden from the public build');
 for(const file of ['AR-02-notas-sobre-o-castelo.pdf','AR-03-interrupcao-e-montagem.pdf'])if(!hosted.includes(file))fail(`Missing hosted publication PDF: ${file}`);
-for(const [id,title] of [['VO-02','Uneafro Brasil: 12 anos de luta'],['VO-03','Ponto Virgulina: revista de tradução literária'],['PO-01','Marte atacado'],['PO-02','Meia lua soco'],['PO-03','Plástico pluma'],['PO-04','Manifesto Baphywave']])if(!articlesHtml.includes(title))fail(`Expected public publication ${id} missing`);
 if(!joined.includes('PDF excerpt'))fail('Arquipélago excerpt label missing');
 const articlesHtml=fs.readFileSync(path.join(root,'publications/index.html'),'utf8');
+for(const [id,title] of [['VO-02','Uneafro Brasil: 12 anos de luta'],['VO-03','Ponto Virgulina: revista de tradução literária'],['PO-01','Marte atacado'],['PO-02','Meia lua soco'],['PO-03','Plástico pluma'],['PO-04','Manifesto Baphywave']])if(!articlesHtml.includes(title))fail(`Expected public publication ${id} missing`);
 for(const id of ['AR-08','AR-09','AR-10'])if((articlesHtml.match(new RegExp(`id="${id}"`,'g'))||[]).length!==0)fail(`${id} must be hidden from Publications`);
 for(const [id,title] of [['OU-01','Escravidão e Ditadura: por mais Comissões da Verdade'],['OU-02','Novos mercados da violência no Brasil: as armas não letais']])if((articlesHtml.match(new RegExp(`id="${id}"`,'g'))||[]).length!==1||!articlesHtml.includes(title))fail(`2013 press item ${id} missing or duplicated`);
 const ids=[];for(const [f,s] of texts)for(const m of s.matchAll(/\sid="([^"]+)"/g))ids.push([f,m[1]]);const seen=new Map();for(const [f,id] of ids){if(seen.has(`${f}:${id}`))fail(`Duplicate HTML id #${id} in ${path.relative(root,f)}`);seen.set(`${f}:${id}`,true)}
