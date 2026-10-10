@@ -422,9 +422,16 @@ ul.method li{ margin: 0 0 var(--s-2); }
 .footer-logos img {
   height: 24px;
 }
+.site-foot .bed .footer-logos a[aria-label^="Ruhr-Universität"] {
+  width: 70px;
+  height: 24px;
+  overflow: hidden;
+  flex: 0 0 70px;
+}
 .site-foot .bed .footer-logos a[aria-label^="Ruhr-Universität"] img {
-  height: 30px;
-  max-width: 150px;
+  height: 47px;
+  max-width: none;
+  flex: 0 0 auto;
 }
 @media (max-width: 760px) {
   .podcast-item {
