@@ -334,3 +334,61 @@ ul.method li{ margin: 0 0 var(--s-2); }
   .spotify-embed{max-width:100%;}
   .construction-notice{font-size:22px;}
 }
+
+
+/* ---------- Requested refinements: home portrait, footer marks, podcast embeds ---------- */
+.identity .portrait {
+  width: 188px;
+}
+.identity .portrait picture {
+  display: block;
+}
+.identity .portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.footer-logos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-left: auto;
+  padding-left: 12px;
+}
+.site-foot .bed .footer-logos a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 0;
+}
+.footer-logos img {
+  display: block;
+  width: auto;
+  height: 22px;
+  max-width: 130px;
+  object-fit: contain;
+  opacity: .82;
+}
+.footer-logos a:hover img {
+  opacity: 1;
+}
+.spotify-embed {
+  height: 352px;
+  min-height: 352px;
+}
+@media (max-width: 760px) {
+  .identity .portrait {
+    width: auto;
+  }
+  .identity .portrait img {
+    width: 96px;
+  }
+  .footer-logos {
+    justify-content: flex-start;
+    flex-basis: 100%;
+    margin-left: 0;
+    padding: 8px 0 0;
+  }
+}
