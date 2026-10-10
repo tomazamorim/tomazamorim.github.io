@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import CvTable from '../components/CvTable.astro';
+import { grantBlocks } from '../lib/cv';
+import { site, activeMarks, markLabel, gateOpen } from '../lib/data';
+const blocks = grantBlocks();
+const ack = gateOpen('DFGNR');
+const ackMarks = activeMarks(site.funding.acknowledgement_tbc);
+---
+<Base title="Grants" description="Research funding and fellowships of Dr. Tomaz Amorim." path="/grants/" nav="grants">
+  <section class="row">
+    <div class="pl"></div>
+    <div class="bed">
+      <h1 class="title">Grants</h1>
+      <p class="lead" style="margin-top:var(--s-4)">Current funding: <a href={site.funding.group_url}>{site.funding.name}</a> “{site.funding.title}”, <a href={site.funding.gepris_url}>GEPRIS {site.funding.gepris_id}</a>.</p>
+      {ack && <p class="ack">{site.funding.acknowledgement}{ackMarks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}</p>}
+    </div>
+    <div class="pr"></div>
+  </section>
+  <section class="row sp-m">
+    <div class="pl"></div>
+    <div class="bed">
+      {blocks.map((g) => (
+        <div class="cv-sec grant-block">
+          <h2 class="cv-h">{g.title}</h2>
+          <CvTable rows={g.rows} />
+        </div>
+      ))}
+    </div>
+    <div class="pr"></div>
+  </section>
+</Base>

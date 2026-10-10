@@ -1,0 +1,44 @@
+---
+// Índice das Keywords em duas partes: "Keywords" (temas) e "Authors" (autores analisados). A glosa é a primeira oração da definição do verbete.
+import { visibleKeywords, isPreview, kwUrl, activeMarks, markLabel } from '../lib/data';
+import { kwLangs, glossOf } from '../lib/research';
+interface Props { standalone?: boolean }
+const parts = [
+  { id: 'keywords', label: 'Keywords', list: visibleKeywords('keyword') },
+  { id: 'authors', label: 'Authors', list: visibleKeywords('author') },
+].filter((p) => p.list.length > 0);
+const marks = activeMarks([{ q: 'KW_APPROVED', note: 'the 16 entries (definitions, quotations, selection) await Tomaz’s approval; hidden from the public build until then' }]);
+---
+{parts.length > 0 && (
+  <Fragment>
+    <section class="row lv0">
+      <div class="pl"></div>
+      <div class="bed">
+        <h1 class="title">Keywords</h1>
+        {marks.map((m) => <p class="label"><span class="tbc">{markLabel(m)}</span></p>)}
+      </div>
+      <div class="pr"></div>
+    </section>
+    {parts.map((part, pi) => (
+      <section class={`row lv0 ${pi === 0 ? 'sp-m' : 'sp-l'}`} id={part.id}>
+        <div class="pl"></div>
+        <div class="bed">
+          <h2 class="sec">{part.label}</h2>
+          <ul class="kwx">
+            {part.list.map((k) => {
+              const gl = glossOf(k);
+              const langs = kwLangs(k);
+              return (
+                <li>
+                  <div class="top"><a href={kwUrl(k.slug)}>{k.term}</a>{langs.length > 1 && <span class="nm">names in: {langs.join(' · ')}</span>}</div>
+                  {gl && <p class="gl" lang="en">{gl}</p>}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div class="pr note"></div>
+      </section>
+    ))}
+  </Fragment>
+)}

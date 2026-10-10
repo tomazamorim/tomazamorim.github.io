@@ -1,0 +1,88 @@
+---
+import Base from '../../layouts/Base.astro';
+import CvTable from '../../components/CvTable.astro';
+import TalkItem from '../../components/TalkItem.astro';
+import { talkGroups, talksTitle, buildDate, buildDateISO, inline, isPreview, site, gateOpen, activeMarks, markLabel } from '../../lib/data';
+import PubItem from '../../components/PubItem.astro';
+import { groupedViews } from '../../lib/pubs';
+import { rowsOf, parasOf, grantBlocks, slugOf } from '../../lib/cv';
+import { cvPdf } from '../../lib/files';
+
+const pdf = cvPdf();
+const talks = talkGroups();
+// Publications no CV web: grupos acadêmicos (livros a anais), sem ações; lista completa em /publications/
+const pubGroups = groupedViews({ cv: true }).filter((g) => ['books', 'edited', 'articles', 'chapters', 'proceedings'].includes(g.id));
+const publishesAs = gateOpen('PUBAS');
+const pubAsMarks = activeMarks([{ q: 'PUBAS', note: 'declaration about Tomaz’s author identity' }]);
+const sec = {
+  positions: rowsOf('positions'),
+  education: rowsOf('education', { education: true }),
+  grants: grantBlocks(),
+  teaching: rowsOf('teaching', { desc: true }),
+  editorial: rowsOf('editorial-work-and-service'),
+};
+// "Examination committees are listed under Editorial Work and Service" -> link para a âncora desta página
+const teachNotes = parasOf('teaching').map((p) => p.replace('Editorial work and service', '<a href="#examination-committees">Editorial work and service</a>'));
+const languages = parasOf('languages');
+---
+<Base title="CV" description="Curriculum vitae of Dr. Tomaz Amorim." path="/cv/" nav="cv">
+  <section class="row">
+    <div class="pl"></div>
+    <div class="bed">
+      <h1 class="title">CV</h1>
+      {publishesAs && <p class="publishes">Preferred citation: Amorim, Tomaz. Earlier publications may appear under historical name variants.{pubAsMarks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}</p>}
+      <p class="updated">Last updated: <time datetime={buildDateISO}>{buildDate}</time>{pdf && <Fragment> · <a class="btn small" href={pdf.href}>CV · PDF <span class="meta">{pdf.size}</span></a></Fragment>}</p>
+    </div>
+    <div class="pr"></div>
+  </section>
+
+  <section class="row">
+    <div class="pl"></div>
+    <div class="bed">
+      <div class="cv-sec" id="positions"><h2 class="cv-h">Positions</h2>
+        {sec.positions.map((g) => <Fragment>{g.label && <h3 class="cv-sub">{g.label}</h3>}<CvTable rows={g.rows} /></Fragment>)}
+      </div>
+      {sec.education.length > 0 && (
+        <div class="cv-sec" id="education"><h2 class="cv-h">Education</h2>
+          {sec.education.map((g) => <CvTable rows={g.rows} />)}
+        </div>
+      )}
+      {sec.grants.length > 0 && (
+        <div class="cv-sec" id="grants"><h2 class="cv-h">Grants and fellowships</h2>
+          {sec.grants.map((g) => <Fragment><h3 class="cv-sub">{g.title}</h3><CvTable rows={g.rows} /></Fragment>)}
+        </div>
+      )}
+      <div class="cv-sec cv-pubs" id="publications"><h2 class="cv-h">Publications</h2>
+        {pubGroups.map((g) => (
+          <Fragment>
+            <h3 class="cv-sub">{g.label}</h3>
+            <ul class="items">{g.views.map((v) => <PubItem v={v} actions={false} />)}</ul>
+          </Fragment>
+        ))}
+        <p class="all-link"><a href="/publications/">Full list →</a></p>
+      </div>
+      {(sec.teaching.length > 0 || teachNotes.length > 0) && (
+        <div class="cv-sec" id="teaching"><h2 class="cv-h">Teaching</h2>
+          {sec.teaching.map((g) => <Fragment>{g.label && <h3 class="cv-sub">{g.label}</h3>}<CvTable rows={g.rows} /></Fragment>)}
+          {teachNotes.map((p) => <p class="cv-note" set:html={p} />)}
+        </div>
+      )}
+      {talks.length > 0 && (
+        <div class="cv-sec" id="talks"><h2 class="cv-h">{talksTitle}</h2>
+          <ul class="items">{talks.map((g) => <TalkItem t={g.main} also={g.also} />)}</ul>
+        </div>
+      )}
+      {sec.editorial.length > 0 && (
+        <div class="cv-sec" id="editorial"><h2 class="cv-h">Editorial work and service</h2>
+          {sec.editorial.map((g) => <Fragment>{g.label && <h3 class="cv-sub" id={g.label === 'Editorial' ? 'editorial-subsection' : slugOf(g.label)}>{g.label}</h3>}<CvTable rows={g.rows} /></Fragment>)}
+        </div>
+      )}
+      {languages.length > 0 && (
+        <div class="cv-sec" id="languages"><h2 class="cv-h">Languages</h2>
+          {languages.map((l) => <p class="cv-note" set:html={l} />)}
+        </div>
+      )}
+    </div>
+    <div class="pr"></div>
+  </section>
+</Base>

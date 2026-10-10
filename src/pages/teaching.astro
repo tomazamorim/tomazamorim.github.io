@@ -1,0 +1,27 @@
+---
+import { site, activeMarks, markLabel } from '../lib/data';
+import Base from '../layouts/Base.astro';
+import CvTable from '../components/CvTable.astro';
+import { rowsOf, parasOf } from '../lib/cv';
+const groups = rowsOf('teaching', { desc: true });
+// "Examination committees are listed under Editorial Work and Service" -> link para a âncora no CV
+const notes = parasOf('teaching').map((p) => p.replace('Editorial work and service', '<a href="/cv/#examination-committees">Editorial work and service</a>'));
+---
+<Base title="Teaching" description="Teaching of Dr. Tomaz Amorim." path="/teaching/" nav="teaching">
+  <section class="row">
+    <div class="pl"></div>
+    <div class="bed">
+      <h1 class="title">Teaching</h1>
+      {activeMarks(site.menu_tbc.teaching).map((m) => <p class="label"><span class="tbc">{markLabel(m)}</span></p>)}
+    </div>
+    <div class="pr"></div>
+  </section>
+  <section class="row sp-m">
+    <div class="pl"></div>
+    <div class="bed">
+      {groups.map((g) => <Fragment>{g.label && <h2 class="cv-sub">{g.label}</h2>}<CvTable rows={g.rows} /></Fragment>)}
+      {notes.map((p) => <p class="cv-note" set:html={p} />)}
+    </div>
+    <div class="pr"></div>
+  </section>
+</Base>

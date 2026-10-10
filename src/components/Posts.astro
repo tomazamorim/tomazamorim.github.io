@@ -1,0 +1,26 @@
+---
+import { loadPosts } from '../lib/feed';
+import { isPreview } from '../lib/data';
+interface Props { tone: string }
+const { tone } = Astro.props;
+const { posts, example, blog } = await loadPosts();
+---
+{posts.length > 0 && (
+  <section class={`row ${tone} sp-l posts`} id="posts">
+    <div class="pl"></div>
+    <div class="bed">
+      <h2 class="sec">Posts</h2>
+      <ul class="items">
+        {posts.map((p) => (
+          <li class="item">
+            {example ? <span class="post-title">{p.title}</span> : <a href={p.url}>{p.title}</a>}
+            <span class="meta">{p.date} · Hypotheses · {blog ?? (isPreview ? '[blog name A CONFIRMAR]' : '')}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="pr note">
+      {example && <p><span class="example">EXAMPLE CONTENT · RSS not connected</span></p>}
+    </div>
+  </section>
+)}

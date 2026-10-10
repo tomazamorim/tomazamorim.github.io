@@ -1,0 +1,79 @@
+[
+  {
+    "id": "en45",
+    "lang": "en",
+    "label": "English · 45 words",
+    "words": 45,
+    "open": true,
+    "copy": "Copy",
+    "text": "Dr. Tomaz Amorim is the Principal Investigator of subproject TP 4, “Extractivism and Infrastructure in Brazilian Literature”, of DFG Research Unit FOR 5710 “Infrastructure: Aesthetics and Supply” at Ruhr-Universität Bochum. He analyzes how extractive infrastructures—from coffee plantations to mining—shape literary genres and modes of narration.",
+    "words_counted": 45,
+    "status": "published",
+    "tbc": []
+  },
+  {
+    "id": "en94",
+    "lang": "en",
+    "label": "English · 94 words",
+    "words": 94,
+    "open": true,
+    "copy": "Copy",
+    "text": "Dr. Tomaz Amorim is the Principal Investigator of subproject TP 4, “Extractivism and Infrastructure in Brazilian Literature”, of DFG Research Unit FOR 5710 “Infrastructure: Aesthetics and Supply” at Ruhr-Universität Bochum. He is an Associated Investigator at the Maria Sibylla Merian Centre Conviviality-Inequality in Latin America (Mecila), where he previously served as Academic Coordinator. He obtained his PhD in 2018 in Literary Theory and Comparative Literature at the University of São Paulo (USP) with a thesis on Franz Kafka and Walter Benjamin. His current research project investigates the aesthetic configurations of extractivism in Brazilian literature.",
+    "words_counted": 94,
+    "status": "published",
+    "tbc": []
+  },
+  {
+    "id": "en204",
+    "lang": "en",
+    "label": "English · 204 words",
+    "words": 204,
+    "open": false,
+    "copy": "Copy",
+    "text": "Dr. Tomaz Amorim is the Principal Investigator of subproject TP 4, “Extractivism and Infrastructure in Brazilian Literature”, of DFG Research Unit FOR 5710 “Infrastructure: Aesthetics and Supply” at Ruhr-Universität Bochum. He is an Associated Investigator at the Maria Sibylla Merian Centre Conviviality-Inequality in Latin America (Mecila), where he previously served as Academic Coordinator. He is also an Associated Researcher and member of the Executive Board at the Brazilian Center for Analysis and Planning (CEBRAP). He obtained his PhD in 2018 in Literary Theory and Comparative Literature at the University of São Paulo (USP) with a thesis on Franz Kafka and Walter Benjamin (Contar do tempo interrompido / Narrating Interrupted Time), which included a research stay at the Humboldt University of Berlin. Following his doctorate, he was a Postdoctoral Researcher at Unicamp, where he researched non-modern interfaces in Oswald de Andrade and Walter Benjamin, and a Fellow at the Cluster of Excellence Temporal Communities: Doing Literature in a Global Perspective at the Freie Universität Berlin. As a writer and critic, he published the volume Arquipélago: literatura brasileira contemporânea (2023) as well as the poetry collections Plástico pluma (2018) and Meia-lua soco (2020). His current research project investigates the aesthetic configurations of extractivism in Brazilian literature.",
+    "words_counted": 204,
+    "status": "published",
+    "tbc": []
+  },
+  {
+    "id": "de103",
+    "lang": "de",
+    "label": "Deutsch · Kurzvita · 103 Wörter",
+    "words": 103,
+    "open": false,
+    "copy": "Kopieren",
+    "text": "Dr. Tomaz Amorim ist Principal Investigator des Teilprojekts „Extraktivismus und Infrastruktur in der brasilianischen Literatur“ (TP 4) innerhalb der DFG-Forschungsgruppe FOR 5710 „Infrastruktur: Ästhetik und Versorgung“ an der Ruhr-Universität Bochum. Er promovierte 2018 in Literaturtheorie und Vergleichender Literaturwissenschaft an der Universität von São Paulo (USP) mit einer Arbeit über Franz Kafka und Walter Benjamin (Contar do tempo interrompido), die einen Forschungsaufenthalt an der Humboldt-Universität zu Berlin beinhaltete. Als Schriftsteller und Kritiker veröffentlichte er den Band Arquipélago: literatura brasileira contemporânea (2023) sowie die Gedichtbände Plástico pluma (2018) und Meia-lua soco (2020). Sein aktuelles Forschungsprojekt untersucht die ästhetischen Konfigurationen des Extraktivismus in der brasilianischen Literatur.",
+    "suggestions": [
+      {
+        "from": "Universität von São Paulo",
+        "to": "Universität São Paulo",
+        "why": "usual German form of the name"
+      },
+      {
+        "from": "Vergleichender Literaturwissenschaft",
+        "to": "Komparatistik",
+        "why": "alternative only; the current wording is acceptable"
+      },
+      {
+        "from": "beinhaltete",
+        "to": "einschloss",
+        "why": "“beinhalten” is administrative register"
+      }
+    ],
+    "words_counted": 103,
+    "status": "published",
+    "tbc": []
+  },
+  {
+    "id": "pt105",
+    "lang": "pt",
+    "label": "Português · 105 palavras",
+    "words": 105,
+    "open": false,
+    "copy": "Copiar",
+    "text": "Tomaz Amorim é crítico literário e pesquisador especializado em literatura brasileira moderna e contemporânea, frequentemente em diálogo comparativo com a literatura alemã e a Teoria Crítica. Atualmente, é Pesquisador Principal do subprojeto TP 4, “Extractivism and Infrastructure in Brazilian Literature”, da Unidade de Pesquisa DFG FOR 5710 “Infrastructure: Aesthetics and Supply”, na Ruhr-Universität Bochum (Alemanha), e Pesquisador Associado no Mecila (Maria Sibylla Merian Centre Conviviality-Inequality in Latin America), onde atuou anteriormente como Coordenador Acadêmico. É doutor em Teoria Literária e Literatura Comparada pela Universidade de São Paulo (USP), título obtido em 2018 com a tese Franz Kafka e Walter Benjamin: narrar o tempo interrompido.",
+    "words_counted": 105,
+    "status": "published",
+    "tbc": []
+  }
+]

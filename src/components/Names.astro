@@ -1,0 +1,11 @@
+---
+// Nomes de um verbete na margem: o termo é o link da entrada; os outros nomes (outras línguas) vêm com a etiqueta de língua.
+import type { KwTerm } from '../lib/data';
+import { kwUrl } from '../lib/data';
+interface Props { term: KwTerm; withNames?: boolean }
+const { term, withNames = true } = Astro.props;
+---
+<ul class="names">
+  <li><a href={kwUrl(term.slug)}><i>{term.term}</i></a></li>
+  {withNames && term.names.map((n) => <li><span class="lang">{n.lang}</span><i lang={n.lang || undefined}>{n.text}</i></li>)}
+</ul>

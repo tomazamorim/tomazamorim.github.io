@@ -1,0 +1,90 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, isVisible, isPreview, approved, activeMarks, markLabel, siteHasScript, feed } from '../lib/data';
+
+export function getStaticPaths() {
+  // Impressum e Datenschutz são rascunhos a validar por quem entende do assunto: no modo público só existem depois de aprovados ('LEGAL' em release.json).
+  return isVisible({ status: 'pending', needs: ['LEGAL'] })
+    ? [{ params: { legal: 'impressum' } }, { params: { legal: 'datenschutz' } }]
+    : [];
+}
+const { legal } = Astro.params;
+const isImp = legal === 'impressum';
+const draft = isPreview && !approved.has('LEGAL');
+const addrMarks = activeMarks(site.address_tbc);
+const mailMarks = activeMarks(site.email_tbc);
+const hostMarks = activeMarks(site.hosting_tbc);
+const nlMarks = activeMarks(site.newsletter.tbc);
+const m = (ms: any[]) => ms.map((x) => ` <span class="tbc">${markLabel(x)}</span>`).join('');
+// Anmerkungen für die juristische Prüfung (nur im Preview, solange LEGAL nicht freigegeben ist)
+const note = (text: string) => (draft ? ` <span class="tbc">[A CONFIRMAR: ${text} · LEGAL]</span>` : '');
+const hasScript = siteHasScript();
+const hasResearchSection = !!feed.feed_url;  // seção sobre o RSS só quando o feed existir (revisor R2-14)
+---
+<Base title={isImp ? "Impressum" : "Datenschutzerklärung"} description={isImp ? "Impressum / legal notice." : "Datenschutzerklärung / privacy statement."} path={`/${legal}/`}>
+  <section class="row">
+    <div class="pl"></div>
+    <div class="bed">
+      <h1 class="title" lang="de">{isImp ? 'Impressum' : 'Datenschutzerklärung'}</h1>
+      {draft && <p class="legal-flag"><span class="tbc">ENTWURF / DRAFT · not legal advice · to be validated by a legal reviewer before publication</span></p>}
+    </div>
+    <div class="pr"></div>
+  </section>
+
+  {isImp ? (
+    <section class="row sp-m">
+      <div class="pl"></div>
+      <div class="bed legal" lang="de">
+        <h2 class="cv-h">Angaben gemäß § 5 DDG</h2>
+        <p>{site.name_title}<br>{site.address_lines[0]}<br>{site.address_lines[1]}<br>{site.address_lines[2]}<br>{site.address_lines[3]}<Fragment set:html={m(addrMarks)} /><Fragment set:html={note('the RUB / the institute must confirm that its address and e-mail may be used on a personal site hosted outside the RUB; alternative: a personal postal address for service of documents (the registered address in Witten cannot receive mail safely)')} /></p>
+        <p>E-Mail: {site.email}<Fragment set:html={m(mailMarks)} /><Fragment set:html={note('a second quick means of contact (contact form or telephone) may be required; the reviewer decides whether e-mail alone suffices')} /></p>
+        {draft && <p set:html={note('“Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV” (name and address) is needed if the site publishes editorial content of its own, such as blog posts or a podcast; no VAT ID, register entry or supervisory authority applies to a private person without commercial activity (to confirm)')} />}
+        <hr class="legal-rule">
+        <div lang="en">
+          <h2 class="cv-h">Legal notice (English)</h2>
+          <p>{site.name_title}<br>{site.address_lines[0]}<br>{site.address_lines[1]}<br>{site.address_lines[2]}<br>{site.address_lines[3]}, Germany</p>
+          <p>E-mail: {site.email}</p>
+        </div>
+      </div>
+      <div class="pr"></div>
+    </section>
+  ) : (
+    <section class="row sp-m">
+      <div class="pl"></div>
+      <div class="bed legal" lang="de">
+        <h2 class="cv-h">1. Verantwortlicher</h2>
+        <p>{site.name_title}, {site.address_lines.join(', ')}. E-Mail: {site.email}.<Fragment set:html={note('whether the RUB is a joint controller, and the contact of the RUB data protection officer if so')} /></p>
+
+        <h2 class="cv-h">2. Was diese Website tut und was nicht</h2>
+        <p>Diese Website setzt keine Cookies, verwendet keine Analyse- oder Tracking-Dienste, bindet keine Inhalte Dritter ein (keine Schriften, Skripte, Karten, Videos oder Social-Media-Plugins von Dritten) und lädt alle Schriften von der eigenen Domain. {hasScript ? 'JavaScript wird nur für die Schaltflächen „Copy“/„Kopieren“/„Copiar“ verwendet; dabei werden keine Daten übertragen.' : 'Die Seiten kommen ohne JavaScript aus.'}</p>
+
+        <h2 class="cv-h">3. Hosting und Server-Logdateien</h2>
+        <p>Beim Aufruf einer Seite verarbeitet der Hosting-Anbieter technisch notwendige Verbindungsdaten (insbesondere IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, übertragene Datenmenge, Browserkennung) in Server-Logdateien. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren und stabilen Bereitstellung der Website).{hostMarks.length > 0 && <Fragment> <span class="tbc">[A CONFIRMAR: hosting provider, country and location of the servers, retention period of the logs, data-processing agreement (Art. 28 DSGVO), transfer to a third country if the provider is outside the EU/EEA · HOSTING]</span></Fragment>}</p>
+
+        <h2 class="cv-h">4. Kontakt per E-Mail</h2>
+        <p>Wenn Sie mir eine E-Mail schreiben, verarbeite ich Ihre Angaben ausschließlich, um Ihre Anfrage zu beantworten (Art. 6 Abs. 1 lit. b oder f DSGVO). Beim Anklicken einer E-Mail-Adresse öffnet sich Ihr E-Mail-Programm; die Website übermittelt dabei nichts.<Fragment set:html={note('storage period of e-mails; legal basis to be confirmed by the reviewer')} /></p>
+
+        <h2 class="cv-h">5. Newsletter</h2>
+        <p>Derzeit bietet diese Website keinen Newsletter an.{nlMarks.length > 0 && <Fragment> <span class="tbc">[A CONFIRMAR: if a newsletter service is introduced (Q10), this statement must be extended: consent, double opt-in with record, provider and processing agreement, revocation and unsubscribe link, § 7 UWG; no script of the service before consent]</span></Fragment>}</p>
+
+        {hasResearchSection && (<Fragment>
+        <h2 class="cv-h">6. Beiträge (RSS)</h2>
+        <p>Die Liste der neuesten Beiträge wird beim Erstellen der Website aus einem öffentlichen RSS-Feed gelesen; dabei werden keine Daten von Besucherinnen und Besuchern übertragen.</p>
+        </Fragment>)}
+
+        <h2 class="cv-h">{hasResearchSection ? '7' : '6'}. Externe Links</h2>
+        <p>Diese Website verlinkt auf externe Seiten (zum Beispiel ORCID, Lattes, DOI-Dienste, Zeitschriften, Repositorien, Instagram, LinkedIn). Mit dem Anklicken eines Links verlassen Sie diese Website; es gelten die Datenschutzbestimmungen der jeweiligen Anbieter.</p>
+
+        <h2 class="cv-h">{hasResearchSection ? '8' : '7'}. Ihre Rechte</h2>
+        <p>Sie haben nach der DSGVO das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren.{isPreview && <Fragment> <span class="tbc">[A CONFIRMAR: competent supervisory authority; suggestion to be checked by the reviewer: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen · LEGAL]</span></Fragment>}</p>
+
+        <hr class="legal-rule">
+        <div lang="en">
+          <h2 class="cv-h">Privacy statement (English summary)</h2>
+          <p>This website sets no cookies, uses no analytics or tracking, embeds no third-party content, and serves all fonts from its own domain. {hasScript ? 'JavaScript is used only for the “Copy” buttons and transmits no data.' : 'The pages need no JavaScript.'} The hosting provider processes the technically necessary connection data in server logs. If you e-mail me, I use your details only to answer you. The site currently offers no newsletter. External links lead to third-party sites with their own privacy policies. You have the rights granted by the GDPR, including the right to lodge a complaint with a supervisory authority.</p>
+        </div>
+      </div>
+      <div class="pr"></div>
+    </section>
+  )}
+</Base>

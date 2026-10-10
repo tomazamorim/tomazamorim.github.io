@@ -1,0 +1,18 @@
+---
+import type { Row } from '../lib/cv';
+interface Props { rows: Row[]; heads?: [string, string, string] }
+const { rows, heads = ['Years', 'Funding', 'Role'] } = Astro.props;
+const hasRole = rows.some((r) => r.role);
+---
+<table class={`cv ${hasRole ? 'has-role' : ''}`}>
+  {hasRole && <thead><tr><th scope="col">{heads[0]}</th><th scope="col">{heads[1]}</th><th scope="col">{heads[2]}</th></tr></thead>}
+  <tbody>
+    {rows.map((r) => (
+      <tr>
+        <td class="y">{r.when}</td>
+        <td set:html={r.html} />
+        {hasRole && <td class="role">{r.role ? <Fragment><span class="role-l">Role: </span>{r.role}</Fragment> : ''}</td>}
+      </tr>
+    ))}
+  </tbody>
+</table>

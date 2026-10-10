@@ -1,0 +1,12 @@
+---
+import { isVisible, isPreview, buildDate } from '../lib/data';
+const legalVisible = isVisible({ status: 'pending', needs: ['LEGAL'] });
+---
+<footer class="row site-foot">
+  <div class="bed">
+    <a href="/colophon/">Colophon</a>
+    {legalVisible && <a href="/impressum/">Impressum</a>}
+    {legalVisible && <a href="/datenschutz/">Datenschutz</a>}
+    {isPreview && <span class="tbc">PREVIEW BUILD · not for publication · {buildDate}</span>}
+  </div>
+</footer>

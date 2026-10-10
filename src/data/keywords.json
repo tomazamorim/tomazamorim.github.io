@@ -1,0 +1,1072 @@
+{
+  "terms": [
+    {
+      "id": "extractivism",
+      "slug": "extractivism",
+      "kind": "keyword",
+      "term": "Extractivism",
+      "term_lang": null,
+      "names": [
+        {
+          "lang": "es",
+          "text": "extractivismo",
+          "source": "CL-02",
+          "page": "70"
+        }
+      ],
+      "definition": "In this research, extractivism names more than an economic sector: it is a way of relating to land in which territories, and the beings that live in them, become means rather than ends, and in which relations are removed along with materials. Taken from Latin American political economy, the term is used as a lens on literature: on how writing has helped make land available for extraction, and on how it records, contests or imitates that operation.",
+      "quotes": [
+        {
+          "text": "El concepto de extractivismo se utiliza frecuentemente en el análisis político-económico de Sudamérica para describir las prácticas colonizadoras y neocolonizadoras de extracción de recursos minerales, vegetales, animales y energéticos que estructuran la vida económica y social del territorio",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "70",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Para examinar la literatura y las prácticas culturales en el contexto del extractivismo, debemos considerarlo como una práctica integral, que extrae no solo materiales, sino también relaciones.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "74",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Considering Extractivism not only as a historical practice but as a mode of relation; could we see a connection between poetic technique and the economic model?",
+          "lang": "en",
+          "source": "CL-03",
+          "page": "241",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "VO-01",
+        "CL-01",
+        "CL-02",
+        "CL-03"
+      ],
+      "related_talks": [
+        {
+          "id": "2024-12-03-gssc-koeln"
+        },
+        {
+          "id": "2025-01-mecam-tunis"
+        },
+        {
+          "id": "2025-07-17-accra"
+        },
+        {
+          "id": "2026-02-25-cebrap"
+        },
+        {
+          "id": "2026-06-26-race-genre"
+        },
+        {
+          "id": "2026-09-17-kafkiana"
+        }
+      ],
+      "near": [
+        "extractive-infrastructures",
+        "extractive-gaze",
+        "aesthetic-extractivism",
+        "land-and-territory"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "extractive-infrastructures",
+      "slug": "extractive-infrastructures",
+      "kind": "keyword",
+      "term": "Extractive infrastructures",
+      "term_lang": null,
+      "names": [
+        {
+          "lang": "es",
+          "text": "infraestructuras extractivistas",
+          "source": "CL-02",
+          "page": "70"
+        }
+      ],
+      "definition": "Extractive infrastructures are the mines, plantations, railways and ports through which territories are turned into raw material for distant markets. The research takes both their material and their symbolic side into account: the works themselves, and the single worldview they impose on human and non-human inhabitants. In the periphery these infrastructures cannot stay out of sight, and literature shows them, sometimes in praise and sometimes in critique.",
+      "quotes": [
+        {
+          "text": "Las infraestructuras extractivistas se basan en un modelo relacional asimétrico y no recíproco en el que las áreas y los seres vivos que las habitan se tratan como medios, no como fines.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "70",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Las minas, los mineros, los trenes, los molinos, las infraestructuras, por así decirlo, quedan expuestas. Y esto es lo que, estéticamente, habla de la especificidad de los modernismos periféricos.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "64",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Este implica la construcción de infraestructuras complejas, utilizando las técnicas de ingeniería más avanzadas, desplazamientos masivos de población, alteración radical de territorios, redes transcontinentales y la imposición de una cosmovisión ontológica muy específica sobre los territorios y sus habitantes, tanto humanos como no humanos; todo ello con el fin de mantener el territorio en la pobreza de un monocultivo hasta el agotamiento de los recursos.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "77",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "CL-02",
+        "CL-01",
+        "VO-01"
+      ],
+      "related_talks": [
+        {
+          "id": "2024-12-03-gssc-koeln"
+        },
+        {
+          "id": "2026-02-25-cebrap"
+        },
+        {
+          "id": "2026-09-17-kafkiana"
+        }
+      ],
+      "near": [
+        "extractivism",
+        "literature-as-infrastructure",
+        "extractive-gaze",
+        "land-and-territory"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "extractive-gaze",
+      "slug": "extractive-gaze",
+      "kind": "keyword",
+      "term": "Extractive gaze",
+      "term_lang": null,
+      "names": [
+        {
+          "lang": "es",
+          "text": "mirada extractiva",
+          "source": "CL-02",
+          "page": "88"
+        },
+        {
+          "lang": "es",
+          "text": "mirada extractivista",
+          "source": "CL-02",
+          "page": "87"
+        },
+        {
+          "lang": "en",
+          "text": "extractivist gaze",
+          "source": "CL-03",
+          "page": "241"
+        }
+      ],
+      "definition": "The extractive gaze is a way of seeing that turns land into an inventory. It reduces the material specificity and the many relations of a place to a flattening language, legible mainly to readers elsewhere, as the colonial letters of discovery were for investors. The research follows this gaze in close readings from the colonial chronicles to modernism and the present, and attends to works that expose how it is built, Oswald de Andrade's montage among them.",
+      "quotes": [
+        {
+          "text": "La mirada extractiva en la literatura puede entenderse como una estetización del territorio (parafraseando a Walter Benjamin): retratar la tierra como propaganda, como si se vendiera.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "88",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Mientras que la mirada extractivista impone una división radical entre sujeto y objeto, la práctica indígena no moderna se produce de forma conjunta en contacto con el territorio.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "87",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Al adoptar la perspectiva del explorador solo para distorsionarla mediante la ironía y el montaje, visibiliza el aparato colonial en lugar de presentarlo como algo natural. Muestra la construcción de la mirada.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "111",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "The project aims to investigate the development of literary representations of extractive infrastructures and the \"extractive gaze\" through close readings.",
+          "lang": "en",
+          "source": "WEB-P4",
+          "page": null,
+          "translator": null,
+          "coauthor": null,
+          "source_url": "https://infra-aesthetics.de/project4/"
+        }
+      ],
+      "related_pubs": [
+        "CL-02",
+        "CL-03"
+      ],
+      "related_talks": [
+        {
+          "id": "2024-12-03-gssc-koeln"
+        },
+        {
+          "id": "2026-06-26-race-genre"
+        }
+      ],
+      "near": [
+        "extractivism",
+        "aesthetic-extractivism",
+        "land-and-territory",
+        "oswald-de-andrade"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "aesthetic-extractivism",
+      "slug": "aesthetic-extractivism",
+      "kind": "keyword",
+      "term": "Aesthetic extractivism",
+      "term_lang": null,
+      "names": [
+        {
+          "lang": "es",
+          "text": "extractivismo estético",
+          "source": "CL-02",
+          "page": "96, 111"
+        },
+        {
+          "lang": "es",
+          "text": "extractivismo literario",
+          "source": "CL-02",
+          "page": "92"
+        },
+        {
+          "lang": "en",
+          "text": "modernist extractivism",
+          "source": "CL-03",
+          "page": "236"
+        }
+      ],
+      "definition": "Aesthetic extractivism describes artistic procedures that repeat the logic of extraction: taking landscapes, cultural forms or voices from their place, moving them and refining them into works valued elsewhere. The research develops the term through Oswald de Andrade's Pau-Brasil, whose montage of colonial sources both reproduces and exposes that operation. It is put as a question rather than a verdict, since the same procedure can also turn against the gaze it borrows.",
+      "quotes": [
+        {
+          "text": "Podría decirse que opera un “extractivismo literario” al aplicar la técnica del montaje a textos coloniales, tratando la prosa histórica como materia prima para la producción de una nueva “poesía de exportación”.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "92",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "El extractivismo estético explota la superficie visual y cultural de los subalternos para su exportación, utilizando eficazmente su imagen mientras conserva el micrófono para el narrador de la élite, movilizando a menudo sus palabras en su contra.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "96",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "En este caso, parece que el procedimiento de montaje reproduce formalmente la operación extractivista.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "92",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "It is surely possible to characterize what Oswald does with elements of the landscape and traditional cultures as aesthetic Extractivism.",
+          "lang": "en",
+          "source": "CL-03",
+          "page": "243",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "CL-02",
+        "CL-03",
+        "VO-01"
+      ],
+      "related_talks": [
+        {
+          "id": "2025-01-mecam-tunis"
+        },
+        {
+          "id": "2024-12-03-gssc-koeln"
+        }
+      ],
+      "near": [
+        "extractive-gaze",
+        "extractivism",
+        "modernist-critique-of-modernity",
+        "oswald-de-andrade"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "literature-as-infrastructure",
+      "slug": "literature-as-infrastructure",
+      "kind": "keyword",
+      "term": "Literature as infrastructure",
+      "term_lang": null,
+      "names": [],
+      "definition": "In this research, literature is treated not only as a representation of infrastructure but as a kind of infrastructure itself. Texts, and the system of publishers, journals and canons that circulates them, produce and carry values, images and models of the land: they can defend extraction, testify against it, travel as export goods or try to change the terms of exchange. The same capacity lets some works build other ways of perceiving.",
+      "quotes": [
+        {
+          "text": "In doing so, it also considers the literary system itself as a type of infrastructure.",
+          "lang": "en",
+          "source": "WEB-P4",
+          "page": null,
+          "translator": null,
+          "coauthor": null,
+          "source_url": "https://infra-aesthetics.de/project4/"
+        },
+        {
+          "text": "This economical, historical and cultural conjunction demands a type of literary reading which not only pays attention to the extractive “motifs” and “topoi”, but which also considers literature as part of the macro-international exchanges, defending the extraction, giving testimony against it, acting itself as an export product or attempting to change the exchange relations.",
+          "lang": "en",
+          "source": "CL-03",
+          "page": "236",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "El texto literario actúa como un mecanismo para producir valores, conceptos, ideas, formatos y modelos disputados en el espacio público, con el potencial de generar desigualdades y nuevas formas de convivialidad.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "67",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "A través de estas obras, la literatura establece los términos estéticos de esta coexistencia desigual con el extractivismo.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "113",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "CL-02",
+        "CL-03"
+      ],
+      "related_talks": [
+        {
+          "id": "2026-02-25-cebrap"
+        },
+        {
+          "id": "2026-06-26-race-genre"
+        }
+      ],
+      "near": [
+        "extractive-infrastructures",
+        "worlds-world-making",
+        "aesthetic-extractivism"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "modernist-critique-of-modernity",
+      "slug": "modernist-critique-of-modernity",
+      "kind": "keyword",
+      "term": "Modernist critique of modernity",
+      "term_lang": null,
+      "names": [
+        {
+          "lang": "pt",
+          "text": "crítica modernista da modernidade",
+          "source": "AR-04",
+          "page": "40"
+        },
+        {
+          "lang": "es",
+          "text": "críticas modernistas de la Modernidad",
+          "source": "CL-02",
+          "page": "76"
+        },
+        {
+          "lang": "es",
+          "text": "crítica modernista de la Modernidad",
+          "source": "CL-01",
+          "page": "11"
+        }
+      ],
+      "definition": "A modernist critique of modernity is the research's name for avant-garde work that turns modernism's own resources against the premises of modernization, often by drawing on non-modern (not pre-modern) forms: myth, oral tradition, Indigenous and Afro-Brazilian thought. The idea runs from earlier work on Kafka and Benjamin to the reading of Oswald de Andrade, and now frames a sharper question: whether peripheral modernism could escape the extractive logic it was built on.",
+      "quotes": [
+        {
+          "text": "Trata-se, sem dúvida, de um elogio do ponto de vista de uma crítica modernista da modernidade, como a que se propõe aqui, mas terá sido pensada assim no contexto de sua formulação?",
+          "lang": "pt",
+          "source": "AR-04",
+          "page": "40",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Escritores y pensadores como Kafka y Benjamin, por ejemplo, si bien daban testimonio del poder destructivo de la Modernidad, también movilizaron formas y temas de la rica tradición oral y mística judía para componer obras modernistas y vanguardistas. Podríamos llamarlas “críticas modernistas de la Modernidad” (Amorim Izabel, 2020, p. 152).",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "76",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "El futuro debe ser, de alguna manera, ancestral. Un siglo antes, ciertos modernistas latinoamericanos habían llegado a esta misma conclusión.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "84",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Un segundo momento de esta desconfianza dio lugar a una “crítica modernista de la Modernidad”, que implicó la incorporación de géneros, temas, cosmo-percepciones y ontologías no europeas —con diversos grados de apropiación o folklorización— en el arte de vanguardia como una forma de subvertir los aspectos negativos de la modernización.",
+          "lang": "es",
+          "source": "CL-01",
+          "page": "11",
+          "translator": null,
+          "coauthor": "Jörn Etzold",
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "AR-04",
+        "CL-02",
+        "CL-01",
+        "AR-03",
+        "CL-03"
+      ],
+      "related_talks": [
+        {
+          "id": "2026-05-28-leuphana-workshop"
+        }
+      ],
+      "near": [
+        "oswald-de-andrade",
+        "walter-benjamin",
+        "franz-kafka",
+        "aesthetic-extractivism"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rivers",
+      "slug": "rivers",
+      "kind": "keyword",
+      "term": "Rivers",
+      "term_lang": null,
+      "names": [
+        {
+          "lang": "es",
+          "text": "ríos",
+          "source": "CL-02",
+          "page": "92"
+        }
+      ],
+      "definition": "Rivers are where the extractive history traced by this research becomes most legible. Literature has long cast rivers as routes, borders or reserves; reading Euclides da Cunha's Amazonian essays alongside Prisca Agustoni's poems on the Rio Doce shows that reduction taking shape, and at moments failing. The thought of the Krenak people, for whom the Rio Doce is kin, offers the counter-term. This strand has been presented in talks since 2025; publications are in preparation.",
+      "quotes": [
+        {
+          "text": "From this perspective, in colonization literature, women, fruit, animals, rivers, mountains, and minerals are indistinguishable.",
+          "lang": "en",
+          "source": "CL-03",
+          "page": "241",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Para muchas de las comunidades indígenas directamente afectadas, como los Krenak, el río es una entidad íntima y familiar.",
+          "lang": "es",
+          "source": "CL-01",
+          "page": "31",
+          "translator": null,
+          "coauthor": "Jörn Etzold",
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "VO-01",
+        "CL-01",
+        "CL-03"
+      ],
+      "related_talks": [
+        {
+          "id": "2025-01-mecam-tunis"
+        },
+        {
+          "id": "2025-07-17-accra"
+        },
+        {
+          "id": "2026-05-06-ringvorlesung"
+        },
+        {
+          "id": "2026-05-27-leuphana-colloquium"
+        },
+        {
+          "id": "2026-06-02-medienwissenschaft"
+        },
+        {
+          "id": "2026-07-10-group-colloquium"
+        },
+        {
+          "id": "2026-09-01-mecila"
+        },
+        {
+          "id": "2026-09-21-unicamp"
+        },
+        {
+          "id": "2026-10-08-motyro"
+        }
+      ],
+      "near": [
+        "kinship-more-than-human",
+        "land-and-territory",
+        "euclides-da-cunha",
+        "prisca-agustoni",
+        "ailton-krenak"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "kinship-more-than-human",
+      "slug": "kinship-more-than-human",
+      "kind": "keyword",
+      "term": "Kinship (more-than-human)",
+      "term_lang": null,
+      "names": [
+        {
+          "lang": "pt",
+          "text": "parentescos",
+          "source": "AR-04",
+          "page": "32"
+        }
+      ],
+      "definition": "In this research, kinship names relations in which rivers, mountains, animals and soils are relatives rather than resources. It is the counter-term to extraction, which narrows the many possibilities of life in a place to a single activity. The vocabulary comes from Indigenous authors, Krenak writers foremost, and the research takes it at their word. Earlier readings prepare the question: Oswald de Andrade's search for kinship between humans and other animals, and Kafka's dog-narrator, who unsettles human exceptionalism.",
+      "quotes": [
+        {
+          "text": "em uma arqueo-biologia experimental, busca, por exemplo, parentescos entre humanos e outros animais (antecipando as contribuições da teoria do “Perspectivismo ameríndio”)",
+          "lang": "pt",
+          "source": "AR-04",
+          "page": "32",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Minha hipótese principal é a de que o narrador kafkiano rompe com a representação tradicional na literatura europeia do animal como metáfora ou como índice do humano e utiliza sua \"estranheza\", sua exterioridade, justamente para – ainda dentro de uma linguagem humana – colocar em questão a excepcionalidade humana.",
+          "lang": "pt",
+          "source": "AR-01",
+          "page": "64",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "AR-04",
+        "AR-01"
+      ],
+      "related_talks": [
+        {
+          "id": "2026-09-01-mecila"
+        },
+        {
+          "id": "2026-09-21-unicamp"
+        }
+      ],
+      "near": [
+        "rivers",
+        "land-and-territory",
+        "worlds-world-making",
+        "ailton-krenak"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "land-and-territory",
+      "slug": "land-and-territory",
+      "kind": "keyword",
+      "term": "Land and territory",
+      "term_lang": null,
+      "names": [
+        {
+          "lang": "es",
+          "text": "territorio",
+          "source": "CL-02",
+          "page": "70"
+        },
+        {
+          "lang": "es",
+          "text": "tierra",
+          "source": "CL-02",
+          "page": "88"
+        }
+      ],
+      "definition": "Land and territory are where this research's other terms meet. Territory is never a neutral surface here: extraction imposes a single use and a single worldview on it, renames it after its commodities, as Pindorama became Brazil, and severs the bonds between peoples and their lands. Against this, the research reads Indigenous and Quilombola writing that relates to territory without extracting from it, where a forest cannot be separated from those who live in it.",
+      "quotes": [
+        {
+          "text": "La extracción de caucho, plata o yerba mate extrae simultáneamente los vínculos culturales entre los pueblos indígenas y sus territorios.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "74",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Así, Pindorama, “la tierra de las palmeras”, un territorio que lleva el nombre de un árbol, se convierte en Brasil, el nombre de otro árbol con valor comercial, transformado en mercancía.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "78",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "El bosque no es un “fondo” (en el sentido bancario), un recurso objetivo y gratuito para la extracción, sino una construcción indistinguible de los sujetos que lo habitan (Neves, 2022).",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "87",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "If the peoples from the land specialized over millennia in planting and harvesting in multiple layers, in a kind of quilt of many fabrics, animals, plants, minerals, spirits, integrated through multiple hands and paws sewing the land, the European discovery of Brazil is then a sudden lifting of this fabric, destroying the subtlety of hiding and revealing, and the delicate web of relationships.",
+          "lang": "en",
+          "source": "CL-03",
+          "page": "240",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "las perspectivas contemporáneas —ya sean “ficción de desastres”, testimonios o reflexiones de intelectuales indígenas y quilombolas sobre formas no extractivas de relacionarse con el territorio— sugieren un cambio estructural",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "113",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "CL-02",
+        "CL-03",
+        "CL-01"
+      ],
+      "related_talks": [
+        {
+          "id": "2026-02-25-cebrap"
+        },
+        {
+          "id": "2026-05-28-leuphana-workshop"
+        },
+        {
+          "id": "2026-06-26-race-genre"
+        },
+        {
+          "id": "2026-10-08-motyro"
+        }
+      ],
+      "near": [
+        "extractivism",
+        "extractive-gaze",
+        "kinship-more-than-human",
+        "worlds-world-making",
+        "rivers"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "worlds-world-making",
+      "slug": "worlds-world-making",
+      "kind": "keyword",
+      "term": "Worlds / world-making",
+      "term_lang": null,
+      "names": [
+        {
+          "lang": "es",
+          "text": "mundos de vida",
+          "source": "CL-01",
+          "page": "15"
+        },
+        {
+          "lang": "en",
+          "text": "infrastructures for world-making",
+          "source": "WEB-P4",
+          "page": null
+        }
+      ],
+      "definition": "World-making is the research's term for what literature can do beyond describing: build, through form and reference, the conditions for experiencing other worlds. Extraction moves the other way, obliterating the many worlds a territory holds in favour of infrastructure oriented to one. Contemporary works, especially by Indigenous and Quilombola authors, are read as infrastructures for world-making that put relationality, reciprocity and the plurality of worlds in the foreground.",
+      "quotes": [
+        {
+          "text": "These works are understood as infrastructures for world-making, extending beyond the literary text to reorganize readers' perceptions through new forms and extraliterary references, thus enabling or even creating experiences with other worlds.",
+          "lang": "en",
+          "source": "WEB-P4",
+          "page": null,
+          "translator": null,
+          "coauthor": null,
+          "source_url": "https://infra-aesthetics.de/project4/"
+        },
+        {
+          "text": "Las formas de existencia tradicionales y no modernas, que representan los “muchos mundos” de Arturo Escobar (2020), son obliteradas incesantemente por la imposición y reproducción de una infraestructura orientada hacia un único mundo.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "70–71",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "El extractivismo destruye mundos de vida y crea otros nuevos, deshabilitando, habilitando y modelando así la percepción y la constitución de mundos.",
+          "lang": "es",
+          "source": "CL-01",
+          "page": "15",
+          "translator": null,
+          "coauthor": "Jörn Etzold",
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "CL-02",
+        "CL-01",
+        "VO-01"
+      ],
+      "related_talks": [
+        {
+          "id": "2026-05-28-leuphana-workshop"
+        },
+        {
+          "id": "2026-02-25-cebrap"
+        }
+      ],
+      "near": [
+        "literature-as-infrastructure",
+        "land-and-territory",
+        "kinship-more-than-human"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "euclides-da-cunha",
+      "slug": "euclides-da-cunha",
+      "kind": "author",
+      "term": "Euclides da Cunha",
+      "term_lang": null,
+      "names": [],
+      "definition": "Euclides da Cunha (1866–1909) opens the research's history of rivers. His Amazonian essays, collected in À margem da história (1909), grew out of his survey of the Purus River for the Brazilian state; the research reads them as a scene in which an extractive view of the Amazon takes shape and is, at moments, unsettled by the river it describes. He has been the subject of talks since May 2026, paired with Prisca Agustoni and with Oswald de Andrade.",
+      "quotes": [],
+      "related_pubs": [],
+      "related_talks": [
+        {
+          "id": "2026-05-06-ringvorlesung"
+        },
+        {
+          "id": "2026-05-27-leuphana-colloquium"
+        },
+        {
+          "id": "2026-06-02-medienwissenschaft"
+        },
+        {
+          "id": "2026-06-26-race-genre"
+        },
+        {
+          "id": "2026-07-10-group-colloquium"
+        },
+        {
+          "id": "2026-09-01-mecila"
+        },
+        {
+          "id": "2026-09-21-unicamp"
+        },
+        {
+          "id": "2026-10-08-motyro"
+        }
+      ],
+      "near": [
+        "rivers",
+        "prisca-agustoni",
+        "extractive-gaze",
+        "land-and-territory"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "oswald-de-andrade",
+      "slug": "oswald-de-andrade",
+      "kind": "author",
+      "term": "Oswald de Andrade",
+      "term_lang": null,
+      "names": [],
+      "definition": "Oswald de Andrade (1890–1954) is the research's central modernist case. Pau-Brasil (1925), named after the colony's first export commodity, is read as a synthesis of the underground relations between extractivism and modernism: its montage of colonial chronicles both reproduces and exposes the extractive gaze. Earlier work read his matriarchal Anthropophagy, with Walter Benjamin, as a modernist critique of modernity; the research distinguishes Anthropophagy, a reciprocal exchange, from extraction.",
+      "quotes": [
+        {
+          "text": "En este ensayo, intentaré demostrar que, en el caso de la literatura brasileña moderna, el libro de Oswald de Andrade, Pau-Brasil, funciona en cierto modo como una síntesis de estas contradicciones y de estas relaciones subterráneas entre el extractivismo y el modernismo.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "65",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "De hecho, la antropofagia no es extractivista porque implica —al menos en la versión tupinambá— una relación temporal de intercambio e identificación basada en el otro. El devorador, al devorar, también es devorado.",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "110",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Sua antropofagia matriarcal pode ser entendida como tomada de posição",
+          "lang": "pt",
+          "source": "AR-04",
+          "page": "15",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "CL-02",
+        "CL-03",
+        "AR-04",
+        "VO-01"
+      ],
+      "related_talks": [
+        {
+          "id": "2024-12-03-gssc-koeln"
+        },
+        {
+          "id": "2026-06-26-race-genre"
+        }
+      ],
+      "near": [
+        "aesthetic-extractivism",
+        "extractive-gaze",
+        "modernist-critique-of-modernity",
+        "walter-benjamin"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "prisca-agustoni",
+      "slug": "prisca-agustoni",
+      "kind": "author",
+      "term": "Prisca Agustoni",
+      "term_lang": null,
+      "names": [],
+      "definition": "Prisca Agustoni is the research's main contemporary interlocutor on rivers. Her collection O gosto amargo dos metais (2022) responds to the mining-dam disasters in Minas Gerais and the poisoning of the Rio Doce. Read against Euclides da Cunha's Amazon, it records what a century of extraction has done to a river and to the people and beings that depend on it. Her work has been discussed in talks since May 2026.",
+      "quotes": [],
+      "related_pubs": [],
+      "related_talks": [
+        {
+          "id": "2026-05-06-ringvorlesung"
+        },
+        {
+          "id": "2026-05-27-leuphana-colloquium"
+        },
+        {
+          "id": "2026-06-02-medienwissenschaft"
+        },
+        {
+          "id": "2026-07-10-group-colloquium"
+        },
+        {
+          "id": "2026-09-01-mecila"
+        },
+        {
+          "id": "2026-09-21-unicamp"
+        }
+      ],
+      "near": [
+        "rivers",
+        "euclides-da-cunha",
+        "kinship-more-than-human",
+        "ailton-krenak"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "ailton-krenak",
+      "slug": "ailton-krenak",
+      "kind": "author",
+      "term": "Ailton Krenak",
+      "term_lang": null,
+      "names": [],
+      "definition": "Ailton Krenak, writer and thinker of the Krenak people of the Rio Doce valley in Minas Gerais, is a principal source for the research's vocabulary of non-extractive relation. In his books, such as Ideias para adiar o fim do mundo (2019), and in Krenak testimony after the 2015 dam collapse, the river is a relative; the research follows that usage when it reads rivers in literature. The introduction to Estéticas del extractivismo en América Latina cites him.",
+      "quotes": [
+        {
+          "text": "En las “zonas extractivas” de América Latina —a menudo en tierras indígenas o territorios habitados por quilombos— el extractivismo es una experiencia sensorial (Krenak, 2021).",
+          "lang": "es",
+          "source": "CL-01",
+          "page": "10",
+          "translator": null,
+          "coauthor": "Jörn Etzold",
+          "source_url": null
+        },
+        {
+          "text": "Para muchas de las comunidades indígenas directamente afectadas, como los Krenak, el río es una entidad íntima y familiar.",
+          "lang": "es",
+          "source": "CL-01",
+          "page": "31",
+          "translator": null,
+          "coauthor": "Jörn Etzold",
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "CL-01",
+        "VO-01"
+      ],
+      "related_talks": [
+        {
+          "id": "2026-09-01-mecila"
+        },
+        {
+          "id": "2026-09-21-unicamp"
+        }
+      ],
+      "near": [
+        "kinship-more-than-human",
+        "rivers",
+        "worlds-world-making",
+        "prisca-agustoni"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "franz-kafka",
+      "slug": "franz-kafka",
+      "kind": "author",
+      "term": "Franz Kafka",
+      "term_lang": null,
+      "names": [],
+      "definition": "Franz Kafka has accompanied this work since the doctoral thesis on Kafka and Walter Benjamin (2018), which read his writing as an attempt to interrupt the time of modernity. Later essays turn to his non-human figures: Odradek as an uncapturable chimera, and the dog-narrator who parodies anthropocentrism as “kynocentrism”. In 2026 the question turned to extraction, in a talk at Kafkiana VI on extractivism in Kafka's work.",
+      "quotes": [
+        {
+          "text": "Como experimento literário, a história parodia o antropocentrismo sob a forma de \"kynocentrismo\", revelando os limites de uma razão especista que se pretende total.",
+          "lang": "pt",
+          "source": "AR-01",
+          "page": "63",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Através da ideia de quimera, esse ensaio tentará compreender a constituição aberta do personagem Odradek, da narrativa curta “A preocupação do pai de família” de Franz Kafka.",
+          "lang": "pt",
+          "source": "AR-07",
+          "page": "74",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Buscamos elementos do não-moderno dentro de suas obras modernistas, elementos subversivos à Modernidade em seu próprio seio.",
+          "lang": "pt",
+          "source": "AR-04",
+          "page": "4",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "AR-01",
+        "AR-02",
+        "AR-07",
+        "AR-08",
+        "TD-03",
+        "TD-04",
+        "RV-27",
+        "RV-33",
+        "RV-34"
+      ],
+      "related_talks": [
+        {
+          "id": "2026-09-17-kafkiana"
+        }
+      ],
+      "near": [
+        "walter-benjamin",
+        "modernist-critique-of-modernity",
+        "kinship-more-than-human"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "walter-benjamin",
+      "slug": "walter-benjamin",
+      "kind": "author",
+      "term": "Walter Benjamin",
+      "term_lang": null,
+      "names": [],
+      "definition": "Walter Benjamin is the research's longest-standing theoretical companion. The doctoral thesis paired him with Kafka, and essays followed on divine violence as interruption and on his affinities with Oswald de Andrade's method. In the work on extractivism he supplies tools rather than a topic: the aestheticization that the extractive gaze performs on land, the emergency brake as an image of revolution, the ancient custom of returning to the earth part of what one takes.",
+      "quotes": [
+        {
+          "text": "Este ensaio tentará mostrar, a partir de alguns pontos da tese A crise da filosofia messiânica de Oswald de Andrade, certas afinidades entre seu método desviante e aquele do filósofo alemão Walter Benjamin.",
+          "lang": "pt",
+          "source": "AR-04",
+          "page": "1",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "Para fugir justamente deste ciclo de interrupção-repetição da violência, Benjamin propõe a ideia de “violência divina”, uma violência que não é meio para o fim que é sua auto-instauração, mas que é fim em si mesma: pura interrupção do movimento histórico.",
+          "lang": "pt",
+          "source": "CL-04",
+          "page": "58",
+          "translator": null,
+          "coauthor": null,
+          "source_url": null
+        },
+        {
+          "text": "En este hermoso fragmento de Calle de sentido único, Walter Benjamin presenta una serie de ejemplos europeos “no modernos” sobre la relación entre el consumo “sostenible” y la tierra",
+          "lang": "es",
+          "source": "CL-02",
+          "page": "71",
+          "translator": "Santiago Basso",
+          "coauthor": null,
+          "source_url": null
+        }
+      ],
+      "related_pubs": [
+        "AR-03",
+        "AR-04",
+        "AR-05",
+        "CL-04",
+        "CL-02"
+      ],
+      "related_talks": [],
+      "near": [
+        "franz-kafka",
+        "modernist-critique-of-modernity",
+        "oswald-de-andrade",
+        "extractive-gaze"
+      ],
+      "status": "published"
+    }
+  ]
+}

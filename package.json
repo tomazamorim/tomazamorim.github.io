@@ -1,0 +1,18 @@
+{
+  "name": "tomazamorim-academic-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Personal academic website and research project site for Tomaz Amorim.",
+  "scripts": {
+    "dev": "SITE_MODE=preview astro dev",
+    "build:preview": "node scripts/build.mjs preview",
+    "build:public": "node scripts/build.mjs public",
+    "build": "npm run build:public",
+    "serve:public": "node scripts/serve.mjs dist/public 4322",
+    "check:public": "node scripts/check-public.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.14.0"
+  }
+}

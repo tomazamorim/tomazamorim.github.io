@@ -1,0 +1,675 @@
+{
+  "header": {
+    "lines": [
+      "Dr. Tomaz Amorim",
+      "Principal Investigator, subproject TP 4 “Extractivism and Infrastructure in Brazilian Literature”",
+      "DFG Research Unit FOR 5710 “Infrastructure: Aesthetics and Supply”",
+      "Institut für Theaterwissenschaft, Ruhr-Universität Bochum",
+      "Universitätsstraße 150, 44801 Bochum, Germany"
+    ],
+    "contact_md": "tomaz.amorim@rub.de · tomazamorim.github.io · ORCID 0000-0001-5617-4323 · Google Scholar: scholar.google.com/citations?user=023JBREAAAAJ · Lattes: lattes.cnpq.br/4805211374545553"
+  },
+  "sections": [
+    {
+      "id": "positions",
+      "title": "Positions",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "**Dec 2025–present.** Principal Investigator, subproject TP 4 “Extractivism and Infrastructure in Brazilian Literature”, DFG Research Unit FOR 5710 “Infrastructure: Aesthetics and Supply”. Institut für Theaterwissenschaft, Ruhr-Universität Bochum."
+            },
+            {
+              "md": "**2025–present.** Associated Investigator, Maria Sibylla Merian Centre Conviviality-Inequality in Latin America (Mecila), São Paulo."
+            },
+            {
+              "md": "**2025–present.** Associated Researcher and Member of the Executive Board, Brazilian Center for Analysis and Planning (CEBRAP), São Paulo."
+            },
+            {
+              "md": "**2024–2025.** Associated Researcher and Special Project Coordinator, CEBRAP, São Paulo."
+            },
+            {
+              "md": "**2022–2025.** Academic Coordinator, Maria Sibylla Merian Centre Conviviality-Inequality in Latin America (Mecila), São Paulo (from April 2022)."
+            },
+            {
+              "md": "**Jul–Dec 2021.** Early Career Fellow, Research Area “Competing Communities”, Cluster of Excellence “Temporal Communities: Doing Literature in a Global Perspective” (EXC 2020), Freie Universität Berlin."
+            },
+            {
+              "md": "**2019–2022.** Postdoctoral Researcher (CAPES fellowship), Instituto de Estudos da Linguagem, Universidade Estadual de Campinas (Unicamp)."
+            },
+            {
+              "md": "**2012–2022.** Teacher and pedagogical consultant, UNEAFRO Brasil."
+            }
+          ]
+        },
+        {
+          "t": "label",
+          "md": "Visiting positions"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "**Nov 2024.** Guest Lecturer (Gastdozentur DAAD-ISAP), Portugiesisch-Brasilianisches Institut, Universität zu Köln."
+            },
+            {
+              "md": "**Apr–Sep 2017.** Doctoral research stay (short-term CAPES fellowship), Humboldt-Universität zu Berlin."
+            },
+            {
+              "md": "**Sep 2010–Aug 2011.** Research stay (Albertus Magnus Programme), Universität zu Köln."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "**Ph.D. in Literary Theory and Comparative Literature (Doutorado em Letras), Universidade de São Paulo (USP), 2014–2018** (defended 3 October 2018). Dissertation: *Franz Kafka e Walter Benjamin: Contar do tempo interrompido* (“Narrating Interrupted Time”). Advisor: Jorge Mattos Brito de Almeida. Research period at Humboldt-Universität zu Berlin (Prof. Joseph Vogl), 2017. CAPES fellowship."
+            },
+            {
+              "md": "**M.A. in Literary Theory and History (Mestrado em Teoria e História Literária), Unicamp, 2010–2013.** Dissertation: *Origem negativa na literatura de Franz Kafka: “O castelo” e outras narrativas* (2013). Advisor: Jeanne Marie Gagnebin de Bons. FAPESP fellowship. Research period at Universität zu Köln (Prof. Manuela Günter), 2010–2011."
+            },
+            {
+              "md": "**B.A. in Literary Studies (Estudos Literários), Unicamp, 2006–2009.** Thesis: *Das portas na obra de Franz Kafka* (2009). Advisor: Jeanne Marie Gagnebin de Bons. FAPESP fellowship."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grants-and-fellowships",
+      "title": "Grants and Fellowships",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "**2025–present.** DFG Research Unit FOR 5710 “Infrastructure: Aesthetics and Supply” (GEPRIS project no. 524611401), Deutsche Forschungsgemeinschaft. Principal Investigator of subproject TP 4 “Extractivism and Infrastructure in Brazilian Literature”. Spokesperson of the Research Unit: Jörn Etzold.",
+              "kind": "funding",
+              "role": "Principal Investigator, subproject TP 4"
+            },
+            {
+              "md": "**Jul–Dec 2021.** Early Career Fellowship, Cluster of Excellence “Temporal Communities” (EXC 2020), Freie Universität Berlin, funded by the Deutsche Forschungsgemeinschaft (DFG); project “Modernist Critique of Modernity: Oswald de Andrade and Walter Benjamin”.",
+              "kind": "fellowship"
+            },
+            {
+              "md": "**2019–2022.** Postdoctoral fellowship, CAPES (Unicamp); project “Oswald de Andrade and Walter Benjamin: Modernist Critique of Modernity”.",
+              "kind": "fellowship"
+            },
+            {
+              "md": "**2017.** Short-term doctoral fellowship (CAPES), Humboldt-Universität zu Berlin.",
+              "kind": "fellowship"
+            },
+            {
+              "md": "**2014–2018.** Doctoral fellowship, CAPES.",
+              "kind": "fellowship"
+            },
+            {
+              "md": "**2010–2013.** Master’s fellowship, FAPESP.",
+              "kind": "fellowship"
+            },
+            {
+              "md": "**Sep 2010–Aug 2011.** Albertus Magnus Programme fellowship, Universität zu Köln (research stay).",
+              "kind": "fellowship"
+            },
+            {
+              "md": "**2008–2009.** Undergraduate research (scientific initiation) fellowship, FAPESP.",
+              "kind": "fellowship"
+            }
+          ]
+        },
+        {
+          "t": "label",
+          "md": "Award"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "**2020.** 1st place, 4th Desvairada Video-Poetry Competition (4º Concurso Desvairada de Videopoesia), Biblioteca Mário de Andrade.",
+              "kind": "award"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "publications",
+      "title": "Publications",
+      "blocks": [
+        {
+          "t": "h3",
+          "md": "Books"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "Amorim Izabel, Tomaz. 2023. *Arquipélago: Literatura Brasileira Contemporânea (2013-2023)*. 1st ed. Campinas: Ofícios Terrestres Edições. ISBN 978-65-88777-43-5.",
+              "ref_id": "LV-01"
+            }
+          ]
+        },
+        {
+          "t": "h3",
+          "md": "Edited Volumes"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "Amorim Izabel, Tomaz, and Jörn Etzold, eds. 2026. *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. ISBN 978-631-308-346-6.",
+              "ref_id": "VO-01"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz, and Vanessa Nascimento, eds. 2020. *Uneafro: 12 anos de luta*. 1st ed. São Paulo: Oralituras.",
+              "ref_id": "VO-02"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz, ed. 2020. *Ponto virgulina* #1: Afrofuturismo [revista de tradução literária].",
+              "ref_id": "VO-03"
+            }
+          ]
+        },
+        {
+          "t": "h3",
+          "md": "Journal Articles"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "Amorim Izabel, Tomaz. 2025. “Ração e Razão: sobre as ‘Investigações de um cão’ de Franz Kafka.” *Philologie im Netz*, Beiheft 36: 63–75.",
+              "ref_id": "AR-01"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2023. “Notas sobre *O castelo* de Franz Kafka: temporalidade subjuntiva e comunidade.” *Matraga* 30 (60): 568–582. https://doi.org/10.12957/matraga.2023.73461.",
+              "ref_id": "AR-02"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2020. “Interrupção e montagem nas teses ‘Sobre o conceito de história’ / Interruption and Assemblage in the Theses ‘On the Concept of History’.” *Cadernos Benjaminianos* 15 (2): 135–157. https://doi.org/10.17851/2179-8478.15.2.135-157.",
+              "ref_id": "AR-03"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2020. “Crise da filosofia messiânica: a antropofagia matriarcal devora a Modernidade.” *Dissonância: Revista de Teoria Crítica* 4 (dossiê “Teoria Decolonial e Teoria Crítica”).",
+              "ref_id": "AR-04"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2019. “Contagem e contação: notas sobre contar o tempo na modernidade.” *Caderno de Letras* (UFPel) 34: 19–46.",
+              "ref_id": "AR-05"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2019. “O direito e o além da literatura.” *Nau Literária* 15 (2): 119–132. https://doi.org/10.22456/1981-4526.102610.",
+              "ref_id": "AR-06"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2016. “Odradek, quimera incapturável.” *Pandaemonium Germanicum* 19 (28): 74–100. https://doi.org/10.11606/1982-8837192874.",
+              "ref_id": "AR-07"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2012. “A ausência da origem em *O castelo*, de Franz Kafka.” *Estação Literária* 10 (suppl. 1): 7–18. https://ojs.uel.br/revistas/uel/index.php/estacaoliteraria/article/view/25713.",
+              "ref_id": "AR-08"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2009. “Considerações sobre imagem e gesto na obra de Franz Kafka.” *Língua, Literatura e Ensino* (Unicamp) 4: 1–7.",
+              "ref_id": "AR-09"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2007. “Os símiles na Odisséia.” *Língua, Literatura e Ensino* (Unicamp) 2: 17–24.",
+              "ref_id": "AR-10"
+            }
+          ]
+        },
+        {
+          "t": "h3",
+          "md": "Book Chapters and Afterword"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "Amorim Izabel, Tomaz, and Jörn Etzold. 2026. “Introducción.” In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 9–42. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila.",
+              "ref_id": "CL-01"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2026. “Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade.” Translated by Santiago Basso. In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 61–119. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila.",
+              "ref_id": "CL-02"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2025. “Coffee Poetics in Brazilian Modernism.” In *Lateinamerika denken und beschreiben: Festschrift für Susanne Klengel*, edited by Joanna M. Moszczyńska and Philipp Seidel, vol. 1, 235–245. Berlin: Frank & Timme.",
+              "ref_id": "CL-03"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2019. “A repetição da violência e sua interrupção divina.” In *Benjaminiana: outros ensaios sobre arte, política, linguagem e história*, edited by Francisco Camêlo, Leonardo Apolinário Alves de Lima, Patrick Gert Bange, and Ricardo Pinto de Souza, 53–70. São João de Meriti, RJ: Desalinho. ISBN 978-85-92789-26-8 (digital); 978-85-92789-25-1 (print).",
+              "ref_id": "CL-04"
+            }
+          ]
+        },
+        {
+          "t": "h3",
+          "md": "Translations"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "Bachofen, Johann Jakob. 2021. “Prefácio e Introdução” de *O direito materno* [*Das Mutterrecht*]. Translated by Tomaz Amorim Izabel. *Sibila: Revista de Poesia e Crítica Literária*.",
+              "ref_id": "TD-01"
+            },
+            {
+              "md": "Whitman, Walt. 2017. *Canção da estrada aberta*. Translated by Tomaz Amorim Izabel. Bragança Paulista: Editora Urutau.",
+              "ref_id": "TD-02"
+            },
+            {
+              "md": "Kafka, Franz. 2013. *Aforismos de Zürau*. Translated by Tomaz Amorim Izabel. Campinas: Editora Medita.",
+              "ref_id": "TD-03"
+            },
+            {
+              "md": "Butler, Judith. 2013. “A quem pertence Kafka?” Translated by Tomaz Amorim Izabel. *Terceira Margem* 17 (28): 222–260. https://revistas.ufrj.br/index.php/tm/article/view/10767.",
+              "ref_id": "TD-04"
+            },
+            {
+              "md": "Scholem, Gershom. 2013. “Confissão sobre a nossa língua: carta de Scholem a Rosenzweig.” Translated by Tomaz Amorim Izabel. *Vértices* (Centro de Estudos Judaicos, Universidade de São Paulo) 15: 124–134.",
+              "ref_id": "TD-05"
+            }
+          ]
+        },
+        {
+          "t": "h3",
+          "md": "Poetry"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "Amorim Izabel, Tomaz. 2023. *Marte atacado*. 1st ed. Salvador, BA: Mormaço. 20 pp. ISBN 978-65-99232-97-8.",
+              "ref_id": "PO-01"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2020. *Meia lua soco*. 1st ed. São Paulo: Primata. 71 pp. ISBN 978-65-88866-00-9.",
+              "ref_id": "PO-02"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2018. *Plástico pluma*. 1st ed. Bragança Paulista: Urutau. 150 pp.",
+              "ref_id": "PO-03"
+            },
+            {
+              "md": "Alves, E., H. Monnerat, and Tomaz Amorim Izabel. 2015. “Manifesto Baphywave.” *Sibila: Revista de Poesia e Crítica Literária*.",
+              "ref_id": "PO-04"
+            }
+          ]
+        },
+        {
+          "t": "h3",
+          "md": "Reviews, Essays and Interviews in the Press"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "Amorim Izabel, Tomaz. 2024. “Dossiê Franz Kafka: a propósito do centésimo aniversário de sua morte.” *Revista Cult* (São Paulo), Jun 2024, 28–45.",
+              "ref_id": "RV-33"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2024. “O riso de Odradek: aprender a ler, rir e se desesperar com Kafka.” *Revista Cult* (São Paulo), Jun 2024.",
+              "ref_id": "RV-34"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2023. “A libertação: contos de *Mulher feita*, de Marilene Felinto.” *Rascunho* (Curitiba), 1 Feb 2023. https://rascunho.com.br/ensaios-e-resenhas/a-libertacao/",
+              "ref_id": "RV-31"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2022. “Literatura ou série da Netflix? Sobre *Gótico nordestino*, de Cristhiano Aguiar.” *Rascunho* (Curitiba), 1 Apr 2022. https://rascunho.com.br/ensaios-e-resenhas/literatura-ou-serie-da-netflix/",
+              "ref_id": "RV-28"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2022. “Refugiado universal: sobre *Onze astros*, de Mahmud Darwich.” *Rascunho* (Curitiba), 1 Aug 2022.",
+              "ref_id": "RV-29"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2022. “Ternura realista: *O livro do Martim*, de Daniel Francoy.” *Rascunho* (Curitiba), 1 Dec 2022. https://rascunho.com.br/ensaios-e-resenhas/ternura-realista/",
+              "ref_id": "RV-30"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2021. “Ouvindo da plateia o *Solo para Vialejo*, de Cida Pedrosa.” *Revista Fórum*, 1 Mar 2021.",
+              "ref_id": "RV-21"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2021. “Kafkiano até na morte.” *Rascunho* (Curitiba), 1 Nov 2021.",
+              "ref_id": "RV-27"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2020. “A lír(ic)a de Carlos Orfeu em *Invisíveis cotidianos*.” *Revista Fórum*, 28 Mar 2020.",
+              "ref_id": "RV-16"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2020. “O fim deste mundo.” *Revista Fórum*, 7 Apr 2020.",
+              "ref_id": "RV-17"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2020. “O *Fliperama* cyberpunk de Fabiano Calixto.” *Revista Fórum*, 8 Sep 2020.",
+              "ref_id": "RV-18"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2020. “Maternidade e morte em *A mulher submersa*, de Mar Becker.” *Revista Fórum*, 2 Oct 2020.",
+              "ref_id": "RV-19"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2020. “*Deus devolve o revólver*, de Régis Bonvicino.” *Revista Fórum*, 28 Oct 2020.",
+              "ref_id": "RV-20"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2020. “Ulysses pernambucano: sobre *Agá*, de Hermilo Borba Filho.” *Rascunho* (Curitiba), 1 May 2020.",
+              "ref_id": "RV-26"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2020. “A solidão de quem morre e de quem fica.” *Revista Cult* (São Paulo), 14 Aug 2020.",
+              "ref_id": "RV-32"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2019. “O ridículo do falo em *O pau do Brasil*, de Wilson Alves-Bezerra.” *Revista Fórum*, 3 Jan 2019.",
+              "ref_id": "RV-10"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2019. “É preciso quase amar no Méier, como Rafael Zacca.” *Revista Fórum*, 24 Jan 2019.",
+              "ref_id": "RV-11"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2019. “O videogame como obra de arte e a série *Russian Doll*.” *Revista Fórum*, 12 Feb 2019.",
+              "ref_id": "RV-12"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2019. “‘Estamos em uma dimensão ruim’ ou as realidades paralelas como resposta da ficção à catástrofe social.” *Revista Fórum*, 2 Jul 2019.",
+              "ref_id": "RV-13"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2019. “Amor militante em *Divino Amor*, de Gabriel Mascaro.” *Revista Fórum*, 19 Jul 2019.",
+              "ref_id": "RV-14"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2019. “Entrevista com Lubi Prates: ‘Meu corpo — não meu país — é meu lugar de fala’.” *Revista Fórum*, 24 Sep 2019.",
+              "ref_id": "RV-15"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2019. “Poesia como estratégia de sobrevivência em *Retratos com erro*, de Eucanaã Ferraz.” *Rascunho* (Curitiba), 29 Oct 2019. https://rascunho.com.br/ensaios-e-resenhas/poesia-como-estrategia-de-sobrevivencia/",
+              "ref_id": "RV-25"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2018. “A menstruação de Valter Hugo Mãe, de Carla Diacov.” *Revista Fórum*, 12 Jan 2018.",
+              "ref_id": "RV-04"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2018. “O Sul do Brasil como ‘enclave’ na poesia de Marcelo Labes.” *Revista Fórum*, 2 Apr 2018.",
+              "ref_id": "RV-05"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2018. “A perifilia do *Perifobia*, de Lilia Guerra.” *Revista Fórum*, 10 May 2018.",
+              "ref_id": "RV-06"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2018. “Hoje qualquer um pode montar uma editora no Brasil: conversa com Eduardo Lacerda, da Editora Patuá.” *Revista Fórum*, 19 May 2018.",
+              "ref_id": "RV-07"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2018. “*A Casa que Jack Construiu*, de Lars von Trier, e o inferno na Terra.” *Revista Fórum*, 2018.",
+              "ref_id": "RV-08"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2018. “Que tipo de filme é *Shirkers*?” *Revista Fórum*, 2018.",
+              "ref_id": "RV-09"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2017. “A clandestina poesia de Facebook.” *Revista Fórum*, 1 Nov 2017.",
+              "ref_id": "RV-01"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2017. “A história feminina do Brasil em *Sangria*, de Luiza Romão.” *Revista Fórum*, 22 Dec 2017.",
+              "ref_id": "RV-02"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2017. “Afrofuturismo ou raio laser mais barato.” *Revista Fórum*, 2017.",
+              "ref_id": "RV-03"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2008. “Forma e Liberdade: crítica de *Contos Anarquistas*.” *Língua, Literatura e Ensino* (Unicamp) 3: 4.",
+              "ref_id": "RE-00"
+            }
+          ]
+        },
+        {
+          "t": "h3",
+          "md": "Other Publications"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "Amorim Izabel, Tomaz. 2015. [jacket text]. In *O manifesto lenitivo*, by André Nogueira. Bragança Paulista.",
+              "ref_id": "OU-03"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2013. “Escravidão e Ditadura: por mais Comissões da Verdade.” Blog Negro Belchior, *CartaCapital*, 8 Nov 2013.",
+              "ref_id": "OU-01"
+            },
+            {
+              "md": "Amorim Izabel, Tomaz. 2013. “Novos mercados da violência no Brasil: as armas não letais.” Blog Negro Belchior, *CartaCapital*.",
+              "ref_id": "OU-02"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "talks",
+      "title": "Talks",
+      "blocks": [
+        {
+          "t": "h3",
+          "md": "2026"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "21 Sep 2026. “Imigração telúrica: a representação literária dos rios em Euclides da Cunha e Prisca Agustoni.” Open lecture (Aula aberta), Seminário Intermitente “Metamorfoses da Literatura no Tempo das Imagens”, Instituto de Estudos da Linguagem, Unicamp, Campinas."
+            },
+            {
+              "md": "6 May 2026. “Telluric migration: The Rivers of Euclides da Cunha and Prisca Agustoni.” Ringvorlesung “Transitorische Räume”, Ruhr-Universität Bochum."
+            }
+          ]
+        },
+        {
+          "t": "h3",
+          "md": "2025 and earlier"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "3 Dec 2024. “Underground Relations: Extractivism and Modernism in Brazilian Literature.” GSSC Seminar Series, Global South Studies Center, Universität zu Köln, Cologne."
+            },
+            {
+              "md": "Aug 2015. “Franz Kafka e Walter Benjamin: Narrativa da temporalidade interrompida.” Colóquio Internacional Marx e o Marxismo 2015: Insurreições, passado e presente, Universidade Federal Fluminense, Niterói."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teaching",
+      "title": "Teaching",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "**Nov 2024.** Guest Lecturer (Gastdozentur DAAD-ISAP), Portugiesisch-Brasilianisches Institut, Universität zu Köln."
+            }
+          ]
+        },
+        {
+          "t": "label",
+          "md": "Universidade Estadual de Campinas (Unicamp). Undergraduate (B.A.) courses."
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "**1st semester 2020.** *Franz Kafka: Life and Work*."
+            },
+            {
+              "md": "**1st semester 2022.** *Walter Benjamin and Oswald de Andrade: Modernist Critique of Modernity*."
+            },
+            {
+              "md": "**1st semester 2022.** *Brazilian Avant-garde Magazines (1900–1940)*."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "md": "Supervision: co-supervisor of one doctoral thesis in progress (Universidade Federal de Juiz de Fora, since 2020); supervisor of one undergraduate research project (Unicamp, 2021). Examination committees are listed under Editorial work and service."
+        }
+      ]
+    },
+    {
+      "id": "editorial-work-and-service",
+      "title": "Editorial Work and Service",
+      "blocks": [
+        {
+          "t": "label",
+          "md": "Editorial"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "Co-editor (with Jörn Etzold), *Estéticas del extractivismo en América Latina: Literatura, cine y archivo* (Biblioteca Mecila-CLACSO 10, 2026)."
+            },
+            {
+              "md": "Co-editor (with Vanessa Nascimento), *Uneafro: 12 anos de luta* (2020)."
+            },
+            {
+              "md": "Editor, *Ponto virgulina* no. 1: Afrofuturismo (2020)."
+            },
+            {
+              "md": "Peer review: *Revista Sofia* (Universidade Federal do Espírito Santo), 2022."
+            }
+          ]
+        },
+        {
+          "t": "label",
+          "md": "Event organization"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "**30 Mar 2026.** Workshop “Knowledge Infrastructures of Extraction & Return: Indigenous Materialities between Brazil and Europe”, Blue Square, Bochum (organizers: Tomaz Amorim and Jörn Etzold)."
+            },
+            {
+              "md": "**17–18 Nov 2025.** Mecila Final Workshop 2025, CEBRAP, São Paulo. Co-organizer (as Mecila Academic Coordinator)."
+            },
+            {
+              "md": "**8–11 Sep 2025.** Mecila Annual Meeting and Young Researchers Forum, “Relational Approaches to Conviviality-Inequality in Latin America”, São Paulo. Co-organizer (as Mecila Academic Coordinator)."
+            },
+            {
+              "md": "**8–9 Apr 2025.** Mecila’s Kick-Off Workshop 2025, “Relationalities”, CEBRAP, São Paulo. Co-organizer (as Mecila Academic Coordinator)."
+            },
+            {
+              "md": "**11 Dec 2024.** Workshop “Aesthetics of Extractivism in Latin America: When Marked Bodies Talk”, Erich-Auerbach-Institut, Universität zu Köln."
+            },
+            {
+              "md": "**26–27 Nov 2024.** Mecila’s Final Workshop 2024, “Outlooks”, CEBRAP, São Paulo. Co-organizer (as Mecila Academic Coordinator)."
+            },
+            {
+              "md": "**7–11 Oct 2024.** Mecila Annual Meeting and Young Researchers Forum, “Informalities, Conviviality and Inequality in Latin America”, São Paulo. Co-organizer (as Mecila Academic Coordinator)."
+            },
+            {
+              "md": "**2–4 Apr 2024.** Mecila’s Kick-Off Workshop 2024, “(In)formalities: Work, Art and Care”, CEBRAP, São Paulo. Co-organizer (as Mecila Academic Coordinator)."
+            },
+            {
+              "md": "**2024.** 5th Kafkiana; Workshop “Arquipélago, as ilhas da literatura brasileira contemporânea”."
+            },
+            {
+              "md": "**21–22 Nov 2023.** Mecila Final Workshop 2023, “Aesthetics of Extractivism”, USP, São Paulo. Co-organizer (as Mecila Academic Coordinator)."
+            },
+            {
+              "md": "**2–6 Oct 2023.** Mecila Annual Meeting and Young Researchers Forum, “Medialities of Conviviality – Inequality in Latin America”, São Paulo. Co-organizer (as Mecila Academic Coordinator)."
+            },
+            {
+              "md": "**16–17 Mar 2023.** Mecila’s Kick-Off Workshop 2023, CEBRAP, São Paulo. Co-organizer (as Mecila Academic Coordinator)."
+            },
+            {
+              "md": "**22–23 Nov 2022.** Mecila’s Final Workshop 2022, “Conviviality, Knowledge, Difference”, Universidade de São Paulo. Co-organizer (as Mecila Academic Coordinator)."
+            },
+            {
+              "md": "**10–14 Oct 2022.** Mecila Annual Meeting and Young Researchers Forum, “Colonialities and their Contestation: Negotiating Conviviality in Latin America”, São Paulo. Co-organizer (as Mecila Academic Coordinator)."
+            },
+            {
+              "md": "**2022.** Colóquio Internacional “Na Semana que vem: História e futuro da Semana de Arte Moderna de 22”."
+            },
+            {
+              "md": "**2021.** Thematic symposium “Franz Kafka, intérprete da Modernidade”."
+            },
+            {
+              "md": "**2020.** 4th Encontro de Pesquisadores de Franz Kafka."
+            },
+            {
+              "md": "**2018.** Advisory role, II Kafkiana."
+            }
+          ]
+        },
+        {
+          "t": "label",
+          "md": "Examination committees"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "Master’s examination committees: Universidade Federal de Juiz de Fora (2023), Universidade Federal de Sergipe (2023)."
+            },
+            {
+              "md": "Master’s qualification committees: Universidade Federal de Sergipe (2022), Unicamp (2023)."
+            },
+            {
+              "md": "Doctoral qualification committees: Universidade Federal de Juiz de Fora (2022), Universidade Federal do Paraná (2023)."
+            }
+          ]
+        },
+        {
+          "t": "label",
+          "md": "Institutional roles"
+        },
+        {
+          "t": "ul",
+          "items": [
+            {
+              "md": "Member of the Executive Board, CEBRAP (2025–present)."
+            },
+            {
+              "md": "Academic Coordinator, Mecila (2022–2025)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "languages",
+      "title": "Languages",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "Portuguese (native), English, German, Spanish, French."
+        }
+      ]
+    }
+  ]
+}

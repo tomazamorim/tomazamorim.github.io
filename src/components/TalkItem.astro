@@ -1,0 +1,30 @@
+---
+// Item de fala (DS 6.6). Reapresentações da mesma fala vêm em `also` e viram uma linha "Also presented" (rodada 2).
+import { activeMarks, markLabel, effStatus, isPreview, type Talk } from '../lib/data';
+interface Props { t: Talk; also?: Talk[] }
+const { t, also = [] } = Astro.props;
+const marks = activeMarks(t.tbc);
+const title = /[.?!]$/.test(t.title) ? t.title : t.title + '.';
+const featuredUnicamp = t.id === '2026-09-21-unicamp';
+const relatedNote = 'Variations of this work in progress were also presented from May to September 2026 at the Mecila Annual Meeting (São Paulo); the Ringvorlesung “Transitorische Räume”, the DFG Research Unit FOR 5710 Group Colloquium and Medienwissenschaft Colloquium (Bochum); and Leuphana Universität (Lüneburg).';
+const status = effStatus(t);
+// as reapresentações, agrupadas pelo título com que foram feitas (cada fala entra com o título que teve no evento)
+const segments: { title: string; lang: string; items: Talk[] }[] = [];
+for (const a of also) {
+  const seg = segments.find((s) => s.title === a.title);
+  if (seg) seg.items.push(a); else segments.push({ title: a.title, lang: a.title_lang, items: [a] });
+}
+const where = (a: Talk) => `${a.event}${a.institution ? ', ' + a.institution : ''}, ${a.city}, ${a.date_label}`;
+---
+<li class="item talk">
+  <span class="meta when">{t.date_label} · {t.city}{isPreview && status === 'pending' && <Fragment> <span class="tbc">[A CONFIRMAR: not in the public build]</span></Fragment>}</span>
+  <span class="ref">{featuredUnicamp ? <strong lang={t.title_lang}>“{title}”</strong> : <span lang={t.title_lang}>“{title}”</span>} {t.event}{t.institution ? ', ' + t.institution : ''}.{marks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}{t.link && <Fragment> <a href={t.link}>{t.link_label || new URL(t.link).hostname.replace(/^www\./, '')}</a></Fragment>}</span>
+  {featuredUnicamp && <span class="ids also">{relatedNote}</span>}
+  {also.length > 0 && !featuredUnicamp && (
+    <span class="ids also">Also presented{segments.map((s, i) => (
+      <Fragment>{i > 0 ? ' · ' : ': '}{s.title !== t.title && <Fragment>as <span lang={s.lang}>“{s.title}”</span>, </Fragment>}{s.items.map((a, j) => (
+        <Fragment>{j > 0 && '; '}{where(a)}{activeMarks(a.tbc).map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}</Fragment>
+      ))}</Fragment>
+    ))}.</span>
+  )}
+</li>
