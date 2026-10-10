@@ -290,10 +290,13 @@ ul.method li{ margin: 0 0 var(--s-2); }
 }
 
 
-/* ---------- Talks: title first, details below ---------- */
+/* ---------- Talks: title first, labelled metadata below ---------- */
 .talk-card{display:block;padding:var(--s-4) 0;border-top:var(--b-hair);}
-.talk-card .talk-title{display:block;font-size:20px;line-height:1.35;font-weight:600;margin:0 0 var(--s-1);color:var(--c-ink);}
-.talk-card .talk-details{display:flex;flex-direction:column;gap:3px;font-size:16.5px;line-height:1.4;}
+.talk-card .talk-title{display:block;font-size:21px;line-height:1.35;font-weight:650;margin:0 0 var(--s-2);color:var(--c-ink);max-width:44em;}
+.talk-card .talk-details{display:flex;flex-direction:column;gap:7px;font-size:16px;line-height:1.42;}
+.talk-card .talk-detail{display:grid;grid-template-columns:7.25rem minmax(0,1fr);column-gap:12px;align-items:start;}
+.talk-card .talk-key{font-family:var(--f-note);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--c-muted);padding-top:4px;}
+.talk-card .talk-value{min-width:0;}
 .talk-card .talk-event{color:var(--c-ink);font-weight:500;}
 .talk-card .talk-institution{font-size:15.5px;color:var(--c-muted);}
 .talk-card .talk-date{font-family:var(--f-note);font-size:14.5px;color:var(--c-muted);}
@@ -321,6 +324,9 @@ ul.method li{ margin: 0 0 var(--s-2); }
 .spotify-embed{display:block;width:100%;border:0;border-radius:12px;min-height:152px;}
 .construction-notice{font-size:25px;line-height:1.35;margin:0;padding:var(--s-4) 0 var(--s-7);color:var(--c-muted);font-family:var(--f-note);}
 @media(max-width:760px){
+  .talk-card .talk-detail{grid-template-columns:6.2rem minmax(0,1fr);column-gap:8px;}
+  .talk-card .talk-title{font-size:19px;}
+
   .recorded-item{grid-template-columns:124px minmax(0,1fr);gap:12px;}
   .recording-thumb{width:124px;}
   .recording-title{font-size:17px;}

@@ -28,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
-          npm install --no-save --package-lock=false playwright
+          npm install --no-save --package-lock=false playwright pdf-lib
           npx playwright install --with-deps chromium
       - name: Build the public site
         env:

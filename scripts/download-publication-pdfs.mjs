@@ -1,6 +1,7 @@
 // Download approved PDF copies for the public build, using curl so the runner's configured network proxy is respected.
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { PDFDocument } from 'pdf-lib';
 import { spawnSync } from 'node:child_process';
 
 const downloads = [
@@ -34,3 +35,22 @@ for (const item of downloads) {
   }
   console.log(`Downloaded ${item.filename} (${bytes.length.toLocaleString()} bytes)`);
 }
+
+
+// Build a downloadable PDF excerpt of the introduction from the approved hosted volume.
+// Page selection mirrors the supplied 35-page extract: cover, acknowledgements, and physical pages 9–41.
+const volume = path.join(outDir, 'VO-01-esteticas-del-extractivismo.pdf');
+const excerpt = path.join(outDir, 'VO-01-esteticas-del-extractivismo-introduccion.pdf');
+const volumeBytes = await fs.readFile(volume);
+const volumePdf = await PDFDocument.load(volumeBytes);
+const excerptPdf = await PDFDocument.create();
+const pageIndices = [0, 3, ...Array.from({ length: 33 }, (_, i) => i + 8)];
+const pages = await excerptPdf.copyPages(volumePdf, pageIndices);
+for (const page of pages) excerptPdf.addPage(page);
+const excerptBytes = await excerptPdf.save();
+await fs.writeFile(excerpt, excerptBytes);
+const validation = await PDFDocument.load(excerptBytes);
+if (validation.getPageCount() !== 35 || String.fromCharCode(...excerptBytes.slice(0, 5)) !== '%PDF-') {
+  throw new Error('Introduction excerpt failed PDF validation (expected 35 pages).');
+}
+console.log(`Built Estéticas del extractivismo introduction PDF (${excerptBytes.length.toLocaleString()} bytes)`);
