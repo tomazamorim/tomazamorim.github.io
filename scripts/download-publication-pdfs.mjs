@@ -1,6 +1,7 @@
-// Download the approved PDF copies into the public build. Their persistent publisher/repository links remain on each publication record.
+// Download approved PDF copies for the public build, using curl so the runner's configured network proxy is respected.
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { spawnSync } from 'node:child_process';
 
 const downloads = [
   {
@@ -20,12 +21,18 @@ const downloads = [
 const outDir = path.resolve('public/downloads/publications');
 await fs.mkdir(outDir, { recursive: true });
 for (const item of downloads) {
-  const response = await fetch(item.url, { redirect: 'follow' });
-  if (!response.ok) throw new Error(`PDF download failed for ${item.filename}: HTTP ${response.status}`);
-  const bytes = Buffer.from(await response.arrayBuffer());
-  if (bytes.length < 1000 || bytes.subarray(0, 5).toString('ascii') !== '%PDF-') {
-    throw new Error(`The source did not return a valid PDF for ${item.filename}: ${response.url}`);
+  const output = path.join(outDir, item.filename);
+  const result = spawnSync('curl', [
+    '--fail', '--location', '--silent', '--show-error',
+    '--max-time', '120', '--retry', '2', '--retry-all-errors',
+    '--output', output, item.url,
+  ], { encoding: 'utf8', timeout: 150_000 });
+  if (result.error || result.status !== 0) {
+    throw new Error(`PDF download failed for ${item.filename}: ${result.error?.message ?? result.stderr ?? result.status}`);
   }
-  await fs.writeFile(path.join(outDir, item.filename), bytes);
+  const bytes = await fs.readFile(output);
+  if (bytes.length < 1000 || bytes.subarray(0, 5).toString('ascii') !== '%PDF-') {
+    throw new Error(`Source did not return a valid PDF for ${item.filename}`);
+  }
   console.log(`Downloaded ${item.filename} (${bytes.length.toLocaleString()} bytes)`);
 }
