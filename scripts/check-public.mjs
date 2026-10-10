@@ -30,6 +30,7 @@ if(fs.existsSync(path.join(root,'research/keywords/index.html')))fail('Keywords 
 for(const file of ['AR-02-notas-sobre-o-castelo.pdf','AR-03-interrupcao-e-montagem.pdf','VO-01-esteticas-del-extractivismo-introduccion.pdf'])if(!hosted.includes(file))fail(`Missing hosted publication PDF: ${file}`);
 if(!joined.includes('Introduction PDF'))fail('Estéticas introduction PDF button missing from Publications');
 if(!joined.includes('PDF excerpt'))fail('Arquipélago excerpt label missing');
+if(!joined.includes('Read the afterword') || !joined.includes('/downloads/publications/LV-01-arquipelago-posfacio-excerpt.pdf'))fail('Arquipélago afterword link missing from Selected Work');
 const articlesHtml=fs.readFileSync(path.join(root,'publications/index.html'),'utf8');
 for(const [id,title] of [['VO-02','Uneafro Brasil: 12 anos de luta'],['VO-03','Ponto Virgulina: revista de tradução literária'],['PO-01','Marte atacado'],['PO-02','Meia lua soco'],['PO-03','Plástico pluma'],['PO-04','Manifesto Baphywave']])if(!articlesHtml.includes(title))fail(`Expected public publication ${id} missing`);
 for(const id of ['AR-08','AR-09','AR-10'])if((articlesHtml.match(new RegExp(`id="${id}"`,'g'))||[]).length!==0)fail(`${id} must be hidden from Publications`);
