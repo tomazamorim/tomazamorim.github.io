@@ -50,7 +50,7 @@ for (const page of pages) excerptPdf.addPage(page);
 const excerptBytes = await excerptPdf.save();
 await fs.writeFile(excerpt, excerptBytes);
 const validation = await PDFDocument.load(excerptBytes);
-if (validation.getPageCount() !== 35 || excerptBytes.subarray(0, 5).toString('ascii') !== '%PDF-') {
+if (validation.getPageCount() !== 35 || String.fromCharCode(...excerptBytes.slice(0, 5)) !== '%PDF-') {
   throw new Error('Introduction excerpt failed PDF validation (expected 35 pages).');
 }
 console.log(`Built Estéticas del extractivismo introduction PDF (${excerptBytes.length.toLocaleString()} bytes)`);
