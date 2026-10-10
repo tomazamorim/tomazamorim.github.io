@@ -294,7 +294,7 @@ ul.method li{ margin: 0 0 var(--s-2); }
 .talk-card{display:block;padding:var(--s-4) 0;border-top:var(--b-hair);}
 .talk-card .talk-title{display:block;font-size:20px;line-height:1.35;font-weight:600;margin:0 0 var(--s-1);color:var(--c-ink);}
 .talk-card .talk-details{display:flex;flex-direction:column;gap:3px;font-size:16.5px;line-height:1.4;}
-.talk-card .talk-event{color:var(--c-ink);}
+.talk-card .talk-event{color:var(--c-ink);font-weight:500;}
 .talk-card .talk-institution{font-size:15.5px;color:var(--c-muted);}
 .talk-card .talk-date{font-family:var(--f-note);font-size:14.5px;color:var(--c-muted);}
 .talk-card .talk-link{font-family:var(--f-note);font-size:14.5px;align-self:flex-start;}
