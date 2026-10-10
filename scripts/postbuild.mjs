@@ -57,6 +57,7 @@ const external = [];
 // Permit only those provider resources on that page; all other third-party requests still fail the build.
 function allowedEmbedRequest(pagePath, rawUrl) {
   if (pagePath !== '/talks/') return false;
+  if (rawUrl.startsWith('blob:https://open.spotify.com/')) return true;
   let host;
   try { host = new URL(rawUrl).hostname.toLowerCase(); } catch { return false; }
   return host === 'i.ytimg.com'
