@@ -77,7 +77,8 @@ async function measure(u) {
   const pending = [];
   page.on('request', (r) => { if (!r.url().startsWith(`http://127.0.0.1:${port}`) && !r.url().startsWith('data:') && !allowedEmbedRequest(u, r.url())) external.push(`${u} -> ${r.url()}`); });
   page.on('requestfinished', (req) => pending.push(req.sizes().then((s) => { total += s.responseBodySize + s.responseHeadersSize; n++; })));
-  await page.goto(`http://127.0.0.1:${port}${u}`, { waitUntil: 'networkidle' });
+  // Spotify's embedded player can keep connections open indefinitely; measure Talks after DOM content is ready.
+  await page.goto(`http://127.0.0.1:${port}${u}`, { waitUntil: u === '/talks/' ? 'domcontentloaded' : 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(200);
   await Promise.all(pending);
