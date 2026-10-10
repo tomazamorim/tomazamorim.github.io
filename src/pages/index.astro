@@ -75,6 +75,7 @@ const jsonld = {
                 <span class={`t ${s.v.quoted ? '' : 'book'}`} lang={s.v.lang} set:html={titleHtml(s.v)} />
                 {s.credit && <span class="cr" set:html={inline(s.credit, { marks: false })} />}
                 {s.access && <a class="acc" href={s.access.href}>{s.access.label}</a>}
+                {s.v.p.id === 'LV-01' && <a class="acc" href="/downloads/publications/LV-01-arquipelago-posfacio-excerpt.pdf">Read the afterword</a>}
               </li>
             ))}
           </ul>
@@ -92,7 +93,7 @@ const jsonld = {
       )}
     </div>
     <div class="pr portrait-col">
-      <Portrait width={150} />
+      <Portrait width={188} />
     </div>
   </section>
 
