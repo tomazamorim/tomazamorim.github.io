@@ -10,7 +10,9 @@
     "build:public": "node scripts/build.mjs public",
     "build": "npm run build:public",
     "serve:public": "node scripts/serve.mjs dist/public 4322",
-    "check:public": "node scripts/check-public.mjs"
+    "check:public": "node scripts/check-public.mjs",
+    "prebuild:preview": "node scripts/assemble-photo-hd.mjs",
+    "prebuild:public": "node scripts/assemble-photo-hd.mjs"
   },
   "dependencies": {
     "astro": "^5.14.0"
