@@ -55,7 +55,7 @@ const SHOW: Record<string, string> = { en: 'Show full bio', de: 'Vollständig an
         <div class="bio-card">
           <div class="head"><p class="label">Photo for programs{photoMarks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}</p></div>
           <Portrait width={150} credit="long" />
-          <p class="photo-note">{site.portrait.credit} · 2048 × 1766 px (high resolution) · {photo.size}<br>Credit must accompany every reuse.</p>
+          <p class="photo-note">{site.portrait.credit} · {site.portrait.width} × {site.portrait.height} px (web resolution) · {photo.size}<br>Credit must accompany every reuse.</p>
           <p class="photo-acts"><a class="btn" href={photo.href} download>Download photo <span class="meta">JPG · {photo.size}</span></a></p>
         </div>
       )}
