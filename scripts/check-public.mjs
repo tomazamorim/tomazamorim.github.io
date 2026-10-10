@@ -14,7 +14,7 @@ for(const re of forbidden)if(re.test(joined))fail(`Public HTML contains forbidde
 for(const route of ['index.html','cv/index.html','publications/index.html','talks/index.html','research/index.html','grants/index.html','teaching/index.html','colophon/index.html','impressum/index.html','datenschutz/index.html','for-organizers/index.html','sitemap.xml','cv/tomaz-amorim-izabel-cv.pdf'])if(!fs.existsSync(path.join(root,route)))fail(`Missing public output: ${route}`);
 const pdfDir=path.join(root,'downloads/publications');
 const hosted=fs.existsSync(pdfDir)?fs.readdirSync(pdfDir).filter(x=>x.toLowerCase().endsWith('.pdf')):[];
-if(hosted.length!==15)fail(`Expected 15 hosted publication PDFs, found ${hosted.length}`);
+if(hosted.length!==14)fail(`Expected 15 hosted publication PDFs, found ${hosted.length}`);
 if(fs.existsSync(path.join(root,'cv/tomaz-amorim-izabel-cv.pdf'))){
   const cv=path.join(root,'cv/tomaz-amorim-izabel-cv.pdf');
   try { const info=execFileSync('pdfinfo',[cv],{encoding:'utf8'}); if(!/Pages:\s+7\b/.test(info))fail('CV PDF should have 7 pages'); } catch { console.warn('pdfinfo unavailable; skipped PDF page count'); }
@@ -25,8 +25,9 @@ if(!joined.includes('https://ojs.ifch.unicamp.br/index.php/teoriacritica/article
 if(!joined.includes('Recorded talks and events')||!joined.includes('Sonhos Intranquilos')||!joined.includes('Introdução à obra de Franz Kafka'))fail('Recorded talks/podcast sections missing');
 if(!joined.includes('editorial-subsection'))fail('Editorial heading anchor not updated');
 if(!joined.includes('Still under construction.'))fail('Research under-construction notice missing');
+if(!joined.includes('https://biblioteca-repositorio.clacso.edu.ar/bitstreams/15f7ea6f-6c78-4949-8004-9b4414b9c26c/download'))fail('CLACSO introduction PDF endpoint missing');
 if(fs.existsSync(path.join(root,'research/keywords/index.html')))fail('Keywords index must be hidden from the public build');
-for(const file of ['AR-02-notas-sobre-o-castelo.pdf','AR-03-interrupcao-e-montagem.pdf','CL-01-introduccion-esteticas-del-extractivismo.pdf'])if(!hosted.includes(file))fail(`Missing hosted publication PDF: ${file}`);
+for(const file of ['AR-02-notas-sobre-o-castelo.pdf','AR-03-interrupcao-e-montagem.pdf'])if(!hosted.includes(file))fail(`Missing hosted publication PDF: ${file}`);
 for(const [id,title] of [['VO-02','Uneafro Brasil: 12 anos de luta'],['VO-03','Ponto Virgulina: revista de tradução literária'],['PO-01','Marte atacado'],['PO-02','Meia lua soco'],['PO-03','Plástico pluma'],['PO-04','Manifesto Baphywave']])if(!articlesHtml.includes(title))fail(`Expected public publication ${id} missing`);
 if(!joined.includes('PDF excerpt'))fail('Arquipélago excerpt label missing');
 const articlesHtml=fs.readFileSync(path.join(root,'publications/index.html'),'utf8');
