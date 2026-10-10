@@ -381,9 +381,10 @@ ul.method li{ margin: 0 0 var(--s-2); }
 @media (max-width: 760px) {
   .identity .portrait {
     width: auto;
+    grid-template-columns: 120px 1fr;
   }
   .identity .portrait img {
-    width: 96px;
+    width: 120px;
   }
   .footer-logos {
     justify-content: flex-start;
