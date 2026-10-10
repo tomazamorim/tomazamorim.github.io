@@ -5,7 +5,6 @@ import { talkGroups, talksTitle, site, activeMarks, markLabel, podcast } from '.
 import recordedTalks from '../data/recorded-talks.json';
 const talks = talkGroups();
 const youtubeId = (url: string) => url.match(/[?&]v=([^&]+)/)?.[1] ?? null;
-const spotifyShowId = (url: string) => url.match(/spotify\.com\/show\/([^?]+)/)?.[1] ?? null;
 ---
 <Base title={talksTitle} description={`${talksTitle} by Dr. Tomaz Amorim.`} path="/talks/" nav="talks">
   <section class="row">
@@ -53,7 +52,6 @@ const spotifyShowId = (url: string) => url.match(/spotify\.com\/show\/([^?]+)/)?
       <h2 class="group" id="podcasts">Podcasts</h2>
       <ul class="items podcast-list">
         {podcast.episodes.map((e) => {
-          const id = spotifyShowId(e.url);
           return <li class="item podcast-item">
             <div class="podcast-copy">
               <strong class="podcast-title">{e.title}</strong>
@@ -61,7 +59,9 @@ const spotifyShowId = (url: string) => url.match(/spotify\.com\/show\/([^?]+)/)?
               <p>{e.description}</p>
               <a class="podcast-link" href={e.url} target="_blank" rel="noopener noreferrer">Open on Spotify ↗</a>
             </div>
-            {id && <iframe class="spotify-embed" title={`Spotify player: ${e.title}`} src={`https://open.spotify.com/embed/show/${id}?utm_source=generator&theme=0`} width="100%" height="352" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" />}
+            <a class="podcast-cover" href={e.url} target="_blank" rel="noopener noreferrer" aria-label={`Open ${e.title} on Spotify`}>
+              <img src={e.cover} alt={e.cover_alt} loading="lazy" width="180" height="180">
+            </a>
           </li>;
         })}
       </ul>

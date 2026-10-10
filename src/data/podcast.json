@@ -6,7 +6,9 @@
       "title": "Introdução à obra de Franz Kafka",
       "description": "Online undergraduate course at Universidade Estadual de Campinas (Unicamp), published as a podcast on Spotify. 15-episode series on Kafka’s literary works, critical reception, and intellectual context, including conversations with Laís Oliveira, Renato Faria, and Susana Kampff Lages.",
       "url": "https://open.spotify.com/show/5szWrcT6ez7KRXqNA7UXwO",
-      "platform": "Spotify"
+      "platform": "Spotify",
+      "cover": "/podcast-covers/introducao-kafka.png",
+      "cover_alt": "Capa do podcast Introdução à obra de Franz Kafka"
     },
     {
       "id": "sonhos-intranquilos",
@@ -14,7 +16,9 @@
       "title": "Sonhos Intranquilos",
       "description": "Literary podcast hosted, produced and edited by Tomaz Amorim, featuring in-depth conversations with contemporary Brazilian authors about their recent books. The eight-episode series explores literary form, politics, race, music, the sacred, and the intersections between literature and society.",
       "url": "https://open.spotify.com/show/1l4m4oAB1CMG90hDb0W80r",
-      "platform": "Spotify"
+      "platform": "Spotify",
+      "cover": "/podcast-covers/sonhos-intranquilos.png",
+      "cover_alt": "Capa do podcast Sonhos Intranquilos"
     }
   ]
 }

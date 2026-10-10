@@ -393,3 +393,56 @@ ul.method li{ margin: 0 0 var(--s-2); }
     padding: 8px 0 0;
   }
 }
+
+
+/* ---------- Static podcast covers and refreshed green/blue Research tones ---------- */
+.podcast-item {
+  grid-template-columns: minmax(0, 1fr) minmax(140px, 180px);
+  gap: 24px;
+  align-items: start;
+}
+.podcast-cover {
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.podcast-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.research-blue-accent {
+  border-right: 1px solid var(--c-name);
+  min-height: 100%;
+}
+.footer-logos img {
+  height: 24px;
+}
+.site-foot .bed .footer-logos a[aria-label^="Ruhr-Universität"] {
+  width: 70px;
+  height: 24px;
+  overflow: hidden;
+  flex: 0 0 70px;
+}
+.site-foot .bed .footer-logos a[aria-label^="Ruhr-Universität"] img {
+  height: 47px;
+  max-width: none;
+  flex: 0 0 auto;
+}
+@media (max-width: 760px) {
+  .podcast-item {
+    grid-template-columns: minmax(0, 1fr) 112px;
+    gap: 12px;
+    align-items: start;
+  }
+  .podcast-cover {
+    max-width: 112px;
+  }
+  .research-blue-accent {
+    display: none;
+  }
+}
