@@ -68,8 +68,8 @@
     "doi_linked": true,
     "book_doi": null,
     "issue_doi": null,
-    "url": null,
-    "url_label": null,
+    "url": "https://tomazamorim.github.io/downloads/publications/VO-02-uneafro-12-anos.pdf",
+    "url_label": "Full PDF",
     "license": null,
     "license_conflict": false,
     "pdf": {
@@ -79,7 +79,8 @@
     },
     "bibtex": "@collection{amorim2021uneafro,\n  editor = {Amorim, Tomaz},\n  title = {Uneafro Brasil: 12 anos de luta},\n  publisher = {Uneafro Brasil; Fundação Rosa Luxemburgo},\n  address = {São Paulo},\n  year = {2021}\n}",
     "cv_only": false,
-    "credit_override": "Edited by Tomaz Amorim"
+    "credit_override": "Edited by Tomaz Amorim",
+    "accessed": "10 Oct 2026"
   },
   {
     "id": "VO-03",
@@ -94,8 +95,8 @@
     "doi_linked": true,
     "book_doi": null,
     "issue_doi": null,
-    "url": null,
-    "url_label": null,
+    "url": "https://tomazamorim.github.io/downloads/publications/VO-03-ponto-virgulina-afrofuturismo.pdf",
+    "url_label": "Full PDF",
     "license": null,
     "license_conflict": false,
     "pdf": {
@@ -105,7 +106,8 @@
     },
     "bibtex": "@collection{amorim2020ponto,\n  editor = {Amorim, Tomaz},\n  title = {Ponto Virgulina: revista de tradução literária. Edição Temática 1: Afrofuturismo},\n  publisher = {Ponto Virgulina},\n  address = {São Paulo},\n  year = {2020},\n  note = {Revista de tradução literária; tradução e organização de Tomaz Amorim}\n}",
     "cv_only": false,
-    "credit_override": "Translated and organized by Tomaz Amorim"
+    "credit_override": "Translated and organized by Tomaz Amorim",
+    "accessed": "10 Oct 2026"
   },
   {
     "id": "AR-01",
@@ -301,11 +303,17 @@
     "license_conflict": true,
     "pdf": {
       "public": true,
-      "file": "https://biblioteca-repositorio.clacso.edu.ar/bitstreams/15f7ea6f-6c78-4949-8004-9b4414b9c26c/download",
+      "file": "/downloads/publications/CL-01-esteticas-introduccion.pdf",
       "label": "PDF · Introduction"
     },
     "bibtex": "@incollection{amorim2026introduccion,\n  author = {Amorim, Tomaz and Etzold, Jörn},\n  title = {Introducción},\n  booktitle = {Estéticas del extractivismo en América Latina: Literatura, cine y archivo},\n  editor = {Amorim, Tomaz and Etzold, Jörn},\n  series = {Biblioteca Mecila-CLACSO},\n  number = {10},\n  pages = {9--42},\n  publisher = {CLACSO},\n  address = {Buenos Aires},\n  year = {2026}\n}",
-    "cv_only": false
+    "cv_only": false,
+    "extra_urls": [
+      {
+        "url": "https://biblioteca-repositorio.clacso.edu.ar/bitstreams/15f7ea6f-6c78-4949-8004-9b4414b9c26c/download",
+        "label": "Original PDF at CLACSO"
+      }
+    ]
   },
   {
     "id": "CL-02",

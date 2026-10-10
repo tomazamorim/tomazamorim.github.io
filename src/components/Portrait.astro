@@ -3,18 +3,35 @@ import { getImage } from 'astro:assets';
 import portrait from '../assets/tomaz-amorim-foto-ricson-onodera.jpg';
 import { site } from '../lib/data';
 interface Props { width?: number; credit?: 'short' | 'long'; class?: string }
-// Nunca ampliar além dos 579 px originais. srcset: 1x, 2x, 3x do tamanho exibido, limitado a 579.
-const { width = 150, credit = 'short' } = Astro.props;
-const dens = [1, 2, 3].map((d) => Math.min(579, width * d)).filter((v, i, a) => a.indexOf(v) === i);
-const imgs = await Promise.all(dens.map((w) => getImage({ src: portrait, width: w, format: 'jpeg', quality: 78 })));
-const webp = await Promise.all(dens.map((w) => getImage({ src: portrait, width: w, format: 'webp', quality: 72 })));
-const h = Math.round(width * 869 / 579);
-const srcset = (list: any[], ds: number[]) => list.map((g, i) => `${g.src} ${g.options.width}w`).join(', ');
+const { width = 188, credit = 'short' } = Astro.props;
+// Keep the established vertical cover crop while sourcing it from the newly supplied high-resolution photograph.
+const aspect = 579 / 869;
+const dens = [1, 2, 3].map((d) => width * d);
+const variants = await Promise.all(dens.map((w) => getImage({
+  src: portrait,
+  width: w,
+  height: Math.round(w / aspect),
+  fit: 'cover',
+  position: 'center',
+  format: 'jpeg',
+  quality: 78,
+})));
+const webp = await Promise.all(dens.map((w) => getImage({
+  src: portrait,
+  width: w,
+  height: Math.round(w / aspect),
+  fit: 'cover',
+  position: 'center',
+  format: 'webp',
+  quality: 72,
+})));
+const h = Math.round(width / aspect);
+const srcset = (list: any[]) => list.map((g) => `${g.src} ${g.options.width}w`).join(', ');
 ---
 <figure class="portrait">
   <picture>
-    <source type="image/webp" srcset={srcset(webp, dens)} sizes={`${width}px`}>
-    <img src={imgs[0].src} srcset={srcset(imgs, dens)} sizes={`${width}px`} width={width} height={h} alt={site.portrait.alt} decoding="async">
+    <source type="image/webp" srcset={srcset(webp)} sizes={`${width}px`}>
+    <img src={variants[0].src} srcset={srcset(variants)} sizes={`${width}px`} width={width} height={h} alt={site.portrait.alt} decoding="async">
   </picture>
-  {credit === 'short' && <figcaption>Photo: {site.portrait.credit}</figcaption>}
+  {credit === 'short' && <figcaption>Photo: {site.portrait.credit} · <a href={site.portrait.download}>High-resolution photograph</a></figcaption>}
 </figure>

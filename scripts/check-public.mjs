@@ -14,7 +14,7 @@ for(const re of forbidden)if(re.test(joined))fail(`Public HTML contains forbidde
 for(const route of ['index.html','cv/index.html','publications/index.html','talks/index.html','research/index.html','grants/index.html','teaching/index.html','colophon/index.html','impressum/index.html','datenschutz/index.html','for-organizers/index.html','sitemap.xml','cv/tomaz-amorim-izabel-cv.pdf'])if(!fs.existsSync(path.join(root,route)))fail(`Missing public output: ${route}`);
 const pdfDir=path.join(root,'downloads/publications');
 const hosted=fs.existsSync(pdfDir)?fs.readdirSync(pdfDir).filter(x=>x.toLowerCase().endsWith('.pdf')):[];
-if(hosted.length!==14)fail(`Expected 14 hosted publication PDFs, found ${hosted.length}`);
+if(hosted.length!==15)fail(`Expected 15 hosted publication PDFs, found ${hosted.length}`);
 if(fs.existsSync(path.join(root,'cv/tomaz-amorim-izabel-cv.pdf'))){
   const cv=path.join(root,'cv/tomaz-amorim-izabel-cv.pdf');
   try { const info=execFileSync('pdfinfo',[cv],{encoding:'utf8'}); if(!/Pages:\s+7\b/.test(info))fail('CV PDF should have 7 pages'); } catch { console.warn('pdfinfo unavailable; skipped PDF page count'); }
@@ -27,10 +27,10 @@ if(!joined.includes('editorial-subsection'))fail('Editorial heading anchor not u
 if(!joined.includes('Still under construction.'))fail('Research under-construction notice missing');
 if(!joined.includes('https://biblioteca-repositorio.clacso.edu.ar/bitstreams/15f7ea6f-6c78-4949-8004-9b4414b9c26c/download'))fail('CLACSO introduction PDF endpoint missing');
 if(fs.existsSync(path.join(root,'research/keywords/index.html')))fail('Keywords index must be hidden from the public build');
-for(const file of ['AR-02-notas-sobre-o-castelo.pdf','AR-03-interrupcao-e-montagem.pdf'])if(!hosted.includes(file))fail(`Missing hosted publication PDF: ${file}`);
+for(const file of ['AR-02-notas-sobre-o-castelo.pdf','AR-03-interrupcao-e-montagem.pdf','CL-01-esteticas-introduccion.pdf'])if(!hosted.includes(file))fail(`Missing hosted publication PDF: ${file}`);
 if(!joined.includes('PDF excerpt'))fail('Arquipélago excerpt label missing');
 const articlesHtml=fs.readFileSync(path.join(root,'publications/index.html'),'utf8');
-for(const [id,title] of [['VO-02','Uneafro Brasil: 12 anos de luta'],['VO-03','Ponto Virgulina: revista de tradução literária'],['PO-01','Marte atacado'],['PO-02','Meia lua soco'],['PO-03','Plástico pluma'],['PO-04','Manifesto Baphywave']])if(!articlesHtml.includes(title))fail(`Expected public publication ${id} missing`);
+for(const [id,title] of [['VO-02','Uneafro Brasil: 12 anos de luta'],['VO-03','Ponto Virgulina: revista de tradução literária'],['CL-01','Introducción'],['PO-01','Marte atacado'],['PO-02','Meia lua soco'],['PO-03','Plástico pluma'],['PO-04','Manifesto Baphywave']])if(!articlesHtml.includes(title))fail(`Expected public publication ${id} missing`);
 for(const id of ['AR-08','AR-09','AR-10'])if((articlesHtml.match(new RegExp(`id="${id}"`,'g'))||[]).length!==0)fail(`${id} must be hidden from Publications`);
 for(const [id,title] of [['OU-01','Escravidão e Ditadura: por mais Comissões da Verdade'],['OU-02','Novos mercados da violência no Brasil: as armas não letais']])if((articlesHtml.match(new RegExp(`id="${id}"`,'g'))||[]).length!==1||!articlesHtml.includes(title))fail(`2013 press item ${id} missing or duplicated`);
 const ids=[];for(const [f,s] of texts)for(const m of s.matchAll(/\sid="([^"]+)"/g))ids.push([f,m[1]]);const seen=new Map();for(const [f,id] of ids){if(seen.has(`${f}:${id}`))fail(`Duplicate HTML id #${id} in ${path.relative(root,f)}`);seen.set(`${f}:${id}`,true)}

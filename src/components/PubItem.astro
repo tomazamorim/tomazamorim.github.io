@@ -15,6 +15,7 @@ if (!p.doi && p.issue_doi) ids.push(`Issue DOI <a href="https://doi.org/${p.issu
 if (p.isbn) ids.push(`ISBN ${p.isbn}`);
 if (p.url && p.url !== p.pdf?.file) ids.push(`Online: <a href="${p.url}">${p.url_label || 'publisher/repository'}</a>`);
 for (const x of ((p as any).extra_urls ?? [])) ids.push(`Online: <a href="${x.url}">${x.label}</a>`);
+if ((p as any).accessed) ids.push(`Accessed ${(p as any).accessed}`);
 if (!p.license_conflict && p.license) ids.push(p.license);
 const hostedPdf = p.pdf.public && p.pdf.file;
 ---
