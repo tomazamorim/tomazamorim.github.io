@@ -9,12 +9,12 @@ const p = v.p;
 const marks = activeMarks(p.tbc);
 const status = effStatus(p);
 const ids: string[] = [];
-// DOI só como link; o DOI sem confirmação (doi_linked = false) nem aparece (verificador B1)
 if (p.doi && (p as any).doi_linked !== false) ids.push(`DOI <a href="https://doi.org/${p.doi}">${p.doi}</a>`);
 if (p.book_doi) ids.push(`Volume DOI <a href="https://doi.org/${p.book_doi}">${p.book_doi}</a>`);
 if (!p.doi && p.issue_doi) ids.push(`Issue DOI <a href="https://doi.org/${p.issue_doi}">${p.issue_doi}</a>`);
 if (p.isbn) ids.push(`ISBN ${p.isbn}`);
-if (p.url) ids.push(`Online: <a href="${p.url}">${p.url_label}</a>`);
+if (p.url && p.url !== p.pdf?.file) ids.push(`Online: <a href="${p.url}">${p.url_label || 'publisher/repository'}</a>`);
+for (const x of ((p as any).extra_urls ?? [])) ids.push(`Online: <a href="${x.url}">${x.label}</a>`);
 if (!p.license_conflict && p.license) ids.push(p.license);
 const hostedPdf = p.pdf.public && p.pdf.file;
 ---
@@ -24,11 +24,7 @@ const hostedPdf = p.pdf.public && p.pdf.file;
   {v.credit && <span class="cr" set:html={inline(v.credit, { marks: false })} />}
   {(p as any).includes && <span class="ids">Includes: {(p as any).includes.kind.toLowerCase()} “{(p as any).includes.title}”, pp. {(p as any).includes.pages}</span>}
   {ids.length > 0 && <span class="ids" set:html={ids.join(' · ')} />}
-  {actions && (
-    <div class="acts">
-      {hostedPdf && <a class="btn small" href={p.pdf.file as string}>{p.pdf.label || 'PDF'}</a>}
-    </div>
-  )}
+  {actions && <div class="acts">{hostedPdf && <a class="btn small" href={p.pdf.file as string}>{p.pdf.label || 'PDF'}</a>}</div>}
   {isPreview && status === 'pending' && <span class="tbc">[A CONFIRMAR: {p.reason} · not in the public build]</span>}
   {marks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}
 </li>
