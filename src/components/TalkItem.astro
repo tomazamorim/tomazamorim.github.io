@@ -1,5 +1,4 @@
 ---
-// Talk item: clear hierarchy for title, event, institution, date and related presentations.
 import { activeMarks, markLabel, effStatus, isPreview, type Talk } from '../lib/data';
 interface Props { t: Talk; also?: Talk[] }
 const { t, also = [] } = Astro.props;
@@ -8,7 +7,6 @@ const title = /[.?!]$/.test(t.title) ? t.title : t.title + '.';
 const featuredUnicamp = t.id === '2026-09-21-unicamp';
 const relatedNote = 'Variations of this work in progress were also presented from May to September 2026 at the Mecila Annual Meeting (São Paulo); the Ringvorlesung “Transitorische Räume”, the DFG Research Unit FOR 5710 Group Colloquium and Medienwissenschaft Colloquium (Bochum); and Leuphana Universität (Lüneburg).';
 const status = effStatus(t);
-// as reapresentações, agrupadas pelo título com que foram feitas (cada fala entra com o título que teve no evento)
 const segments: { title: string; lang: string; items: Talk[] }[] = [];
 for (const a of also) {
   const seg = segments.find((s) => s.title === a.title);
@@ -19,12 +17,26 @@ const where = (a: Talk) => `${a.event}${a.institution ? ', ' + a.institution : '
 <li class="item talk talk-card">
   <strong class="talk-title" lang={t.title_lang}>{title}</strong>
   <div class="talk-details">
-    <span class="talk-event">{t.event}</span>
-    {t.institution && <span class="talk-institution">{t.institution}</span>}
-    <span class="talk-date">{t.date_label} · {t.city}</span>
-    {t.link && <a class="talk-link" href={t.link} target="_blank" rel="noopener noreferrer">{t.link_label || new URL(t.link).hostname.replace(/^www\./, '')}</a>}
-    {isPreview && status === 'pending' && <span class="tbc">[A CONFIRMAR: not in the public build]</span>}
-    {marks.map((m) => <span class="tbc">{markLabel(m)}</span>)}
+    <div class="talk-detail">
+      <span class="talk-key">Event</span>
+      <span class="talk-value talk-event">{t.event}</span>
+    </div>
+    {t.institution && <div class="talk-detail">
+      <span class="talk-key">Institution</span>
+      <span class="talk-value talk-institution">{t.institution}</span>
+    </div>}
+    <div class="talk-detail">
+      <span class="talk-key">Date &amp; place</span>
+      <span class="talk-value talk-date">{t.date_label} · {t.city}</span>
+    </div>
+    {t.link && <div class="talk-detail">
+      <span class="talk-key">Link</span>
+      <a class="talk-value talk-link" href={t.link} target="_blank" rel="noopener noreferrer">{t.link_label || new URL(t.link).hostname.replace(/^www\./, '')}</a>
+    </div>}
+    {(isPreview && status === 'pending' || marks.length > 0) && <div class="talk-detail">
+      <span class="talk-key">Note</span>
+      <span class="talk-value">{isPreview && status === 'pending' && <span class="tbc">[A CONFIRMAR: not in the public build]</span>}{marks.map((m) => <span class="tbc">{markLabel(m)}</span>)}</span>
+    </div>}
   </div>
   {featuredUnicamp && <span class="ids also">{relatedNote}</span>}
   {also.length > 0 && !featuredUnicamp && (
