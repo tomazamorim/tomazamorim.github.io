@@ -4,7 +4,7 @@ The public website is built with [Astro](https://astro.build/) and deployed to [
 
 ## Public site
 
-- Live URL: https://tomazamorim.github.io/
+- Live URL: https://tomazamorim.com/
 - PDFs: `public/downloads/publications/` (12 versioned files plus 2 approved publisher PDFs fetched during public builds; the CLACSO introduction links directly to its open-access PDF endpoint because repository mirroring returns HTTP 403)
 - CV PDF: `public/cv/tomaz-amorim-izabel-cv.pdf` (approved static artifact; see note below)
 - Academic data: `src/data/publications.json`, `src/data/talks.json`, `src/data/recorded-talks.json`, `src/data/podcast.json`
@@ -28,7 +28,7 @@ Requires Node.js 22 and npm. The page-weight step uses Playwright/Chromium.
 npm ci
 npm install --no-save playwright
 npx playwright install chromium
-SITE_MODE=public SITE_URL=https://tomazamorim.github.io npm run build:public
+SITE_MODE=public SITE_URL=https://tomazamorim.com npm run build:public
 npm run check:public
 ```
 
