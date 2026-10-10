@@ -4,7 +4,7 @@ import { defineConfig } from 'astro/config';
 const mode = process.env.SITE_MODE === 'public' ? 'public' : 'preview';
 
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://tomazamorim.github.io',
+  site: process.env.SITE_URL || 'https://tomazamorim.com',
   outDir: `./dist/${mode}`,
   trailingSlash: 'always',
   build: { format: 'directory', inlineStylesheets: 'never' },
