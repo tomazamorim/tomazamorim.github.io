@@ -299,7 +299,7 @@
     "license_conflict": true,
     "pdf": {
       "public": true,
-      "file": "/downloads/publications/CL-01-introduccion-esteticas-del-extractivismo.pdf",
+      "file": "https://biblioteca-repositorio.clacso.edu.ar/bitstreams/15f7ea6f-6c78-4949-8004-9b4414b9c26c/download",
       "label": "PDF · Introduction"
     },
     "bibtex": "@incollection{amorim2026introduccion,\n  author = {Amorim, Tomaz and Etzold, Jörn},\n  title = {Introducción},\n  booktitle = {Estéticas del extractivismo en América Latina: Literatura, cine y archivo},\n  editor = {Amorim, Tomaz and Etzold, Jörn},\n  series = {Biblioteca Mecila-CLACSO},\n  number = {10},\n  pages = {9--42},\n  publisher = {CLACSO},\n  address = {Buenos Aires},\n  year = {2026}\n}",
