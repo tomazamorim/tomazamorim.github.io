@@ -60,9 +60,9 @@
     "order": 3,
     "group": "edited",
     "kind": "Edited volume",
-    "year": 2020,
+    "year": 2021,
     "title_lang": "pt",
-    "ref": "Amorim, Tomaz, and Vanessa Nascimento, eds. 2020. *Uneafro: 12 anos de luta*. 1st ed. São Paulo: Oralituras.",
+    "ref": "Amorim, Tomaz, ed. 2021. *Uneafro Brasil: 12 anos de luta*. São Paulo: Uneafro Brasil; Fundação Rosa Luxemburgo.",
     "isbn": null,
     "doi": null,
     "doi_linked": true,
@@ -77,7 +77,7 @@
       "file": "/downloads/publications/VO-02-uneafro-12-anos.pdf",
       "label": "PDF"
     },
-    "bibtex": "@collection{amorim2020uneafro,\n  editor = {Amorim, Tomaz and Nascimento, Vanessa},\n  title = {Uneafro: 12 anos de luta},\n  publisher = {Oralituras},\n  address = {São Paulo},\n  year = {2020},\n  edition = {1}\n}",
+    "bibtex": "@collection{amorim2021uneafro,\n  editor = {Amorim, Tomaz},\n  title = {Uneafro Brasil: 12 anos de luta},\n  publisher = {Uneafro Brasil; Fundação Rosa Luxemburgo},\n  address = {São Paulo},\n  year = {2021}\n}",
     "cv_only": false
   },
   {
@@ -87,7 +87,7 @@
     "kind": "Edited journal issue",
     "year": 2020,
     "title_lang": "pt",
-    "ref": "Amorim, Tomaz, ed. 2020. *Ponto virgulina* #1: Afrofuturismo [revista de tradução literária].",
+    "ref": "Amorim, Tomaz, ed. 2020. *Ponto Virgulina: revista de tradução literária. Edição Temática 1: Afrofuturismo*. São Paulo: Ponto Virgulina.",
     "isbn": null,
     "doi": null,
     "doi_linked": true,
@@ -102,7 +102,7 @@
       "file": "/downloads/publications/VO-03-ponto-virgulina-afrofuturismo.pdf",
       "label": "PDF"
     },
-    "bibtex": "@collection{amorim2020ponto,\n  editor = {Amorim, Tomaz},\n  title = {Ponto virgulina #1: Afrofuturismo},\n  year = {2020},\n  note = {Revista de tradução literária}\n}",
+    "bibtex": "@collection{amorim2020ponto,\n  editor = {Amorim, Tomaz},\n  title = {Ponto Virgulina: revista de tradução literária. Edição Temática 1: Afrofuturismo},\n  publisher = {Ponto Virgulina},\n  address = {São Paulo},\n  year = {2020},\n  note = {Revista de tradução literária; tradução e organização de Tomaz Amorim}\n}",
     "cv_only": false
   },
   {
@@ -148,8 +148,8 @@
     "license": "CC BY-NC 4.0",
     "license_conflict": false,
     "pdf": {
-      "public": false,
-      "file": null,
+      "public": true,
+      "file": "/downloads/publications/AR-02-notas-sobre-o-castelo.pdf",
       "label": "PDF"
     },
     "bibtex": "@article{amorim2023notas,\n  author = {Amorim, Tomaz},\n  title = {Notas sobre {O castelo} de Franz Kafka: temporalidade subjuntiva e comunidade},\n  journaltitle = {Matraga},\n  volume = {30},\n  number = {60},\n  pages = {568--582},\n  year = {2023},\n  doi = {10.12957/matraga.2023.73461}\n}",
@@ -173,8 +173,8 @@
     "license": null,
     "license_conflict": false,
     "pdf": {
-      "public": false,
-      "file": null,
+      "public": true,
+      "file": "/downloads/publications/AR-03-interrupcao-e-montagem.pdf",
       "label": "PDF"
     },
     "bibtex": "@article{amorim2020interrupcao,\n  author = {Amorim, Tomaz},\n  title = {Interrupção e montagem nas teses ``Sobre o conceito de história'' / Interruption and Assemblage in the Theses ``On the Concept of History''},\n  journaltitle = {Cadernos Benjaminianos},\n  volume = {15},\n  number = {2},\n  pages = {135--157},\n  year = {2020},\n  doi = {10.17851/2179-8478.15.2.135-157}\n}",
@@ -281,81 +281,6 @@
     "cv_only": false
   },
   {
-    "id": "AR-08",
-    "order": 12,
-    "group": "articles",
-    "kind": "Journal article",
-    "year": 2012,
-    "title_lang": "pt",
-    "ref": "Amorim, Tomaz. 2012. “A ausência da origem em *O castelo*, de Franz Kafka.” *Estação Literária* 10 (suppl. 1): 7–18.",
-    "isbn": null,
-    "doi": null,
-    "doi_linked": false,
-    "book_doi": null,
-    "issue_doi": null,
-    "url": "https://ojs.uel.br/revistas/uel/index.php/estacaoliteraria/article/view/25713",
-    "url_label": "Estação Literária (UEL)",
-    "license": "CC BY 4.0",
-    "license_conflict": false,
-    "pdf": {
-      "public": false,
-      "file": null,
-      "label": "PDF"
-    },
-    "bibtex": "@article{amorim2012ausencia,\n  author = {Amorim, Tomaz},\n  title = {A ausência da origem em {O castelo}, de Franz Kafka},\n  journaltitle = {Estação Literária},\n  volume = {10},\n  number = {suppl. 1},\n  pages = {7--18},\n  year = {2012}\n}",
-    "cv_only": false
-  },
-  {
-    "id": "AR-09",
-    "order": 13,
-    "group": "articles",
-    "kind": "Journal article",
-    "year": 2009,
-    "title_lang": "pt",
-    "ref": "Amorim, Tomaz. 2009. “Considerações sobre imagem e gesto na obra de Franz Kafka.” *Língua, Literatura e Ensino* (Unicamp) 4: 1–7.",
-    "isbn": null,
-    "doi": null,
-    "doi_linked": true,
-    "book_doi": null,
-    "issue_doi": null,
-    "url": "https://revistas.iel.unicamp.br/index.php/lle/article/view/685/0",
-    "url_label": "Língua, Literatura e Ensino (Unicamp)",
-    "license": null,
-    "license_conflict": false,
-    "pdf": {
-      "public": false,
-      "file": null,
-      "label": "PDF"
-    },
-    "bibtex": "@article{amorim2009imagem,\n  author = {Amorim, Tomaz},\n  title = {Considerações sobre imagem e gesto na obra de Franz Kafka},\n  journaltitle = {Língua, Literatura e Ensino},\n  volume = {4},\n  pages = {1--7},\n  year = {2009}\n}",
-    "cv_only": false
-  },
-  {
-    "id": "AR-10",
-    "order": 14,
-    "group": "articles",
-    "kind": "Journal article",
-    "year": 2007,
-    "title_lang": "pt",
-    "ref": "Amorim, Tomaz. 2007. “Os símiles na Odisséia.” *Língua, Literatura e Ensino* (Unicamp) 2: 17–24.",
-    "isbn": null,
-    "doi": null,
-    "doi_linked": true,
-    "book_doi": null,
-    "issue_doi": null,
-    "url": "https://revistas.iel.unicamp.br/index.php/lle/article/view/46",
-    "url_label": "Língua, Literatura e Ensino (Unicamp)",
-    "license": null,
-    "license_conflict": false,
-    "pdf": {
-      "public": false,
-      "file": null,
-      "label": "PDF"
-    },
-    "bibtex": "@article{amorim2007similes,\n  author = {Amorim, Tomaz},\n  title = {Os símiles na Odisséia},\n  journaltitle = {Língua, Literatura e Ensino},\n  volume = {2},\n  pages = {17--24},\n  year = {2007}\n}",
-    "cv_only": false
-  },
-  {
     "id": "CL-01",
     "order": 15,
     "group": "chapters",
@@ -373,9 +298,9 @@
     "license": null,
     "license_conflict": true,
     "pdf": {
-      "public": false,
-      "file": null,
-      "label": "PDF"
+      "public": true,
+      "file": "/downloads/publications/CL-01-introduccion-esteticas-del-extractivismo.pdf",
+      "label": "PDF · Introduction"
     },
     "bibtex": "@incollection{amorim2026introduccion,\n  author = {Amorim, Tomaz and Etzold, Jörn},\n  title = {Introducción},\n  booktitle = {Estéticas del extractivismo en América Latina: Literatura, cine y archivo},\n  editor = {Amorim, Tomaz and Etzold, Jörn},\n  series = {Biblioteca Mecila-CLACSO},\n  number = {10},\n  pages = {9--42},\n  publisher = {CLACSO},\n  address = {Buenos Aires},\n  year = {2026}\n}",
     "cv_only": false
@@ -593,8 +518,8 @@
     "doi_linked": true,
     "book_doi": null,
     "issue_doi": null,
-    "url": null,
-    "url_label": null,
+    "url": "https://mormacoeditorial.com/produto/marte-atacado/",
+    "url_label": "Mormaço Editorial",
     "license": null,
     "license_conflict": false,
     "pdf": {
@@ -618,8 +543,8 @@
     "doi_linked": true,
     "book_doi": null,
     "issue_doi": null,
-    "url": null,
-    "url_label": null,
+    "url": "https://www.poesiaprimata.com/tomaz-amorim-izabel/tomaz-amorim-izabel-meia-lua-soco-2020/",
+    "url_label": "Editora Primata",
     "license": null,
     "license_conflict": false,
     "pdf": {
@@ -643,8 +568,8 @@
     "doi_linked": true,
     "book_doi": null,
     "issue_doi": null,
-    "url": null,
-    "url_label": null,
+    "url": "https://editoraurutau.com/titulo/plastico-pluma",
+    "url_label": "Editora Urutau",
     "license": null,
     "license_conflict": false,
     "pdf": {
@@ -668,8 +593,8 @@
     "doi_linked": true,
     "book_doi": null,
     "issue_doi": null,
-    "url": null,
-    "url_label": null,
+    "url": "https://sibila.com.br/novos-autores/manifesto-baphywave/12246",
+    "url_label": "Sibila",
     "license": null,
     "license_conflict": false,
     "pdf": {
@@ -678,7 +603,13 @@
       "label": "PDF"
     },
     "bibtex": "@misc{alves2015baphywave,\n  author = {Alves, E. and Monnerat, H. and Amorim Izabel, Tomaz},\n  title = {Manifesto Baphywave},\n  howpublished = {Sibila: Revista de Poesia e Crítica Literária},\n  year = {2015}\n}",
-    "cv_only": false
+    "cv_only": false,
+    "extra_urls": [
+      {
+        "url": "https://baphywave.tumblr.com/manifesto",
+        "label": "Baphywave manifesto"
+      }
+    ]
   },
   {
     "id": "RV-33",
