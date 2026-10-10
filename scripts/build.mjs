@@ -8,4 +8,5 @@ const run = (cmd, args) => {
 };
 if (mode === 'public') run('node', ['scripts/download-publication-pdfs.mjs']);
 run('node', ['node_modules/astro/astro.js', 'build']);
+run('node', ['scripts/generate-og-image.mjs', `dist/${mode}`]);
 run('node', ['scripts/postbuild.mjs', mode]);
