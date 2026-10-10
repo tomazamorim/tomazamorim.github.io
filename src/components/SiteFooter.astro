@@ -8,5 +8,13 @@ const legalVisible = isVisible({ status: 'pending', needs: ['LEGAL'] });
     {legalVisible && <a href="/impressum/">Impressum</a>}
     {legalVisible && <a href="/datenschutz/">Datenschutz</a>}
     {isPreview && <span class="tbc">PREVIEW BUILD · not for publication · {buildDate}</span>}
+    <div class="footer-logos" aria-label="Institutional affiliations">
+      <a href="https://www.dfg.de/" target="_blank" rel="noopener noreferrer" aria-label="Deutsche Forschungsgemeinschaft (DFG)">
+        <img src="/logos/dfg-logo.png" alt="DFG" loading="lazy">
+      </a>
+      <a href="https://www.ruhr-uni-bochum.de/" target="_blank" rel="noopener noreferrer" aria-label="Ruhr-Universität Bochum">
+        <img src="/logos/rub-logo.webp" alt="Ruhr-Universität Bochum" loading="lazy">
+      </a>
+    </div>
   </div>
 </footer>

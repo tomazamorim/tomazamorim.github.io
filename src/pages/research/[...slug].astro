@@ -1,21 +1,71 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Posts from '../../components/Posts.astro';
+import { project, site, activeMarks, markLabel, projectPublishable, researchLede, feed, gateOpen, esc } from '../../lib/data';
+
 export function getStaticPaths() {
-  return [{ params: { slug: undefined } }];
+  return projectPublishable() ? [{ params: { slug: undefined } }] : [];
 }
+const lede = researchLede();
+const paras = project.paragraphs;
+const projMarks = activeMarks(project.tbc);
+const ackMarks = activeMarks(site.funding.acknowledgement_tbc);
+const ledeMarks = activeMarks(site.research_lede_tbc);
 ---
-<Base title="Research" description="Research page under construction." season="flood" nav="project" path="/research/">
+<Base title="Research" description="Research project: Extractivism and Infrastructure in Brazilian Literature, subproject TP 4 of DFG Research Unit FOR 5710." season="flood" nav="project" path="/research/">
   <section class="row opening2 lv0" id="top">
     <div class="ttl">
       <span class="sc">Research</span>
-      <h1>Extractivism and Infrastructure in Brazilian Literature</h1>
+      <h1>{project.title}</h1>
     </div>
     <div class="pr"></div>
   </section>
+
   <section class="row lv0 construction-row">
     <div class="pl"></div>
     <div class="bed">
-      <p class="construction-notice">Still under construction.</p>
+      <p class="construction-notice" style="font-size:20px">Still under construction.</p>
+    </div>
+    <div class="pr"></div>
+  </section>
+
+  <section class="row lv0" style="padding-bottom:var(--s-7)">
+    <div class="pl"></div>
+    <div class="bed">
+      {lede
+        ? <p class="lede-slot" lang="en">{lede}</p>
+        : <p class="lede-slot">{ledeMarks.map((m) => <span class="tbc">{markLabel(m)}</span>)}</p>}
+    </div>
+    <div class="pr"></div>
+  </section>
+
+  <section class="row lv0" id="project">
+    <div class="pl"></div>
+    <div class="bed"><h2 class="proj-h">The project</h2></div>
+    <div class="pr"></div>
+  </section>
+
+  {paras.map((p, i) => (
+    <section class="row lv0 sp-m">
+      <div class="bed body">
+        <p lang="en">{p.n && <Fragment><span class="num">{p.n}</span>{' '}</Fragment>}{p.text}</p>
+        {i === paras.length - 1 && (
+          <p class="credit-line">Project description from <a href={project.source_group_url}>DFG Research Unit FOR 5710</a>, <a href={project.source_url}>infra-aesthetics.de/project4</a>{projMarks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}</p>
+        )}
+      </div>
+      <div class="pl note"></div>
+      <div class="pr note"></div>
+    </section>
+  ))}
+
+  {feed.feed_url && <Posts tone="lv0" />}
+
+  <section class="row lv0" style="padding-top:var(--s-5);padding-bottom:var(--s-6)">
+    <div class="pl"></div>
+    <div class="bed">
+      {gateOpen('DFGNR')
+        ? <p class="credit-line" set:html={esc(site.funding.acknowledgement).replace(site.funding.gepris_id, `<a href="${project.gepris}">${site.funding.gepris_id}</a>`) + ackMarks.map((m) => ` <span class="tbc">${markLabel(m)}</span>`).join('')} />
+        : <p class="credit-line">Funded by the DFG · FOR 5710 · <a href={project.gepris}>GEPRIS {site.funding.gepris_id}</a></p>}
     </div>
     <div class="pr"></div>
   </section>
