@@ -1,0 +1,13 @@
+{
+  "approved": [
+    "PHOTO",
+    "DFGNR",
+    "COLOPHON",
+    "LEGAL",
+    "PUBAS",
+    "HOSTING"
+  ],
+  "lists_complete": {
+    "talks": true
+  }
+}

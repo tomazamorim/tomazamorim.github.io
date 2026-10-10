@@ -1,0 +1,37 @@
+---
+import { visibleKeywords, feed, hasPodcast, projectVisible, hasResearch, researchHref, visibleBios, gateOpen, site } from '../lib/data';
+interface Props { season: 'dry' | 'flood'; nav: string; margins?: boolean }
+const { season, nav, margins = false } = Astro.props;
+const main = [
+  { id: 'cv', href: '/cv/', label: 'CV' },
+  { id: 'publications', href: '/publications/', label: 'Publications' },
+  ...(site.menu.talks ? [{ id: 'talks', href: '/talks/', label: 'Talks' }] : []),
+  { id: 'grants', href: '/grants/', label: 'Grants' },
+  ...(site.menu.teaching ? [{ id: 'teaching', href: '/teaching/', label: 'Teaching' }] : []),
+  // For organizers só existe quando há o que oferecer (bios aprovadas ou foto liberada)
+  ...(visibleBios().length > 0 || gateOpen('PHOTO') ? [{ id: 'organizers', href: '/for-organizers/', label: 'For organizers' }] : []),
+];
+const hasKeywords = visibleKeywords().length > 0;
+const hasPosts = !!feed.feed_url;  // sem feed ligado no lançamento: nem item de menu nem seção (DS 6.11)
+const research = [
+  ...(projectVisible() ? [{ id: 'project', href: '/research/', label: 'Project' }] : []),
+  ...(hasKeywords ? [{ id: 'keywords', href: '/research/keywords/', label: 'Keywords' }] : []),
+  ...(hasPosts && projectVisible() ? [{ id: 'posts', href: '/research/#posts', label: 'Posts' }] : []),
+];
+---
+{season === 'dry' ? (
+  <header class="row site-head">
+    <a class="mark" href="/">{new URL(site.site_url).host}</a>
+    <nav aria-label="Main">
+      {main.map((m) => <a href={m.href} aria-current={nav === m.id ? 'page' : undefined}>{m.label}</a>)}
+      {hasResearch() && <a class="research" href={researchHref()} aria-current={nav === 'research' ? 'page' : undefined}>Research</a>}
+    </nav>
+  </header>
+) : (
+  <header class="row site-head deep">
+    <a class="back" href="/">← {site.name}</a>
+    <nav aria-label="Research">
+      {research.map((m) => <a href={m.href} aria-current={nav === m.id ? 'page' : undefined}>{m.label}</a>)}
+    </nav>
+  </header>
+)}

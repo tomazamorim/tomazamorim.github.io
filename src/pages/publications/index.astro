@@ -1,0 +1,53 @@
+---
+import Base from '../../layouts/Base.astro';
+import PubItem from '../../components/PubItem.astro';
+import { groupedViews, titleHtml } from '../../lib/pubs';
+import { pubListJsonLd } from '../../lib/jsonld';
+import { visiblePubs, gateOpen, activeMarks, markLabel, isPreview, inline } from '../../lib/data';
+const groups = groupedViews();
+const list = visiblePubs();
+const pubAsMarks = activeMarks([{ q: 'PUBAS', note: 'declaration about Tomaz’s author identity' }]);
+const publishesAs = gateOpen('PUBAS');
+---
+<Base title="Publications" description="Publications by Dr. Tomaz Amorim." path="/publications/" nav="publications" jsonld={pubListJsonLd(list, '/publications/')}>
+  <section class="row">
+    <div class="pl"></div>
+    <div class="bed">
+      <h1 class="title">Publications</h1>
+      {publishesAs && <p class="publishes">Preferred citation: Amorim, Tomaz. Earlier publications may appear under historical name variants.{pubAsMarks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}</p>}
+    </div>
+    <div class="pr"></div>
+  </section>
+  <section class="row sp-m">
+    <div class="pl"></div>
+    <div class="bed">
+      <nav aria-label="Types of publication">
+        <ul class="anchors">
+          {groups.map((g) => <li><a href={`#g-${g.id}`}>{g.label}<span class="n">{g.views.length}</span></a></li>)}
+        </ul>
+      </nav>
+      {groups.map((g) => g.id === 'press' ? (
+        <details class="press" id="g-press">
+          <summary>{g.label}<span class="n">{g.views.length}</span></summary>
+          <ul>
+            {g.views.map((v) => (
+              (v.id === 'OU-01' || v.id === 'OU-02') ?
+                <li id={v.id}><span lang="pt" set:html={titleHtml(v)} /> <i>Blog Negro Belchior</i>, <i>CartaCapital</i>, 8 nov. 2013.</li>
+              : <li id={v.id}>
+                <span class="d">{v.press!.date}</span>{v.press!.venue && <Fragment> · <i>{v.press!.venue}</i></Fragment>} · {v.press!.url
+                  ? <a href={v.press!.url} lang={v.lang} set:html={titleHtml(v)} />
+                  : <span lang={v.lang} set:html={titleHtml(v)} />}
+              </li>
+            ))}
+          </ul>
+        </details>
+      ) : (
+        <Fragment>
+          <h2 class="group" id={`g-${g.id}`}>{g.label}<span class="n">{g.views.length}</span></h2>
+          <ul class="items">{g.views.map((v) => <PubItem v={v} />)}</ul>
+        </Fragment>
+      ))}
+    </div>
+    <div class="pr"></div>
+  </section>
+</Base>

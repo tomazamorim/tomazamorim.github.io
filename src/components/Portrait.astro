@@ -1,0 +1,20 @@
+---
+import { getImage } from 'astro:assets';
+import portrait from '../assets/tomaz-amorim-foto-ricson-onodera.jpg';
+import { site } from '../lib/data';
+interface Props { width?: number; credit?: 'short' | 'long'; class?: string }
+// Nunca ampliar além dos 579 px originais. srcset: 1x, 2x, 3x do tamanho exibido, limitado a 579.
+const { width = 150, credit = 'short' } = Astro.props;
+const dens = [1, 2, 3].map((d) => Math.min(579, width * d)).filter((v, i, a) => a.indexOf(v) === i);
+const imgs = await Promise.all(dens.map((w) => getImage({ src: portrait, width: w, format: 'jpeg', quality: 78 })));
+const webp = await Promise.all(dens.map((w) => getImage({ src: portrait, width: w, format: 'webp', quality: 72 })));
+const h = Math.round(width * 869 / 579);
+const srcset = (list: any[], ds: number[]) => list.map((g, i) => `${g.src} ${g.options.width}w`).join(', ');
+---
+<figure class="portrait">
+  <picture>
+    <source type="image/webp" srcset={srcset(webp, dens)} sizes={`${width}px`}>
+    <img src={imgs[0].src} srcset={srcset(imgs, dens)} sizes={`${width}px`} width={width} height={h} alt={site.portrait.alt} decoding="async">
+  </picture>
+  {credit === 'short' && <figcaption>Photo: {site.portrait.credit}</figcaption>}
+</figure>

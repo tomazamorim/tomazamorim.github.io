@@ -1,0 +1,113 @@
+---
+import Base from '../layouts/Base.astro';
+import Portrait from '../components/Portrait.astro';
+import Marks from '../components/Marks.astro';
+import { site, visibleBios, activeMarks, markLabel, isPreview, absoluteUrl, projectVisible, inline } from '../lib/data';
+import { cvPdf } from '../lib/files';
+import { selectedItems, selectedMarks, titleHtml } from '../lib/pubs';
+
+const bio = visibleBios().find((b) => b.id === 'en45');
+const bioPt = visibleBios().find((b) => b.id === 'pt105');
+const pdf = cvPdf();
+const selected = selectedItems();
+const selMarks = activeMarks(selectedMarks);
+// Faixa de limiar da pesquisa: só com o lede de Tomaz (e com a pesquisa publicável). No preview, o lugar fica marcado.
+const lede = site.research_lede as string | null;
+const showThreshold = projectVisible() && !!lede;
+const previewThreshold = isPreview && !lede;
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  givenName: 'Tomaz',
+  familyName: 'Amorim',
+  alternateName: ['Tomaz Amorim Izabel', ...site.name_bibliographic],
+  jobTitle: site.position_exact,
+  url: absoluteUrl('/'),
+  affiliation: [
+    { '@type': 'Organization', name: 'Ruhr-Universität Bochum', department: { '@type': 'Organization', name: site.institute } },
+    { '@type': 'Organization', name: 'Maria Sibylla Merian Centre Conviviality-Inequality in Latin America (Mecila)' },
+    { '@type': 'Organization', name: 'Brazilian Center for Analysis and Planning (CEBRAP)' },
+  ],
+  sameAs: [site.links.orcid.url, site.links.scholar.url, site.links.lattes.url, site.links.linkedin.url, site.links.instagram.url],
+  identifier: { '@type': 'PropertyValue', propertyID: 'ORCID', value: site.links.orcid.id },
+};
+---
+<Base title={site.name} description="Dr. Tomaz Amorim: CV, publications, talks, and research on extractivism and infrastructure in Brazilian literature." path="/" jsonld={jsonld}>
+  <section class="row identity">
+    <div class="pl"></div>
+    <div class="bed">
+      <h1 class="name">{site.name}</h1>
+      <p class="quick" aria-label="Quick links">
+        {pdf && <a class="btn" href={pdf.href}>CV · PDF <span class="meta">{pdf.size}</span></a>}
+        <a class="btn" href={`mailto:${site.email}`}>Email</a>
+      </p>
+      {bio && <p class="bio" lang="en">{bio.text}<Marks tbc={bio.tbc} /></p>}
+      {bioPt && (
+        <details class="pt" lang="pt">
+          <summary>Em português</summary>
+          <p>{bioPt.text}</p>
+        </details>
+      )}
+      <dl class="facts">
+        <dt>Position</dt>
+        <dd>{site.position_exact.replace(/, Ruhr-Universität Bochum$/, '')}<br>{site.institute}, {site.university} · since {site.position_since}</dd>
+        <dt>Funding</dt>
+        {bio
+          ? <dd class="funding"><b>{site.funding.name}</b> · <a href={site.funding.gepris_url}>GEPRIS {site.funding.gepris_id}</a> · since {site.funding.since} · <a href={site.funding.group_url}>infra-aesthetics.de</a></dd>
+          : <dd class="funding"><b>{site.funding.name}</b> “{site.funding.title}” · <a href={site.funding.gepris_url}>GEPRIS {site.funding.gepris_id}</a> · since {site.funding.since} · <a href={site.funding.group_url}>infra-aesthetics.de</a></dd>}
+        <dt>Also</dt>
+        <dd>{site.also.map((a, i) => <Fragment>{i > 0 && <br />}{a}</Fragment>)}</dd>
+        <dt>Profiles</dt>
+        <dd><a href={site.links.orcid.url}>ORCID</a> · <a href={site.links.scholar.url}>Google Scholar</a> · <a href={site.links.lattes.url}>Lattes</a> · <a href={site.links.linkedin.url}>LinkedIn</a> · <a href={site.links.instagram.url}>Instagram</a></dd>
+        <dt id="contact">Contact</dt>
+        <dd><a href={`mailto:${site.email}`}>{site.email}</a><Marks tbc={site.email_tbc} /></dd>
+      </dl>
+
+      {selected.length > 0 && (
+        <section class="selected" aria-labelledby="sw">
+          <span class="sc" id="sw">Selected work</span>
+          {selMarks.map((m) => <p class="sel-mark"><span class="tbc">{markLabel(m)}</span></p>)}
+          <ul class="sw-grid">
+            {selected.map((s) => (
+              <li class="sw-item">
+                <span class="meta">{s.typeLabel} · {s.v.year}</span>
+                <span class={`t ${s.v.quoted ? '' : 'book'}`} lang={s.v.lang} set:html={titleHtml(s.v)} />
+                {s.credit && <span class="cr" set:html={inline(s.credit, { marks: false })} />}
+                {s.access && <a class="acc" href={s.access.href}>{s.access.label}</a>}
+              </li>
+            ))}
+          </ul>
+          <p class="all-link"><a href="/publications/">All publications →</a></p>
+        </section>
+      )}
+
+      {isPreview && (
+        <form class="newsletter" onsubmit="return false" style="margin-top:var(--s-6)">
+          <label class="label" for="nl" style="flex-basis:100%;margin:0">Newsletter</label>
+          <input id="nl" type="email" placeholder="your e-mail" disabled>
+          <button class="btn small" type="button" disabled>Subscribe</button>
+          <Marks tbc={site.newsletter.tbc} />
+        </form>
+      )}
+    </div>
+    <div class="pr portrait-col">
+      <Portrait width={150} />
+    </div>
+  </section>
+
+  {(showThreshold || previewThreshold) && (
+    <section class="row threshold" aria-label="Research">
+      <div class="pl"></div>
+      <div class="bed">
+        <span class="sc">Research</span>
+        <h2>Extractivism and Infrastructure in Brazilian Literature</h2>
+        {lede
+          ? <p class="lead" style="font-size:20px">{lede}</p>
+          : <p class="lead" style="font-size:20px">{activeMarks(site.research_lede_tbc).map((m) => <span class="tbc">{markLabel(m)}</span>)}</p>}
+        <p class="all-link"><a href={projectVisible() || isPreview ? '/research/' : '/research/keywords/'}>Enter the research →</a></p>
+      </div>
+      <div class="pr"></div>
+    </section>
+  )}
+</Base>

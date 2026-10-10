@@ -1,0 +1,99 @@
+---
+// Página da pesquisa (DS v1.1 §6.13a): abertura seca (kicker, título, lede de Tomaz), bloco "The project" com o texto literal do Project 4,
+// margens com os nomes como links, nível de cheia calculado pelo número de itens de margem. Nada de proveniência editorial na página (vai ao Colophon).
+import Base from '../../layouts/Base.astro';
+import Posts from '../../components/Posts.astro';
+import Names from '../../components/Names.astro';
+import { project, site, isPreview, activeMarks, markLabel, projectPublishable, researchLede, feed, kwUrl, gateOpen, esc } from '../../lib/data';
+import { termsIn } from '../../lib/research';
+
+// Sem o aval do grupo (Q12) e sem o lede de Tomaz a pesquisa não vai ao público: a página não existe (nem link, nem sitemap).
+export function getStaticPaths() {
+  return projectPublishable() ? [{ params: { slug: undefined } }] : [];
+}
+const lede = researchLede();
+const paras = project.paragraphs;
+const seen = new Set<string>();
+const banded = new Set<string>();
+let lastBand = -2;
+const sections = paras.map((p, i) => {
+  const terms = termsIn(p.text);
+  const fresh = terms.filter((t) => !seen.has(t.id));
+  // Faixa de nomes (cheia alta): DEPOIS do parágrafo em que o termo aparece pela primeira vez; nunca depois de parágrafo que termina em dois-pontos
+  // (a abertura introduz a lista 1) 2) 3)): nesse caso o termo só ganha margem, e a faixa vem depois do item que o contém. No máximo uma a cada duas seções.
+  const colon = /:\s*$/.test(p.text);
+  let band = null as null | (typeof fresh)[number];
+  if (!colon && fresh.length && i - lastBand >= 2) { band = fresh.find((t) => !banded.has(t.id)) ?? null; if (band) { banded.add(band.id); lastBand = i; } }
+  // itens de margem: um link por termo do trecho + os outros nomes dos termos que aparecem pela primeira vez (menos o da faixa, que mostra os seus)
+  const items = terms.reduce((n, t) => n + 1 + (fresh.includes(t) && t !== band ? t.names.length : 0), 0);
+  const level = items === 0 ? 0 : items <= 3 ? 1 : 2;
+  const noted = terms.map((t) => ({ t, names: fresh.includes(t) && t !== band }));
+  terms.forEach((t) => seen.add(t.id));
+  return { p, terms, band, noted, level };
+});
+const projMarks = activeMarks(project.tbc);
+const ackMarks = activeMarks(site.funding.acknowledgement_tbc);
+const ledeMarks = activeMarks(site.research_lede_tbc);
+let toneIdx = 0;
+---
+<Base title="Research" description="Research project: Extractivism and Infrastructure in Brazilian Literature, subproject TP 4 of DFG Research Unit FOR 5710." season="flood" nav="project" path="/research/">
+  <section class="row opening2 lv0" id="top">
+    <div class="ttl">
+      <span class="sc">Research</span>
+      <h1>{project.title}</h1>
+    </div>
+    <div class="pr"></div>
+  </section>
+  <section class="row lv0" style="padding-bottom:var(--s-7)">
+    <div class="pl"></div>
+    <div class="bed">
+      {lede
+        ? <p class="lede-slot" lang="en">{lede}</p>
+        : <p class="lede-slot">{ledeMarks.map((m) => <span class="tbc">{markLabel(m)}</span>)}</p>}
+    </div>
+    <div class="pr"></div>
+  </section>
+
+  <section class="row lv0" id="project">
+    <div class="pl"></div>
+    <div class="bed"><h2 class="proj-h">The project</h2></div>
+    <div class="pr"></div>
+  </section>
+
+  {sections.map((s, i) => (
+    <Fragment>
+      <section class={`row lv${s.level} sp-m`}>
+        <div class="bed body">
+          <p lang="en">{s.p.n && <Fragment><span class="num">{s.p.n}</span>{' '}</Fragment>}{s.p.text}</p>
+          {i === sections.length - 1 && (
+            <p class="credit-line">Project description from <a href={project.source_group_url}>DFG Research Unit FOR 5710</a>, <a href={project.source_url}>infra-aesthetics.de/project4</a>{projMarks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}</p>
+          )}
+        </div>
+        <div class="pl note">
+          {s.noted.map((n) => <Names term={n.t} withNames={n.names} />)}
+        </div>
+        <div class="pr note"></div>
+      </section>
+      {s.band && (
+        <section class="row highwater lv3" aria-label="Other names of a term">
+          <div class="hw">
+            <span><a href={kwUrl(s.band.slug)}><i>{s.band.term}</i></a></span>
+            {s.band.names.map((n) => <span><span class="lang">{n.lang}</span><i lang={n.lang || undefined}>{n.text}</i></span>)}
+          </div>
+        </section>
+      )}
+    </Fragment>
+  ))}
+
+  {feed.feed_url && <Posts tone="lv0" />}
+
+  <section class="row lv0" style="padding-top:var(--s-5);padding-bottom:var(--s-6)">
+    <div class="pl"></div>
+    <div class="bed">
+      {gateOpen('DFGNR')
+        ? <p class="credit-line" set:html={esc(site.funding.acknowledgement).replace(site.funding.gepris_id, `<a href="${project.gepris}">${site.funding.gepris_id}</a>`) + ackMarks.map((m) => ` <span class="tbc">${markLabel(m)}</span>`).join('')} />
+        : <p class="credit-line">Funded by the DFG · FOR 5710 · <a href={project.gepris}>GEPRIS {site.funding.gepris_id}</a></p>}
+    </div>
+    <div class="pr"></div>
+  </section>
+</Base>

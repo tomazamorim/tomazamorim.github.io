@@ -1,0 +1,290 @@
+/* =====================================================================
+   site.css — acréscimos ao varzea.css (implementação de referência do design system).
+   Só o que as páginas reais precisam e as páginas de referência não tinham.
+   ===================================================================== */
+
+/* ---------- Cabeçalho do subsite ---------- */
+.site-head.deep{ background: transparent; }  /* rodada 3a: cabeçalho do subsite sem tinta (nível 0) */
+
+/* ---------- Primeira linha das páginas da seca ---------- */
+body.dry main > .row:first-child{ padding-top: var(--s-7); padding-bottom: var(--s-2); }
+body.dry main > .row:first-child h1.title{ margin-bottom: 0; }
+@media (max-width: 760px){ body.dry main > .row:first-child{ padding-top: var(--s-6); } }
+
+/* ---------- Home ---------- */
+.portrait-col{ align-self: start; padding-top: calc(var(--t-name) * var(--lh-name) + var(--s-4)); }
+.facts dd.funding b{ font-weight: 500; }
+.facts dd .btn{ margin-right: 6px; }
+@media (max-width: 760px){ .portrait-col{ padding-top: var(--s-5); } }
+
+/* ---------- CV, Grants, Teaching ---------- */
+.cv-h{ font-weight: 400; font-size: 26px; line-height: 1.2; margin: 0 0 var(--s-2); }
+.cv-sub{ font-family: var(--f-note); font-weight: 500; font-size: var(--t-label); color: var(--c-muted); margin: var(--s-5) 0 var(--s-1); }
+.cv-note{ font-size: var(--t-body-s); line-height: var(--lh-body-s); margin: var(--s-3) 0; }
+.cv-sec{ margin: 0 0 var(--s-7); }
+.cv-sec:first-child{ margin-top: var(--s-6); }
+table.cv td i{ font-style: italic; }
+.updated .btn{ margin-left: 4px; }
+@media (max-width: 760px){ .cv-h{ font-size: 23px; } }
+
+/* ---------- For organizers ---------- */
+.bio-card blockquote{ hyphens: auto; }
+.bio-card details summary{ min-height: 32px; display: inline-block; padding-top: 4px; }
+.bio-card .portrait{ margin-bottom: var(--s-3); }
+.photo-note{ font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); margin: 0 0 var(--s-3); }
+.photo-acts{ display: flex; flex-wrap: wrap; gap: 10px; margin: 0; }
+
+/* ---------- Publicações e falas ---------- */
+.filters li{ margin: 0; }
+.items .item .acts .tbc{ align-self: center; }
+details.bib[open]{ flex-basis: 100%; }
+details.bib pre{ font-size: 13px; }
+.item .ids a{ overflow-wrap: anywhere; }
+.talk .tbc{ white-space: normal; }
+
+/* ---------- Colofão ---------- */
+dl.prov{ display: grid; grid-template-columns: 80px 1fr; gap: 2px 12px; margin: 0 0 var(--s-2); }
+dl.prov dt{ color: var(--c-muted); font-size: var(--t-label); padding: 0; border: 0; }
+dl.prov dd{ margin: 0; padding: 0; border: 0; font-size: 17px; }
+#page-weights table{ width: 100%; border-collapse: collapse; font-size: 16px; font-variant-numeric: tabular-nums lining-nums; }
+#page-weights th{ text-align: left; font-family: var(--f-note); font-weight: 400; font-size: var(--t-label); color: var(--c-muted); padding: 4px 8px 4px 0; border-bottom: var(--b-hair); }
+#page-weights td{ padding: 3px 8px 3px 0; border-bottom: var(--b-hair); vertical-align: top; }
+#page-weights td.n, #page-weights th.n{ text-align: right; white-space: nowrap; }
+#page-weights p{ margin: var(--s-2) 0 0; font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); }
+
+/* ---------- Impressum e Datenschutz ---------- */
+.legal h2.cv-h{ margin-top: var(--s-6); }
+.legal p{ font-size: var(--t-body-s); line-height: var(--lh-body-s); margin: 0 0 var(--s-3); }
+.legal-rule{ border: 0; border-top: var(--b-hair); margin: var(--s-6) 0 var(--s-4); }
+.legal-flag{ margin: var(--s-4) 0 0; }
+
+/* ---------- Subsite ---------- */
+.opening{ padding-top: var(--s-8); padding-bottom: var(--s-6); }
+.opening .wide-l{ justify-self: end; width: min(100%, calc(var(--w-bed) + 240px)); }
+.opening h1.title{ font-size: 66px; line-height: 1.03; }
+.opening .pr{ align-self: end; }
+@media (max-width: 1023px){ .opening h1.title{ font-size: var(--t-title); } .opening .wide-l{ width: auto; justify-self: stretch; } }
+@media (max-width: 760px){ .opening{ padding-top: var(--s-6); padding-bottom: var(--s-4); } }
+.kwi .item{ display: flex; justify-content: space-between; gap: 12px; padding: var(--s-2) 0; }
+.note h2.nh{ font-family: var(--f-sc); font-weight: 500; font-size: var(--t-note); letter-spacing: .04em; margin: 0 0 var(--s-1); color: var(--c-muted); line-height: var(--lh-note); }
+.note h2.nh:not(:first-child){ margin-top: var(--s-3); }
+.posts .item .post-title{ font-size: 21px; }
+.cite-acts{ margin: var(--s-2) 0 0; }
+.cite pre{ font-family: var(--f-note); }
+.back-link{ font-family: var(--f-note); font-size: var(--t-label); margin: 0; }
+blockquote.kw-q{ margin-left: 0; margin-right: 0; }
+.kw-q .tbc{ vertical-align: middle; }
+.note .names li{ margin-bottom: 2px; }
+.note p a{ overflow-wrap: anywhere; }
+
+/* ---------- Rodapé e marcas ---------- */
+.site-foot .bed a{ color: var(--c-ink); }
+.tbc{ display: inline; white-space: normal; }
+
+.cv-sec h3.cv-sub{ font-family: var(--f-note); font-weight: 500; font-size: var(--t-label); line-height: 1.4; color: var(--c-muted); margin: var(--s-5) 0 var(--s-1); }
+.item .ref{ overflow-wrap: anywhere; }
+
+/* Ordem no código: trecho (.bed), depois notas (.pl, .pr) — leitor de tela lê o trecho antes das notas (DS §7).
+   Visualmente as três colunas ficam na mesma linha. */
+@media (min-width: 761px){ .row > .pl, .row > .bed, .row > .pr{ grid-row: 1; } }
+@media (min-width: 761px) and (max-width: 1023px){ .row > .pr{ grid-row: 1; } .row > .pl ~ .pr{ grid-row: 2; } .row > .bed{ grid-row: 1 / span 2; } }
+
+/* =====================================================================
+   RODADA 2
+   ===================================================================== */
+
+/* ---------- Home: linha de acesso rápido em todas as larguras (antes só no celular) ---------- */
+.quick{ display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 var(--s-5); }
+@media (max-width: 760px){ .quick{ margin-bottom: var(--s-4); } .quick .btn{ min-height: 44px; } }
+.ack{ font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); margin: var(--s-3) 0 0; }
+
+/* ---------- Publications: BibTeX como link discreto (continua <details>, sem JS) ---------- */
+.item .acts{ margin-top: var(--s-1); }
+details.bib > summary{ display: inline-block; list-style: none; cursor: pointer; font-family: var(--f-note); font-size: var(--t-label); line-height: 1.4;
+  color: var(--c-link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; padding: 2px 0; border: 0; background: none; min-height: 0; }
+details.bib > summary:hover{ text-decoration-thickness: 2px; }
+details.bib[open] > summary{ background: none; color: var(--c-link); }
+@media (max-width: 760px){ details.bib > summary{ padding: 10px 0; } }
+
+/* ---------- Tabelas do CV: régua no topo; coluna de função (Grants) ---------- */
+table.cv{ border-top: var(--b-hair); }
+table.cv.has-role td.role{ width: 190px; font-family: var(--f-note); font-size: var(--t-label); line-height: 1.35; color: var(--c-muted); }
+table.cv.has-role thead th{ border-bottom: var(--b-hair); }
+table.cv .role-l{ display: none; }
+.cv-sec.grant-block{ margin-bottom: var(--s-7); }
+.cv-sec.grant-block:last-child{ margin-bottom: 0; }
+h2.cv-sub{ font-weight: 500; font-size: var(--t-label); }
+.bed > h2.cv-sub{ margin: var(--s-6) 0 var(--s-1); }
+.bed > h2.cv-sub:first-child{ margin-top: 0; }
+@media (max-width: 760px){
+  table.cv .role-l{ display: inline; }
+  table.cv.has-role td.role{ width: auto; }
+  table.cv.has-role thead{ display: none; }
+}
+
+/* ---------- Talks: reapresentações da mesma fala ---------- */
+.talk .ids.also{ margin-top: 2px; }
+
+/* ---------- Colofão ---------- */
+details.weights{ margin-top: var(--s-2); }
+details.weights > summary{ cursor: pointer; font-family: var(--f-note); font-size: var(--t-label); color: var(--c-link); }
+details.weights table{ margin-top: var(--s-2); }
+
+/* ---------- For organizers ---------- */
+.bio-card .suggest{ font-family: var(--f-note); font-size: var(--t-label); line-height: 1.45; color: var(--c-muted); margin: var(--s-2) 0 0; }
+
+/* ---------- Keywords: o termo e os outros nomes na mesma faixa (cheia alta) ---------- */
+.kw-head-row .kw-title{ display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.kw-head-row .kw-term{ margin: 0; }
+.kw-others-l{ font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); margin: var(--s-3) 0 var(--s-1); }
+.kw-others{ list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 var(--s-6); }
+.kw-others li{ white-space: normal; }
+.kw-others i{ font-family: var(--f-text); font-style: italic; font-size: var(--t-names); line-height: var(--lh-names); color: var(--c-name); }
+.kw-others .lang{ margin-right: 8px; }
+.note p.near-src{ margin: var(--s-2) 0 var(--s-1); color: var(--c-ink); }
+.note .near-src + p{ margin-top: 0; }
+/* celular (DS v1.1 §4.2): termo → nomes → definição → citações → relacionados → Near it → Sources → About */
+@media (max-width: 760px){
+  .kw-body > .bed{ display: contents; }
+  .kw-body > .bed > .kw-def{ order: 1; }
+  .kw-body > .bed > .kw-quotes{ order: 2; }
+  .kw-body > .bed > .kw-related{ order: 3; }
+  .kw-body > .pl{ order: 4; margin-top: var(--s-4); }
+  .kw-body > .bed > .sources{ order: 5; }
+  .kw-body > .bed > .entry-acts{ order: 6; }
+  .kw-body > .bed > .entry-marks{ order: 7; }
+  .kw-body > .bed > details.about{ order: 8; }
+  .kw-body > .pr.src-anchors{ display: none; }
+  .kw-body > .pl:not(:has(*)){ display: none; }
+  .sources li{ flex-direction: column; gap: 6px; }
+}
+/* verbete: tipo, definição, subtítulos, listas relacionadas */
+.kw-kind{ font-family: var(--f-sc); font-weight: 500; font-size: var(--t-label); letter-spacing: .06em; color: var(--c-muted); margin: 0 0 var(--s-1); }
+.kw-def{ font-size: var(--t-lead); line-height: var(--lh-lead); margin: 0 0 var(--s-5); max-width: 36em; }
+.kw-h{ font-family: var(--f-sc); font-weight: 500; font-size: 15px; letter-spacing: .04em; color: var(--c-muted); line-height: 1.4; margin: var(--s-6) 0 var(--s-2); }
+.kw-quotes .kw-h{ margin-top: 0; }
+.kw-rel{ list-style: none; margin: 0; padding: 0; }
+.kw-rel li{ display: grid; grid-template-columns: 3.2em 1fr; gap: 0 var(--s-2); border-top: var(--b-hair); padding: var(--s-2) 0; font-size: 17px; line-height: 1.45; }
+.kw-rel .yr{ font-family: var(--f-note); font-size: 14px; color: var(--c-muted); padding-top: 2px; }
+.kw-rel .cr{ color: var(--c-muted); font-family: var(--f-note); font-size: 14.5px; }
+.kw-talks{ margin-top: 0; }
+
+/* ---------- Celular: notas de margem vazias não ocupam espaço (rodada 2; os vãos de ~120 px do Research) ---------- */
+@media (max-width: 760px){
+  .row > .pl:not(:has(*)), .row > .pr:not(:has(*)){ display: none; }
+}
+
+
+/* =====================================================================
+   RODADA 3a — design v1.1 (RESPOSTA-RODADA-2.md). Fonte: design/varzea.css, bloco "Round 2 revision", com `flood` -> `cheia`.
+   ===================================================================== */
+/* nomes nas margens são os links */
+.names a{ color: var(--c-name); text-decoration-color: rgba(30,90,107,.45); }
+.names a i{ color: inherit; }
+.hw a{ color: var(--c-name); text-decoration-color: rgba(30,90,107,.45); }
+.hw a i{ color: inherit; }
+/* menu: Research é um item normal, o último */
+.site-head nav a.research{ color: var(--c-ink); text-decoration: none; }
+.site-head nav a.research:hover{ text-decoration: underline; }
+.site-head nav a.research[aria-current="page"]{ text-decoration: underline; text-decoration-thickness: 2px; }
+/* H1 único no site principal: Newsreader 400, 56/1,06 (761–1023: 46; ≤760: 38) */
+body.dry h1.name, body.dry h1.title{ font-weight: 400; font-size: 56px; line-height: 1.06; letter-spacing: -.01em; }
+@media (max-width: 1023px){ body.dry h1.name, body.dry h1.title{ font-size: 46px; } }
+@media (max-width: 760px){ body.dry h1.name, body.dry h1.title{ font-size: 38px; } }
+.portrait-col{ padding-top: calc(56px * 1.06 + var(--s-4)); }
+@media (max-width: 760px){ .portrait-col{ padding-top: var(--s-5); } }
+
+/* Selected work (home) */
+.selected{ margin-top: var(--s-7); }
+.selected .sc{ margin: 0 0 var(--s-3); display: block; }
+.sw-grid{ list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5) 24px; }
+.sw-item{ border-top: var(--b-hair); padding-top: var(--s-3); }
+.sw-grid > .sw-item:last-child:nth-child(odd){ grid-column: 1 / -1; }  /* número ímpar de itens: o último ocupa a largura toda, sem buraco ao lado */
+.sw-grid > .sw-item:last-child:nth-child(odd) .t{ max-width: 34em; }
+.sw-item .meta{ display: block; font-family: var(--f-note); font-size: 15px; color: var(--c-muted); margin-bottom: 4px; font-variant-numeric: lining-nums; }
+.sw-item .t{ display: block; font-size: 20px; line-height: 1.35; }
+.sw-item .t.book{ font-style: italic; font-size: 22px; line-height: 1.3; }
+.sw-item .cr{ display: block; font-size: 17px; line-height: 1.45; color: var(--c-ink); margin-top: 4px; }
+.sw-item .acc{ display: block; font-family: var(--f-note); font-size: 15px; margin-top: 6px; }
+.all-link{ font-family: var(--f-note); font-size: var(--t-label); margin: var(--s-4) 0 0; }
+.sel-mark{ margin: var(--s-2) 0 0; }
+
+/* Faixa de limiar da pesquisa na home (só existe com o lede de Tomaz) */
+.threshold{ background: var(--c-cheia-1); margin-top: var(--s-6); }
+.threshold .bed{ padding: var(--s-7) 0; }
+.threshold h2{ font-weight: 300; font-size: 30px; line-height: 1.2; margin: var(--s-1) 0 var(--s-3); }
+
+/* Publications agrupadas por tipo */
+.anchors{ display: flex; flex-wrap: wrap; gap: 0 18px; list-style: none; margin: 0 0 var(--s-6); padding: 0; font-family: var(--f-note); font-size: var(--t-label); }
+.anchors a{ display: inline-flex; align-items: center; min-height: var(--hit-min); color: var(--c-ink); text-decoration: none; }
+.anchors a:hover{ text-decoration: underline; }
+.anchors .n{ color: var(--c-muted); margin-left: 4px; font-variant-numeric: tabular-nums lining-nums; }
+h2.group{ font-weight: 300; font-size: 30px; line-height: 1.2; margin: var(--s-7) 0 var(--s-2); }
+h2.group .n, .press summary .n{ font-family: var(--f-note); font-size: 15px; color: var(--c-muted); margin-left: 8px; font-weight: 400; }
+.pub .t{ display: block; font-size: var(--t-body-s); line-height: var(--lh-body-s); }
+.pub .t i{ font-style: italic; }
+.pub .cr{ display: block; font-size: 16.5px; line-height: 1.45; }
+.pub .acts{ display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.press{ margin-top: var(--s-7); }
+.press summary{ cursor: pointer; font-weight: 300; font-size: 30px; line-height: 1.2; margin: 0 0 var(--s-2); min-height: var(--hit-min); list-style: none; }
+.press summary::-webkit-details-marker{ display: none; }
+.press summary::before{ content: "+ "; font-family: var(--f-note); color: var(--c-muted); }
+.press[open] summary::before{ content: "− "; }
+.press ul{ list-style: none; margin: 0; padding: 0; }
+.press li{ padding: 6px 0; border-top: var(--b-hair); font-size: 17px; line-height: 1.45; }
+.press .d{ font-family: var(--f-note); font-size: 15px; color: var(--c-muted); font-variant-numeric: tabular-nums lining-nums; }
+.publishes{ font-family: var(--f-note); font-size: 15px; color: var(--c-muted); margin: 0 0 var(--s-4); }
+.cv-pubs .items .item{ padding-bottom: var(--s-3); }
+
+/* Abertura da pesquisa (seca, nível 0) */
+.opening2{ padding-top: var(--s-8); padding-bottom: var(--s-4); }
+.opening2 .ttl{ grid-column: plain-l / plain-r; justify-self: end; width: min(100%, calc(var(--w-bed) + 240px)); }
+.opening2 h1{ font-weight: 300; font-size: var(--t-title); line-height: var(--lh-title); margin: var(--s-2) 0 0; letter-spacing: -.01em; }
+.lede-slot{ font-size: var(--t-lead); line-height: var(--lh-lead); margin: 0; }
+.credit-line{ font-family: var(--f-note); font-size: 15px; color: var(--c-muted); margin: var(--s-4) 0 0; }
+.proj-h{ font-weight: 300; font-size: 30px; line-height: 1.2; margin: 0; }
+
+/* Fonte curta depois da citação, lista de fontes, "About this entry" */
+.qsrc{ display: block; font-family: var(--f-note); font-weight: 400; font-size: 15px; line-height: 1.4; color: var(--c-muted); margin-top: 6px; }
+.qsrc a{ color: var(--c-muted); }
+.sources{ list-style: none; margin: var(--s-6) 0 0; padding: 0; }
+.sources h2.nh{ margin: 0 0 var(--s-2); font-family: var(--f-sc); font-weight: 500; font-size: 15px; letter-spacing: .04em; color: var(--c-muted); line-height: 1.4; }
+.entry-marks{ margin: var(--s-3) 0 0; line-height: 2; }
+.sources li{ display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; border-top: var(--b-hair); padding: var(--s-2) 0; font-family: var(--f-note); font-size: 15.5px; line-height: 1.45; color: var(--c-ink); }
+.sources li .btn{ flex: none; }
+.entry-acts{ margin: var(--s-4) 0 0; }
+details.about{ margin-top: var(--s-6); font-family: var(--f-note); font-size: 14px; color: var(--c-muted); }
+details.about summary{ cursor: pointer; min-height: var(--hit-min); display: flex; align-items: center; }
+details.about p{ margin: 0 0 8px; }
+
+/* Índice de Keywords com glosa */
+.kwx{ list-style: none; margin: 0; padding: 0; }
+.kwx li{ border-top: var(--b-hair); padding: var(--s-3) 0; }
+.kwx .top{ display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.kwx .top a{ font-size: 22px; line-height: 1.3; }
+.kwx .nm{ font-family: var(--f-note); font-size: 14px; color: var(--c-muted); white-space: nowrap; }
+.kwx .gl{ margin: 4px 0 0; font-size: 17px; line-height: 1.45; color: #2B2F2C; }
+.kwx .gl .pgn{ font-family: var(--f-note); font-size: 14px; color: var(--c-muted); }
+
+/* Português recolhível na home */
+details.pt summary{ list-style: none; cursor: pointer; min-height: var(--hit-min); display: flex; align-items: center; color: var(--c-link); font-family: var(--f-note); font-size: var(--t-label); }
+details.pt summary::-webkit-details-marker{ display: none; }
+details.pt summary::before{ content: "+ "; margin-right: 4px; } details.pt[open] summary::before{ content: "− "; }
+details.pt p{ font-size: 18px; line-height: 1.55; margin: 0 0 var(--s-4); }
+
+/* Colofão: método editorial */
+ul.method{ margin: 0; padding: 0; list-style: none; }
+ul.method li{ margin: 0 0 var(--s-2); }
+
+/* Alvos de 44 px no celular */
+@media (max-width: 1023px){ .sw-grid{ grid-template-columns: 1fr; } .opening2 .ttl{ width: auto; justify-self: stretch; } }
+@media (max-width: 760px){
+  .sw-item .t.book{ font-size: 20px; }
+  .site-head nav{ gap: 0 12px; }
+  .site-head nav a{ display: inline-flex; align-items: center; min-height: var(--hit-min); padding: 0 4px; }
+  .btn, .btn.small{ min-height: var(--hit-min); }
+  .threshold .bed{ padding: var(--s-6) 0; }
+  h2.group, .press summary, .proj-h{ font-size: 26px; }
+  .kwx .top{ flex-direction: column; gap: 0; }
+  .site-foot .bed a{ display: inline-flex; align-items: center; min-height: var(--hit-min); }
+}

@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+import Marks from '../components/Marks.astro';
+import { site, project, isPreview, activeMarks, markLabel, gateOpen, visibleBios, visibleKeywords, projectPublishable, siteHasScript } from '../lib/data';
+const aiOpen = gateOpen('COLOPHON');
+const aiMarks = activeMarks(site.ai_statement_tbc);
+const hasBios = visibleBios().length > 0;
+const hasKeywords = visibleKeywords().length > 0;
+const hasScript = siteHasScript();
+const photoOpen = gateOpen('PHOTO');
+---
+<Base title="Colophon" description="How this site is made: page weight, type, images, texts and editorial method." path="/colophon/">
+  <section class="row">
+    <div class="pl"></div>
+    <div class="bed">
+      <h1 class="title">Colophon</h1>
+    </div>
+    <div class="pr"></div>
+  </section>
+  <section class="row sp-m">
+    <div class="pl"></div>
+    <div class="bed">
+      <dl class="facts">
+        {(isPreview || site.hosting) && (<Fragment><dt>Hosting</dt><dd>{site.hosting ?? ''}<Marks tbc={site.hosting_tbc} /></dd></Fragment>)}
+        <dt>This site</dt>
+        <dd>No third-party requests · no cookies · no tracking. {hasScript
+          ? 'The only script is a small one for the “Copy” buttons; without it, every page works and every text can be selected.'
+          : 'No scripts: every page works as plain HTML and every text can be selected.'}</dd>
+        <dt>Page weight</dt>
+        <dd>
+          <div id="page-weights">%%WEIGHTS%%</div>
+        </dd>
+        <dt>Type</dt>
+        <dd>Newsreader (Production Type) · Alegreya Sans and Alegreya Sans SC (Huerta Tipográfica) · SIL Open Font License 1.1 · self-hosted, Latin and Latin Extended subsets, WOFF2. License texts: <a href="/fonts/newsreader/LICENSE.txt">Newsreader</a>, <a href="/fonts/alegreya-sans/LICENSE.txt">Alegreya Sans</a>, <a href="/fonts/alegreya-sans-sc/LICENSE.txt">Alegreya Sans SC</a>.</dd>
+        <dt>Images</dt>
+        <dd>
+          <dl class="prov">
+            <dt>Work</dt><dd>{site.portrait.alt}</dd>
+            <dt>Author</dt><dd>{site.portrait.credit}</dd>
+            <dt>Source</dt><dd>{site.portrait.source}</dd>
+            {isPreview && !photoOpen && <Fragment><dt>License</dt><dd><Marks tbc={site.portrait.licence_tbc} /></dd></Fragment>}
+          </dl>
+          No other images.
+        </dd>
+        <dt>Texts</dt>
+        <dd>
+          <p>Titles, references, dates and identifiers come from Dr. Tomaz Amorim’s publications, records and documents.</p>
+          {hasBios && <p>The biographies are texts by Dr. Tomaz Amorim; their opening sentence was updated and the later sentences recombined from his January 2026 versions.<Fragment set:html={activeMarks([{ q: 'Q6', note: 'approval of the bios' }]).map((m) => ` <span class="tbc">${markLabel(m)}</span>`).join('')} /></p>}
+        </dd>
+        <dt id="editorial-method">Editorial method</dt>
+        <dd>
+          <ul class="method">
+            <li>Translations are credited to their translators.</li>
+            {hasKeywords && <li>Quotations are literal, in the language in which they were published, with the page of the printed edition (for an online-first article, the page of the online-first PDF). Each entry gives a short definition, passages quoted from published texts by the author, and the related publications and talks; its address does not change once published.</li>}
+            {projectPublishable() && <li>The project description is reproduced without changes from <a href={project.source_url}>infra-aesthetics.de/project4</a>, a page of <a href={project.source_group_url}>DFG Research Unit FOR 5710</a> signed “Dr. Tomaz Amorim”: one paragraph in the source, divided here at its own numbering. Read {project.read_on}.</li>}
+            <li>Sources last checked: {site.sources_checked}.</li>
+          </ul>
+        </dd>
+        {isPreview && (<Fragment><dt>Design and build</dt><dd><span class="tbc">[A CONFIRMAR: credit chosen by the author; the wording is Tomaz’s · COLOPHON]</span></dd></Fragment>)}
+        {aiOpen && (<Fragment><dt>Made with</dt>
+        <dd>{site.ai_statement}{aiMarks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}</dd></Fragment>)}
+      </dl>
+    </div>
+    <div class="pr"></div>
+  </section>
+</Base>

@@ -1,0 +1,65 @@
+---
+// For organizers: bios para reutilização e foto. Só existe quando há o que oferecer (bios aprovadas, Q6, ou foto liberada, PHOTO).
+import Base from '../../layouts/Base.astro';
+import CopyButton from '../../components/CopyButton.astro';
+import Portrait from '../../components/Portrait.astro';
+import { visibleBios, site, activeMarks, markLabel, gateOpen } from '../../lib/data';
+import { portraitDownload } from '../../lib/files';
+
+export function getStaticPaths() {
+  return visibleBios().length > 0 || gateOpen('PHOTO') ? [{ params: { slug: undefined } }] : [];
+}
+const bios = visibleBios();
+const photoOpen = gateOpen('PHOTO');
+const photo = portraitDownload();
+const bioMarks = activeMarks([{ q: 'Q6', note: 'approval of the bios' }]);
+const photoMarks = activeMarks(site.portrait.reuse_tbc);
+const SHOW: Record<string, string> = { en: 'Show full bio', de: 'Vollständig anzeigen', pt: 'Mostrar completa' };
+---
+<Base title="For organizers" description="Short bios and a photo for programs and announcements." path="/for-organizers/" nav="organizers" copy={true}>
+  <section class="row">
+    <div class="pl"></div>
+    <div class="bed">
+      <h1 class="title">For organizers</h1>
+    </div>
+    <div class="pr"></div>
+  </section>
+  <section class="row sp-m">
+    <div class="pl"></div>
+    <div class="bed">
+      {bios.length > 0 && (
+        <Fragment>
+          <p class="label">Short bios for programs and announcements{bioMarks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}</p>
+          {bios.map((b) => (
+            <div class="bio-card">
+              <div class="head">
+                <p class="label">{b.label}</p>
+                <CopyButton target={`bio-${b.id}`} label={b.copy} />
+              </div>
+              {b.open ? (
+                <blockquote id={`bio-${b.id}`} lang={b.lang}>{b.text}</blockquote>
+              ) : (
+                <details><summary>{SHOW[b.lang] ?? 'Show'}</summary><blockquote id={`bio-${b.id}`} lang={b.lang}>{b.text}</blockquote></details>
+              )}
+              {activeMarks(b.tbc.slice(1)).length > 0 && <p class="suggest">{activeMarks(b.tbc.slice(1)).map((m) => <Fragment><span class="tbc">{markLabel(m)}</span>{' '}</Fragment>)}</p>}
+              {(b as any).suggestions && activeMarks([{ q: 'Q6', note: 'x' }]).length > 0 && (
+                <p class="suggest"><span class="tbc">[A CONFIRMAR: suggested edits to the Kurzvita, NOT applied · Q6]</span>
+                  {(b as any).suggestions.map((sg: any, i: number) => <Fragment>{i > 0 ? ' ' : ' '}<span lang="de">„{sg.from}“ → „{sg.to}“</span> ({sg.why}){i < (b as any).suggestions.length - 1 ? ';' : '.'}</Fragment>)}
+                </p>
+              )}
+            </div>
+          ))}
+        </Fragment>
+      )}
+      {photoOpen && (
+        <div class="bio-card">
+          <div class="head"><p class="label">Photo for programs{photoMarks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}</p></div>
+          <Portrait width={150} credit="long" />
+          <p class="photo-note">{site.portrait.credit} · {site.portrait.width} × {site.portrait.height} px (web resolution) · {photo.size}<br>Credit must accompany every reuse.</p>
+          <p class="photo-acts"><a class="btn" href={photo.href} download>Download photo <span class="meta">JPG · {photo.size}</span></a> <CopyButton text={site.portrait.credit} label="Copy credit" small={false} /></p>
+        </div>
+      )}
+    </div>
+    <div class="pr"></div>
+  </section>
+</Base>

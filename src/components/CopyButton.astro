@@ -1,0 +1,6 @@
+---
+// Botão de copiar: renderizado oculto; o script o ativa se houver navigator.clipboard.
+interface Props { target?: string; text?: string; label?: string; small?: boolean }
+const { target, text, label = 'Copy', small = true } = Astro.props;
+---
+<button class={`btn ${small ? 'small' : ''} copy`} type="button" data-copy={target} data-copy-text={text} hidden>{label}</button>

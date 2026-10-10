@@ -1,0 +1,51 @@
+---
+// Layout base. Duas estações: 'dry' (site principal, fundo branco) e 'flood' (subsite da pesquisa).
+import '../styles/tokens.css';
+import '../styles/varzea.css';
+import '../styles/site.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { isPreview, site, absoluteUrl } from '../lib/data';
+
+interface Props {
+  title: string;
+  description?: string;
+  season?: 'dry' | 'flood';
+  nav?: string;
+  path: string;              // caminho canônico, com barra final
+  copy?: boolean;            // carrega o script dos botões de copiar
+  noindex?: boolean;
+  jsonld?: object | null;
+  lang?: string;
+  headerless?: boolean;
+  margins?: boolean;         // subsite: a página tem notas de margem (mostra a linha de ajuda do cabeçalho)
+  canonical?: boolean;       // false na 404
+}
+const { title, description, season = 'dry', nav = '', path, copy = false, noindex = false, jsonld = null, lang = 'en', headerless = false, margins = false, canonical = true } = Astro.props;
+const fullTitle = path === '/' ? title : `${title} · ${site.name}`;
+const robots = isPreview || noindex ? 'noindex, nofollow' : null;
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{fullTitle}</title>
+  {description && <meta name="description" content={description}>}
+  {robots && <meta name="robots" content={isPreview ? 'noindex' : robots}>}
+  {canonical && <link rel="canonical" href={absoluteUrl(path)}>}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/newsreader/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/alegreya-sans/alegreya-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)}></script>}
+</head>
+<body class={season === 'flood' ? 'cheia' : 'dry'}>
+  <a class="skip" href="#main">Skip to content</a>
+  {!headerless && <SiteHeader season={season} nav={nav} margins={margins} />}
+  <main id="main">
+    <slot />
+  </main>
+  <SiteFooter />
+  {copy && <script is:inline src="/copy.js" defer></script>}
+</body>
+</html>

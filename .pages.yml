@@ -1,0 +1,226 @@
+media:
+  - name: publication-pdfs
+    label: Publication PDFs
+    input: public/downloads/publications
+    output: /downloads/publications
+    extensions: [pdf]
+    categories: [document]
+    rename: safe
+
+content:
+  - name: research
+    label: Research
+    type: group
+    items:
+      - name: keywords
+        label: Keywords and authors
+        type: file
+        path: src/data/keywords.json
+        format: json
+        fields:
+          - name: terms
+            label: Terms
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{term}"
+            fields:
+              - name: id
+                label: ID (stable)
+                type: string
+                required: true
+              - name: slug
+                label: URL slug (stable)
+                type: string
+                required: true
+                pattern: "^[a-z0-9-]+$"
+              - name: kind
+                label: Entry type
+                type: select
+                options:
+                  values: [keyword, author]
+              - name: term
+                label: Term or name
+                type: string
+                required: true
+              - name: term_lang
+                label: Language (optional)
+                type: string
+              - name: definition
+                label: Definition
+                type: text
+              - name: names
+                label: Other names / translations
+                type: object
+                list:
+                  collapsible: true
+                fields:
+                  - name: lang
+                    label: Language
+                    type: string
+                  - name: text
+                    label: Variant
+                    type: string
+                  - name: source
+                    label: Source publication ID
+                    type: string
+                  - name: page
+                    label: Page
+                    type: string
+              - name: quotes
+                label: Quotations from published sources
+                type: object
+                list:
+                  collapsible: true
+                fields:
+                  - name: text
+                    label: Exact quotation
+                    type: text
+                    required: true
+                  - name: lang
+                    label: Language
+                    type: string
+                  - name: source
+                    label: Publication ID
+                    type: string
+                  - name: page
+                    label: Page in edition
+                    type: string
+                  - name: translator
+                    label: Translator (if applicable)
+                    type: string
+                  - name: coauthor
+                    label: Co-author (if applicable)
+                    type: string
+                  - name: source_url
+                    label: Source link (optional)
+                    type: string
+              - name: related_pubs
+                label: Related publication IDs
+                type: string
+                list: true
+              - name: related_talks
+                label: Related talk IDs
+                type: object
+                list: true
+                fields:
+                  - name: id
+                    type: string
+              - name: near
+                label: Nearby / related keyword slugs
+                type: string
+                list: true
+  - name: academic-content
+    label: Academic content
+    type: group
+    items:
+      - name: publications
+        label: Publications
+        type: file
+        path: src/data/publications.json
+        format: json
+        list: true
+        fields:
+          - name: id
+            label: ID (stable)
+            type: string
+            required: true
+          - name: order
+            label: Display order within year
+            type: number
+          - name: group
+            label: Category
+            type: select
+            options:
+              values:
+                - name: book
+                  label: Books
+                - name: edited
+                  label: Edited volumes
+                - name: articles
+                  label: Journal articles
+                - name: chapters
+                  label: Book chapters
+                - name: translations
+                  label: Translations
+                - name: poetry
+                  label: Poetry
+                - name: reviews
+                  label: Reviews
+                - name: other
+                  label: Essays, reviews and press
+          - name: kind
+            label: Publication type
+            type: string
+            required: true
+          - name: year
+            label: Year
+            type: number
+          - name: title_lang
+            label: Title language
+            type: string
+          - name: ref
+            label: Full reference (with *italics* where needed)
+            type: text
+            required: true
+          - name: url
+            label: Publisher or repository URL
+            type: string
+          - name: url_label
+            label: Link label
+            type: string
+          - name: doi
+            label: DOI (without https://doi.org/)
+            type: string
+          - name: book_doi
+            label: Volume DOI (optional)
+            type: string
+          - name: issue_doi
+            label: Issue DOI (optional)
+            type: string
+          - name: isbn
+            label: ISBN (optional)
+            type: string
+          - name: license
+            label: License (optional)
+            type: string
+          - name: pdf
+            label: Hosted PDF
+            type: object
+            fields:
+              - name: public
+                label: Show PDF download button
+                type: boolean
+              - name: file
+                label: Choose or upload PDF
+                type: file
+                options:
+                  media: publication-pdfs
+                  path: public/downloads/publications
+                  extensions: [pdf]
+                  categories: [document]
+              - name: label
+                label: Button label (PDF or PDF excerpt)
+                type: string
+          - name: includes
+            label: Included text (optional)
+            type: object
+            fields:
+              - name: id
+                type: string
+              - name: title
+                type: string
+              - name: pages
+                type: string
+              - name: kind
+                type: string
+          - name: bibtex
+            label: Technical metadata (advanced; contributor credits)
+            description: Leave existing values unchanged. For a new publication, provide valid BibTeX metadata so co-authors, editors and translators can be displayed correctly.
+            type: text
+
+settings:
+  content:
+    # Keep publication metadata and keyword relationship fields that are not shown in the form.
+    merge: true

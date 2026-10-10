@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Page not found" description="This page does not exist." path="/404/" noindex={true} canonical={false}>
+  <section class="row">
+    <div class="pl"></div>
+    <div class="bed">
+      <h1 class="title">Page not found</h1>
+      <p class="lead" style="margin-top:var(--s-4)">There is no page at this address. <a href="/">Home</a> · <a href="/publications/">Publications</a> · <a href="/cv/">CV</a></p>
+    </div>
+    <div class="pr"></div>
+  </section>
+</Base>

@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import TalkItem from '../components/TalkItem.astro';
+import { talkGroups, talksTitle, site, activeMarks, markLabel, podcast } from '../lib/data';
+import recordedTalks from '../data/recorded-talks.json';
+const talks = talkGroups();
+---
+<Base title={talksTitle} description={`${talksTitle} by Dr. Tomaz Amorim.`} path="/talks/" nav="talks">
+  <section class="row">
+    <div class="pl"></div>
+    <div class="bed">
+      <h1 class="title">{talksTitle}</h1>
+      {activeMarks(site.menu_tbc.talks).map((m) => <p class="label"><span class="tbc">{markLabel(m)}</span></p>)}
+    </div>
+    <div class="pr"></div>
+  </section>
+  <section class="row sp-m">
+    <div class="pl"></div>
+    <div class="bed">
+      <ul class="items">{talks.map((g) => <TalkItem t={g.main} also={g.also} />)}</ul>
+    </div>
+    <div class="pr"></div>
+  </section>
+  <section class="row sp-m" aria-labelledby="recorded-talks">
+    <div class="pl"></div>
+    <div class="bed">
+      <h2 class="group" id="recorded-talks">Recorded talks and events</h2>
+      <ul class="items">{recordedTalks.map((t) => <li class="item talk"><span class="meta when">{t.published} · {t.duration}</span><span class="ref"><a href={t.url}>{t.title}</a> · {t.event}.</span></li>)}</ul>
+    </div>
+    <div class="pr"></div>
+  </section>
+  {podcast.episodes.length > 0 && <section class="row sp-m" aria-labelledby="podcasts">
+    <div class="pl"></div>
+    <div class="bed">
+      <h2 class="group" id="podcasts">Podcasts</h2>
+      <ul class="items">{podcast.episodes.map((e) => <li class="item talk"><span class="meta when">{e.date}</span><span class="ref"><strong>{e.title}.</strong> {e.description} <a href={e.url}>Listen on {e.platform}</a>.</span></li>)}</ul>
+    </div>
+    <div class="pr"></div>
+  </section>}
+</Base>

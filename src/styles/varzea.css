@@ -1,0 +1,213 @@
+/* =====================================================================
+   varzea.css — reference implementation of the Várzea components.
+   Requires tokens.css. Used by componentes.html and subsite-v2.html.
+   The programmer may copy, split or rewrite this file, but the rendered
+   result must match DESIGN-SYSTEM.md and the two reference pages.
+   ===================================================================== */
+
+/* ---------- Layout: floodplain | bed | floodplain ---------- */
+.row{
+  --tone: var(--c-paper);
+  display: grid;
+  grid-template-columns: [plain-l] minmax(0,1fr) [bed] var(--w-bed) [plain-r] minmax(0,1fr) [end];
+  column-gap: var(--w-gap);
+  padding: 0 var(--w-edge);
+  background: linear-gradient(to right,
+    var(--tone) 0 calc(50% - var(--w-bed)/2 - var(--w-gap)/2),
+    var(--c-paper) calc(50% - var(--w-bed)/2 - var(--w-gap)/2) calc(50% + var(--w-bed)/2 + var(--w-gap)/2),
+    var(--tone) calc(50% + var(--w-bed)/2 + var(--w-gap)/2));
+}
+.bed{ grid-column: bed; min-width: 0; }
+.pl{ grid-column: plain-l; justify-self: end; text-align: right; max-width: var(--w-plain-max); }
+.pr{ grid-column: plain-r; justify-self: start; max-width: var(--w-plain-max); }
+.wide{ grid-column: plain-l / end; }               /* spans plains and bed (high-water only) */
+.wide-l{ grid-column: plain-l / plain-r; }          /* left plain + bed (titles) */
+
+/* Seasons and tones (subsite only). Tone follows page order, never content type. */
+.cheia .lv0{ --tone: var(--c-paper);   --deep: var(--c-cheia-3); }
+.cheia .lv1{ --tone: var(--c-cheia-1); --deep: var(--c-cheia-3); }
+.cheia .lv2{ --tone: var(--c-cheia-2); --deep: var(--c-cheia-3); }
+.cheia .lv3{ --tone: var(--c-cheia-3); --deep: var(--c-cheia-3); }
+.row.submerged{ background: var(--tone); }          /* the bed is under water too */
+.row.highwater{ background: var(--deep); }          /* full-width band; see rules */
+
+/* Vertical rhythm of rows */
+.row.sp-s{ padding-top: var(--s-3); padding-bottom: var(--s-4); }
+.row.sp-m{ padding-top: var(--s-6); padding-bottom: var(--s-6); }
+.row.sp-l{ padding-top: var(--s-9); padding-bottom: var(--s-5); }
+
+/* ---------- Text roles ---------- */
+.lead{ font-size: var(--t-lead); line-height: var(--lh-lead); margin: 0; }
+.body p{ margin: 0 0 var(--s-4); }
+.body p:last-child{ margin-bottom: 0; }
+.num{ font-family: var(--f-note); font-weight: 500; color: var(--c-link); }
+h1.name{ font-weight: 500; font-size: var(--t-name); line-height: var(--lh-name); letter-spacing: -.012em; margin: 0 0 var(--s-4); }
+h1.title{ font-weight: 300; font-size: var(--t-title); line-height: var(--lh-title); letter-spacing: -.01em; margin: 0; }
+h2.sec{ font-weight: 300; font-size: var(--t-h2); line-height: var(--lh-h2); margin: 0 0 var(--s-3); }
+.kicker,.label{ font-family: var(--f-note); font-size: var(--t-label); line-height: var(--lh-label); color: var(--c-muted); margin: 0 0 var(--s-2); }
+.sc{ font-family: var(--f-sc); font-weight: 500; font-size: var(--t-label); letter-spacing: .03em; color: var(--c-muted); }
+.lang{ font-family: var(--f-note); font-weight: 500; font-size: var(--t-small); letter-spacing: .06em; text-transform: uppercase; color: var(--c-muted); font-variant-numeric: lining-nums; }
+
+/* ---------- Margin notes ---------- */
+.note{ font-family: var(--f-note); font-size: var(--t-note); line-height: var(--lh-note); color: var(--c-muted); }
+.note p{ margin: 0 0 var(--s-3); }
+.note h4{ font-family: var(--f-sc); font-weight: 500; font-size: var(--t-note); letter-spacing: .04em; margin: 0 0 var(--s-1); color: var(--c-muted); }
+.names{ list-style: none; margin: 0 0 var(--s-3); padding: 0; }
+.names li{ margin: 0 0 2px; }
+.names i, i.nm{ font-family: var(--f-text); font-style: italic; font-size: 18px; color: var(--c-name); }
+.pl .names .lang{ margin-right: 6px; } .pr .names .lang{ margin-right: 6px; }
+
+/* ---------- High-water band: names across the full width ---------- */
+.hw{ grid-column: plain-l / end; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: var(--s-2) var(--s-7); padding: var(--s-5) 0; }
+.hw .hw-label{ flex-basis: 100%; text-align: center; font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); }
+.hw i{ font-family: var(--f-text); font-style: italic; font-size: var(--t-names); line-height: var(--lh-names); color: var(--c-name); }
+.hw .lang{ margin-right: 8px; }
+
+/* ---------- Header and navigation ---------- */
+.site-head{ padding-top: var(--s-5); padding-bottom: var(--s-4); align-items: baseline; font-family: var(--f-note); font-size: 17px; }
+.site-head .mark{ grid-column: plain-l; justify-self: start; color: var(--c-ink); text-decoration: none; font-size: 16px; }
+.site-head .back{ grid-column: plain-l; justify-self: end; color: var(--c-ink); text-decoration: none; }
+.site-head nav{ grid-column: bed; display: flex; flex-wrap: wrap; gap: var(--s-1) 22px; }
+.site-head nav a{ color: var(--c-ink); text-decoration: none; padding: 2px 0; }
+.site-head nav a:hover{ text-decoration: underline; }
+.site-head nav a[aria-current="page"]{ text-decoration: underline; text-decoration-thickness: 2px; }
+.site-head nav a.research{ color: var(--c-link); text-decoration: underline; }
+.site-head .aside{ grid-column: plain-r; color: var(--c-muted); font-size: var(--t-note); }
+.quick{ display: none; }
+
+/* ---------- Buttons ---------- */
+.btn{ display: inline-flex; align-items: center; gap: 6px; font-family: var(--f-note); font-weight: 500; font-size: 16px; line-height: 1.2;
+      color: var(--c-ink); background: transparent; border: var(--b-button); border-radius: var(--radius); padding: 5px 12px; text-decoration: none; cursor: pointer; min-height: 32px; }
+.btn:hover{ background: var(--c-ink); color: var(--c-paper); }
+.btn[disabled],.btn[aria-disabled="true"]{ border-style: dashed; border-color: var(--c-field); color: var(--c-muted); background: transparent; cursor: not-allowed; }
+.btn.small{ font-size: 14.5px; padding: 3px 10px; min-height: 28px; }
+.btn .meta{ font-weight: 400; color: inherit; opacity: .85; }
+
+/* ---------- Home identity ---------- */
+.identity .bio{ font-size: var(--t-lead); line-height: var(--lh-lead); margin: 0 0 var(--s-5); }
+dl.facts{ margin: 0; display: grid; grid-template-columns: 104px 1fr; column-gap: 20px; border-top: var(--b-hair); }
+.facts dt{ font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); padding: 10px 0; border-bottom: var(--b-hair); }
+.facts dd{ margin: 0; padding: 8px 0; border-bottom: var(--b-hair); font-size: 17px; line-height: 1.45; }
+.portrait{ margin: 0; width: 150px; }
+.portrait img{ display: block; width: 150px; height: auto; }
+.portrait figcaption{ font-family: var(--f-note); font-size: 14px; color: var(--c-muted); margin-top: 6px; }
+.newsletter{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.newsletter input{ font: 16px var(--f-text); border: 1px dashed var(--c-field); background: transparent; padding: 4px 8px; width: 220px; color: var(--c-muted); }
+
+/* ---------- Lists: publications, talks, CV ---------- */
+.filters{ display: flex; flex-wrap: wrap; gap: 6px 14px; font-family: var(--f-note); font-size: var(--t-label); margin: 0 0 var(--s-4); padding: 0; list-style: none; }
+.filters a{ color: var(--c-ink); text-decoration: none; border-bottom: 1px solid transparent; }
+.filters a[aria-current="true"]{ border-bottom: 2px solid var(--c-ink); font-weight: 500; }
+.filters .n{ color: var(--c-muted); font-variant-numeric: tabular-nums lining-nums; }
+.items{ list-style: none; margin: 0; padding: 0; }
+.item{ padding: var(--s-3) 0 var(--s-4); border-top: var(--b-hair); }
+.item .meta{ display: block; font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); font-variant-numeric: tabular-nums lining-nums; }
+.item .ref{ font-size: var(--t-body-s); line-height: var(--lh-body-s); }
+.item .ids{ display: block; font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); margin-top: 4px; }
+.item .acts{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--s-2); align-items: flex-start; }
+details.bib > summary{ list-style: none; }
+details.bib > summary::-webkit-details-marker{ display: none; }
+details.bib[open] > summary{ background: var(--c-ink); color: var(--c-paper); }
+details.bib pre{ margin: var(--s-2) 0 0; padding: var(--s-3); background: var(--c-cheia-1); font: 13.5px/1.5 ui-monospace, "SFMono-Regular", Menlo, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+.talk .when{ font-variant-numeric: tabular-nums lining-nums; }
+.note,.label,.kicker,.sc,.lang,.meta,.ids,.updated{ font-variant-numeric: lining-nums proportional-nums; }
+.cv-sec{ margin: 0 0 var(--s-7); }
+.cv-sec h3{ font-weight: 400; font-size: 26px; margin: 0 0 var(--s-2); }
+table.cv{ width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.45; }
+table.cv th{ text-align: left; font-family: var(--f-note); font-weight: 400; font-size: var(--t-label); color: var(--c-muted); padding: 6px 12px 6px 0; border-bottom: var(--b-hair); }
+table.cv td{ vertical-align: top; padding: 8px 12px 8px 0; border-bottom: var(--b-hair); }
+table.cv td.y{ width: 128px; font-family: var(--f-note); font-size: 15.5px; color: var(--c-muted); font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; }
+.updated{ font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); }
+
+/* ---------- For organizers ---------- */
+.bio-card{ border-top: var(--b-hair); padding: var(--s-4) 0; }
+.bio-card .head{ display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: var(--s-2); }
+.bio-card .head .label{ margin: 0; }
+.bio-card blockquote{ margin: 0; font-size: var(--t-body-s); line-height: 1.55; }
+.bio-card details summary{ cursor: pointer; font-family: var(--f-note); font-size: var(--t-label); color: var(--c-link); }
+
+/* ---------- Keyword entry ---------- */
+.kw-term{ font-weight: 500; font-style: italic; font-size: var(--t-term); line-height: var(--lh-term); margin: 0 0 var(--s-1); }
+.kw-q{ margin: var(--s-4) 0 0; font-weight: 300; font-size: var(--t-quote); line-height: var(--lh-quote); }
+.kw-q.second{ font-size: 21px; line-height: 1.5; }
+.kw-q .pg{ font-family: var(--f-note); font-weight: 500; font-size: var(--t-label); color: var(--c-muted); white-space: nowrap; }
+.cite{ margin-top: var(--s-5); }
+.cite pre{ margin: var(--s-2) 0 0; padding: var(--s-3); background: var(--c-paper); border: 1px solid var(--c-rule); font: 14px/1.5 var(--f-note); white-space: pre-wrap; overflow-wrap: anywhere; }
+.permalink{ font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); overflow-wrap: anywhere; }
+
+/* ---------- Image frame with provenance ---------- */
+.frame{ margin: 0; }
+.frame .img{ border: 1px dashed var(--c-field); min-height: 160px; display: flex; align-items: center; justify-content: center; text-align: center; padding: var(--s-4);
+             font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); }
+.frame figcaption{ font-family: var(--f-note); font-size: var(--t-note); line-height: var(--lh-note); color: var(--c-muted); margin-top: var(--s-2); }
+.frame dl{ display: grid; grid-template-columns: 96px 1fr; gap: 2px 12px; margin: var(--s-2) 0 0; }
+.frame dt{ color: var(--c-muted); } .frame dd{ margin: 0; color: var(--c-ink); }
+.frame.cleared img{ display: block; max-width: 100%; height: auto; }
+
+/* ---------- Posts ---------- */
+.posts .item a{ color: var(--c-ink); text-decoration: none; font-size: 21px; }
+.posts .item a:hover{ text-decoration: underline; }
+.example{ display: inline-block; font-family: var(--f-note); font-weight: 500; font-size: var(--t-small); background: var(--c-ink); color: var(--c-paper); padding: 2px 8px; border-radius: var(--radius); }
+
+/* ---------- Footer ---------- */
+.site-foot{ padding-top: var(--s-7); padding-bottom: var(--s-6); }
+.site-foot .bed{ border-top: var(--b-hair); padding-top: var(--s-3); font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); display: flex; flex-wrap: wrap; gap: 6px 20px; }
+.site-foot a{ color: var(--c-ink); }
+
+/* ---------- Spec annotations (reference page only; not part of the site) ---------- */
+.spec{ font-family: var(--f-note); font-size: 14px; line-height: 1.45; color: var(--c-muted); border-left: 3px solid var(--c-field); padding-left: 10px; }
+.spec b{ color: var(--c-ink); font-weight: 500; }
+.cmp-title{ font-family: var(--f-sc); font-weight: 500; font-size: 17px; letter-spacing: .04em; color: var(--c-ink); margin: 0 0 var(--s-2); }
+
+/* ---------- 761–1023 px: bed + right floodplain ---------- */
+@media (max-width: 1023px) and (min-width: 761px){
+  .row{ grid-template-columns: [plain-l bed] minmax(0,1fr) [plain-r] var(--w-plain-max) [end];
+        background: linear-gradient(to left, var(--tone) 0 calc(var(--w-plain-max) + var(--w-edge) + var(--w-gap)/2), var(--c-paper) calc(var(--w-plain-max) + var(--w-edge) + var(--w-gap)/2)); }
+  .row.submerged{ background: var(--tone); } .row.highwater{ background: var(--deep); }
+  .pl{ grid-column: plain-r; grid-row: 1; justify-self: start; text-align: left; }
+  .pl + .bed + .pr, .pl ~ .pr{ grid-row: 2; }
+  .bed{ grid-row: 1 / span 2; }
+  .site-head .mark,.site-head .back{ grid-column: plain-r; grid-row: 1; justify-self: start; }
+  .site-head nav{ grid-row: 1; }
+  .site-head .aside{ display: none; }
+  .wide-l{ grid-column: bed; }
+}
+
+/* ---------- ≤760 px: one column; floodplain becomes a band after the passage ---------- */
+@media (max-width: 760px){
+  .row{ display: flex; flex-direction: column; padding-left: var(--w-edge); padding-right: var(--w-edge); background: var(--c-paper); }
+  .row.submerged{ background: var(--tone); } .row.highwater{ background: var(--deep); }
+  .bed{ order: 1; } .pl{ order: 2; } .pr{ order: 3; }
+  .pl,.pr{ align-self: stretch; max-width: none; text-align: left; justify-self: auto;
+           background: var(--tone); margin: 0 calc(-1 * var(--w-edge)); padding: var(--s-3) var(--w-edge) var(--s-1); }
+  .row.lv0 .pl,.row.lv0 .pr{ background: transparent; }
+  .row.submerged .pl,.row.submerged .pr,.row.highwater .pl,.row.highwater .pr{ background: transparent; margin: 0; padding-left: 0; padding-right: 0; }
+  .pl:empty,.pr:empty{ display: none; }
+  .bed + .pl, .bed + .pr{ margin-top: var(--s-3); }
+  .hw{ justify-content: flex-start; gap: 4px var(--s-4); padding: var(--s-4) 0; }
+  .hw .hw-label{ text-align: left; }
+  .site-head{ display: block; }
+  .site-head .mark,.site-head .back{ display: block; margin-bottom: var(--s-2); justify-self: start; }
+  .site-head nav{ gap: 2px 16px; font-size: 16px; }
+  .site-head .aside{ display: none; }
+  .quick{ display: flex; gap: 8px; margin: 0 0 var(--s-4); }
+  dl.facts{ grid-template-columns: 1fr; }
+  .facts dt{ border-bottom: 0; padding: 10px 0 0; }
+  .facts dd{ padding-top: 0; overflow-wrap: anywhere; }
+  .portrait{ display: grid; grid-template-columns: 96px 1fr; column-gap: 14px; width: auto; }
+  .portrait img{ width: 96px; }
+  .portrait figcaption{ align-self: end; }
+  .newsletter input{ width: 100%; }
+  table.cv, table.cv tbody, table.cv tr, table.cv td{ display: block; width: auto; }
+  table.cv thead{ display: none; }
+  table.cv tr{ border-bottom: var(--b-hair); padding: 6px 0; }
+  table.cv td{ border: 0; padding: 0; }
+  table.cv td.y{ width: auto; }
+  .frame dl{ grid-template-columns: 1fr; gap: 0; }
+  .frame dt{ margin-top: 6px; }
+}
+
+/* ---------- Skip link and hyphenation (DESIGN-SYSTEM §2.3, §7) ---------- */
+.skip{ position: absolute; left: var(--w-edge); top: -60px; z-index: 10; background: var(--c-ink); color: var(--c-paper); padding: 8px 14px; font-family: var(--f-note); font-size: var(--t-label); text-decoration: none; }
+.skip:focus{ top: 8px; }
+.bed .lead, .bed.body p, .bed .body p{ hyphens: auto; }

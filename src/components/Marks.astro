@@ -1,0 +1,9 @@
+---
+// Marcas [A CONFIRMAR] de um item (só no preview; some quando a pergunta é aprovada em release.json).
+import { activeMarks, markLabel, isPreview, type Tbc } from '../lib/data';
+interface Props { tbc?: Tbc[]; pending?: boolean; why?: string }
+const { tbc, pending = false, why } = Astro.props;
+const marks = activeMarks(tbc);
+---
+{marks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}
+{pending && isPreview && <Fragment> <span class="tbc">[A CONFIRMAR: {why ?? 'pending'} · not in the public build]</span></Fragment>}

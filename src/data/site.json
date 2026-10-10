@@ -1,0 +1,87 @@
+{
+  "name": "Dr. Tomaz Amorim",
+  "name_title": "Dr. Tomaz Amorim",
+  "site_url": "https://tomazamorim.github.io",
+  "position_exact": "Principal Investigator of subproject TP 4, “Extractivism and Infrastructure in Brazilian Literature”, of DFG Research Unit FOR 5710 “Infrastructure: Aesthetics and Supply”, Ruhr-Universität Bochum",
+  "position_exact_de": "Principal Investigator des Teilprojekts TP 4 „Extraktivismus und Infrastruktur in der brasilianischen Literatur“ der DFG-Forschungsgruppe FOR 5710 „Infrastruktur: Ästhetik und Versorgung“, Ruhr-Universität Bochum",
+  "institute": "Institut für Theaterwissenschaft",
+  "university": "Ruhr-Universität Bochum",
+  "address_lines": [
+    "Ruhr-Universität Bochum",
+    "Institut für Theaterwissenschaft",
+    "Universitätsstraße 150",
+    "44801 Bochum"
+  ],
+  "email": "tomaz.amorim@rub.de",
+  "email_tbc": [],
+  "address_tbc": [],
+  "links": {
+    "orcid": {
+      "label": "ORCID",
+      "url": "https://orcid.org/0000-0001-5617-4323",
+      "id": "0000-0001-5617-4323"
+    },
+    "scholar": {
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=023JBREAAAAJ"
+    },
+    "lattes": {
+      "label": "Lattes",
+      "url": "http://lattes.cnpq.br/4805211374545553"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/tomaz-amorim-a48329226/"
+    },
+    "instagram": {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/tommyamorim/"
+    }
+  },
+  "funding": {
+    "name": "DFG Research Unit FOR 5710",
+    "title": "Infrastructure: Aesthetics and Supply",
+    "gepris_id": "524611401",
+    "gepris_url": "https://gepris.dfg.de/gepris/projekt/524611401",
+    "group_url": "https://infra-aesthetics.de/",
+    "since": "December 2025",
+    "acknowledgement": "Funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – project number 524611401.",
+    "acknowledgement_tbc": []
+  },
+  "also": [
+    "Associated Investigator, Mecila, São Paulo",
+    "Associated Researcher and Member of the Executive Board, CEBRAP, São Paulo"
+  ],
+  "portrait": {
+    "alt": "Portrait of Dr. Tomaz Amorim",
+    "credit": "© Ricson Onodera",
+    "download": "/downloads/tomaz-amorim-foto-ricson-onodera.jpg",
+    "width": 579,
+    "height": 869,
+    "source": "Archive of Dr. Tomaz Amorim"
+  },
+  "newsletter": {
+    "service": null,
+    "tbc": []
+  },
+  "hosting": "GitHub Pages",
+  "hosting_tbc": [],
+  "ai_statement": "This site was designed and built by AI agents (Claude, by Anthropic) working under the direction of Dr. Tomaz Amorim, who supplied, checked and approved all content.",
+  "ai_statement_tbc": [],
+  "sources_checked": "10 Oct 2026",
+  "research_lede": "Brazilian literature has long helped make land thinkable as resource — the mine, the plantation, the river turned into a route. My research reads modernist and contemporary writing to trace that extractive gaze and, against it, the forms through which writers, Indigenous and Quilombola authors among them, imagine rivers, forests and soils as relations rather than reserves.",
+  "research_lede_tbc": [],
+  "menu": {
+    "teaching": true,
+    "talks": true
+  },
+  "menu_tbc": {
+    "teaching": [],
+    "talks": []
+  },
+  "name_pt": "Tomaz Amorim",
+  "name_bibliographic": [
+    "Amorim, Tomaz"
+  ],
+  "position_since": "December 2025"
+}
