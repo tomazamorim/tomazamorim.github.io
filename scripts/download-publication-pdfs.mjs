@@ -1,7 +1,7 @@
 // Download approved PDF copies for the public build, using curl so the runner's configured network proxy is respected.
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import os from 'node:os';
+import { PDFDocument } from 'pdf-lib';
 import { spawnSync } from 'node:child_process';
 
 const downloads = [
@@ -37,33 +37,20 @@ for (const item of downloads) {
 }
 
 
-// Build a downloadable PDF excerpt of the introduction from the locally hosted open-access volume.
-// This is a 35-page selection: cover, acknowledgements, and the introduction (printed pages 9–41).
+// Build a downloadable PDF excerpt of the introduction from the approved hosted volume.
+// Page selection mirrors the supplied 35-page extract: cover, acknowledgements, and physical pages 9–41.
 const volume = path.join(outDir, 'VO-01-esteticas-del-extractivismo.pdf');
 const excerpt = path.join(outDir, 'VO-01-esteticas-del-extractivismo-introduccion.pdf');
-const tmp = await fs.mkdtemp(path.join(os.tmpdir(), 'esteticas-introduccion-'));
-try {
-  if (!await fs.stat(volume).catch(() => null)) {
-    throw new Error(`Source volume missing for introduction excerpt: ${volume}`);
-  }
-  const pattern = path.join(tmp, 'page-%d.pdf');
-  const separate = spawnSync('pdfseparate', ['-f', '1', '-l', '41', volume, pattern], { encoding: 'utf8' });
-  if (separate.error || separate.status !== 0) {
-    throw new Error(`Could not extract volume pages: ${separate.error?.message ?? separate.stderr ?? separate.status}`);
-  }
-  const pageNumbers = [1, 4, ...Array.from({ length: 33 }, (_, i) => i + 9)];
-  const inputs = pageNumbers.map(n => path.join(tmp, `page-${n}.pdf`));
-  await fs.rm(excerpt, { force: true });
-  const unite = spawnSync('pdfunite', [...inputs, excerpt], { encoding: 'utf8' });
-  if (unite.error || unite.status !== 0) {
-    throw new Error(`Could not assemble introduction PDF: ${unite.error?.message ?? unite.stderr ?? unite.status}`);
-  }
-  const check = spawnSync('pdfinfo', [excerpt], { encoding: 'utf8' });
-  const bytes = await fs.readFile(excerpt);
-  if (check.status !== 0 || !/Pages:\\s+35\\b/.test(check.stdout) || bytes.subarray(0, 5).toString('ascii') !== '%PDF-') {
-    throw new Error('Introduction excerpt failed PDF validation (expected 35 pages).');
-  }
-  console.log(`Built Estéticas del extractivismo introduction PDF (${bytes.length.toLocaleString()} bytes)`);
-} finally {
-  await fs.rm(tmp, { recursive: true, force: true });
+const volumeBytes = await fs.readFile(volume);
+const volumePdf = await PDFDocument.load(volumeBytes);
+const excerptPdf = await PDFDocument.create();
+const pageIndices = [0, 3, ...Array.from({ length: 33 }, (_, i) => i + 8)];
+const pages = await excerptPdf.copyPages(volumePdf, pageIndices);
+for (const page of pages) excerptPdf.addPage(page);
+const excerptBytes = await excerptPdf.save();
+await fs.writeFile(excerpt, excerptBytes);
+const validation = await PDFDocument.load(excerptBytes);
+if (validation.getPageCount() !== 35 || excerptBytes.subarray(0, 5).toString('ascii') !== '%PDF-') {
+  throw new Error('Introduction excerpt failed PDF validation (expected 35 pages).');
 }
+console.log(`Built Estéticas del extractivismo introduction PDF (${excerptBytes.length.toLocaleString()} bytes)`);
