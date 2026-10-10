@@ -1,5 +1,5 @@
 ---
-// Item de fala (DS 6.6). Reapresentações da mesma fala vêm em `also` e viram uma linha "Also presented" (rodada 2).
+// Talk item: clear hierarchy for title, event, institution, date and related presentations.
 import { activeMarks, markLabel, effStatus, isPreview, type Talk } from '../lib/data';
 interface Props { t: Talk; also?: Talk[] }
 const { t, also = [] } = Astro.props;
@@ -16,9 +16,16 @@ for (const a of also) {
 }
 const where = (a: Talk) => `${a.event}${a.institution ? ', ' + a.institution : ''}, ${a.city}, ${a.date_label}`;
 ---
-<li class="item talk">
-  <span class="meta when">{t.date_label} · {t.city}{isPreview && status === 'pending' && <Fragment> <span class="tbc">[A CONFIRMAR: not in the public build]</span></Fragment>}</span>
-  <span class="ref">{featuredUnicamp ? <strong lang={t.title_lang}>“{title}”</strong> : <span lang={t.title_lang}>“{title}”</span>} {t.event}{t.institution ? ', ' + t.institution : ''}.{marks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}{t.link && <Fragment> <a href={t.link}>{t.link_label || new URL(t.link).hostname.replace(/^www\./, '')}</a></Fragment>}</span>
+<li class="item talk talk-card">
+  <strong class="talk-title" lang={t.title_lang}>{title}</strong>
+  <div class="talk-details">
+    <span class="talk-event">{t.event}</span>
+    {t.institution && <span class="talk-institution">{t.institution}</span>}
+    <span class="talk-date">{t.date_label} · {t.city}</span>
+    {t.link && <a class="talk-link" href={t.link} target="_blank" rel="noopener noreferrer">{t.link_label || new URL(t.link).hostname.replace(/^www\./, '')}</a>}
+    {isPreview && status === 'pending' && <span class="tbc">[A CONFIRMAR: not in the public build]</span>}
+    {marks.map((m) => <span class="tbc">{markLabel(m)}</span>)}
+  </div>
   {featuredUnicamp && <span class="ids also">{relatedNote}</span>}
   {also.length > 0 && !featuredUnicamp && (
     <span class="ids also">Also presented{segments.map((s, i) => (

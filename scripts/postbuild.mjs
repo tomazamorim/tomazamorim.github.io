@@ -53,12 +53,29 @@ pages.sort();
 const { server, port } = await startServer(dir, 0);
 const browser = await launch();
 const external = [];
+// The Talks page intentionally embeds Spotify players and clickable YouTube thumbnails.
+// Permit only those provider resources on that page; all other third-party requests still fail the build.
+function allowedEmbedRequest(pagePath, rawUrl) {
+  if (pagePath !== '/talks/') return false;
+  if (rawUrl.startsWith('blob:https://open.spotify.com/')) return true;
+  let host;
+  try { host = new URL(rawUrl).hostname.toLowerCase(); } catch { return false; }
+  return host === 'i.ytimg.com'
+    || host === 'spotify.com'
+    || host.endsWith('.spotify.com')
+    || host === 'spotifycdn.com'
+    || host.endsWith('.spotifycdn.com')
+    || host === 'scdn.co'
+    || host.endsWith('.scdn.co')
+    || host === 'sentry.io'
+    || host.endsWith('.sentry.io');
+}
 async function measure(u) {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
   const page = await ctx.newPage();
   let total = 0, n = 0;
   const pending = [];
-  page.on('request', (r) => { if (!r.url().startsWith(`http://127.0.0.1:${port}`) && !r.url().startsWith('data:')) external.push(`${u} -> ${r.url()}`); });
+  page.on('request', (r) => { if (!r.url().startsWith(`http://127.0.0.1:${port}`) && !r.url().startsWith('data:') && !allowedEmbedRequest(u, r.url())) external.push(`${u} -> ${r.url()}`); });
   page.on('requestfinished', (req) => pending.push(req.sizes().then((s) => { total += s.responseBodySize + s.responseHeadersSize; n++; })));
   await page.goto(`http://127.0.0.1:${port}${u}`, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);

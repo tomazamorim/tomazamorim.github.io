@@ -5,7 +5,7 @@ The public website is built with [Astro](https://astro.build/) and deployed to [
 ## Public site
 
 - Live URL: https://tomazamorim.github.io/
-- PDFs: `public/downloads/publications/`
+- PDFs: `public/downloads/publications/` (12 versioned files plus 2 approved publisher PDFs fetched during public builds; the CLACSO introduction links directly to its open-access PDF endpoint because repository mirroring returns HTTP 403)
 - CV PDF: `public/cv/tomaz-amorim-izabel-cv.pdf` (approved static artifact; see note below)
 - Academic data: `src/data/publications.json`, `src/data/talks.json`, `src/data/recorded-talks.json`, `src/data/podcast.json`
 - Research concepts: `src/data/keywords.json`
@@ -32,7 +32,7 @@ SITE_MODE=public SITE_URL=https://tomazamorim.github.io npm run build:public
 npm run check:public
 ```
 
-The production output is `dist/public/`. GitHub Actions builds and checks pull requests without publishing them. After an approved pull request is merged into `main`, the same workflow deploys the public site. Configure **Settings → Pages → Build and deployment → Source: GitHub Actions** before the first merge to `main`.
+The public build fetches two approved PDFs from their journal download endpoints and places them in `public/downloads/publications/` before Astro builds the site; the persistent publication links remain on the relevant records. The CLACSO introduction's open-access repository rejects automated mirroring with HTTP 403, so the PDF button links directly to the repository download endpoint. The production output is `dist/public/`. GitHub Actions builds and checks pull requests without publishing them. After an approved pull request is merged into `main`, the same workflow deploys the public site. Configure **Settings → Pages → Build and deployment → Source: GitHub Actions** before the first merge to `main`.
 
 ## CV PDF
 

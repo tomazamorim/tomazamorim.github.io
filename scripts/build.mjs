@@ -6,5 +6,6 @@ const run = (cmd, args) => {
   const r = spawnSync(cmd, args, { stdio: 'inherit', env });
   if (r.status !== 0) { console.error(`Build failed: ${cmd} ${args.join(' ')}`); process.exit(r.status ?? 1); }
 };
+if (mode === 'public') run('node', ['scripts/download-publication-pdfs.mjs']);
 run('node', ['node_modules/astro/astro.js', 'build']);
 run('node', ['scripts/postbuild.mjs', mode]);

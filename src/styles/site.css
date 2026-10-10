@@ -288,3 +288,43 @@ ul.method li{ margin: 0 0 var(--s-2); }
   .kwx .top{ flex-direction: column; gap: 0; }
   .site-foot .bed a{ display: inline-flex; align-items: center; min-height: var(--hit-min); }
 }
+
+
+/* ---------- Talks: title first, details below ---------- */
+.talk-card{display:block;padding:var(--s-4) 0;border-top:var(--b-hair);}
+.talk-card .talk-title{display:block;font-size:20px;line-height:1.35;font-weight:600;margin:0 0 var(--s-1);color:var(--c-ink);}
+.talk-card .talk-details{display:flex;flex-direction:column;gap:3px;font-size:16.5px;line-height:1.4;}
+.talk-card .talk-event{color:var(--c-ink);font-weight:500;}
+.talk-card .talk-institution{font-size:15.5px;color:var(--c-muted);}
+.talk-card .talk-date{font-family:var(--f-note);font-size:14.5px;color:var(--c-muted);}
+.talk-card .talk-link{font-family:var(--f-note);font-size:14.5px;align-self:flex-start;}
+.talk-card .also{display:block;margin-top:var(--s-2);}
+.talk-list .item:first-child{border-top:0;}
+/* ---------- Recorded talks: linked thumbnails ---------- */
+.recorded-item{display:grid;grid-template-columns:160px minmax(0,1fr);gap:16px;align-items:start;padding:var(--s-3) 0;border-top:var(--b-hair);}
+.recording-thumb{position:relative;display:block;width:160px;aspect-ratio:16/9;overflow:hidden;border-radius:5px;background:var(--c-cheia-1);}
+.recording-thumb img{display:block;width:100%;height:100%;object-fit:cover;}
+.recording-thumb .play-mark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(20,25,23,.82);color:#fff;font-size:14px;padding-left:2px;}
+.recording-copy{display:flex;flex-direction:column;gap:5px;min-width:0;}
+.recording-title{font-weight:600;font-size:18px;line-height:1.35;}
+.recording-title a{color:var(--c-ink);text-decoration:none;}
+.recording-title a:hover{text-decoration:underline;}
+.recording-meta{font-family:var(--f-note);font-size:14.5px;line-height:1.4;color:var(--c-muted);}
+.recorded-list .item:first-child{border-top:0;}
+/* ---------- Podcasts: small Spotify player and clear metadata ---------- */
+.podcast-item{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(250px,.85fr);gap:24px;align-items:start;padding:var(--s-4) 0;border-top:var(--b-hair);}
+.podcast-copy{min-width:0;}
+.podcast-title{display:block;font-size:20px;line-height:1.35;margin-bottom:4px;}
+.podcast-meta{display:block;font-family:var(--f-note);font-size:14.5px;color:var(--c-muted);margin-bottom:var(--s-2);}
+.podcast-copy p{font-size:16.5px;line-height:1.5;margin:0 0 var(--s-2);}
+.podcast-link{font-family:var(--f-note);font-size:14.5px;}
+.spotify-embed{display:block;width:100%;border:0;border-radius:12px;min-height:152px;}
+.construction-notice{font-size:25px;line-height:1.35;margin:0;padding:var(--s-4) 0 var(--s-7);color:var(--c-muted);font-family:var(--f-note);}
+@media(max-width:760px){
+  .recorded-item{grid-template-columns:124px minmax(0,1fr);gap:12px;}
+  .recording-thumb{width:124px;}
+  .recording-title{font-size:17px;}
+  .podcast-item{grid-template-columns:minmax(0,1fr);gap:14px;}
+  .spotify-embed{max-width:100%;}
+  .construction-notice{font-size:22px;}
+}
