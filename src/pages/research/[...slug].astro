@@ -2,12 +2,19 @@
 import Base from '../../layouts/Base.astro';
 import Posts from '../../components/Posts.astro';
 import { project, site, activeMarks, markLabel, projectPublishable, researchLede, feed, gateOpen, esc } from '../../lib/data';
+import { termsIn } from '../../lib/research';
 
 export function getStaticPaths() {
   return projectPublishable() ? [{ params: { slug: undefined } }] : [];
 }
 const lede = researchLede();
 const paras = project.paragraphs;
+// Keep the original Várzea color levels by paragraph, without rendering keyword text or links.
+const sections = paras.map((p) => {
+  const count = termsIn(p.text).length;
+  const level = count === 0 ? 0 : count <= 3 ? 1 : 2;
+  return { p, level };
+});
 const projMarks = activeMarks(project.tbc);
 const ackMarks = activeMarks(site.funding.acknowledgement_tbc);
 const ledeMarks = activeMarks(site.research_lede_tbc);
@@ -45,15 +52,15 @@ const ledeMarks = activeMarks(site.research_lede_tbc);
     <div class="pr"></div>
   </section>
 
-  {paras.map((p, i) => (
-    <section class="row lv0 sp-m">
+  {sections.map((s, i) => (
+    <section class={`row lv${s.level} sp-m`}>
       <div class="bed body">
-        <p lang="en">{p.n && <Fragment><span class="num">{p.n}</span>{' '}</Fragment>}{p.text}</p>
-        {i === paras.length - 1 && (
+        <p lang="en">{s.p.n && <Fragment><span class="num">{s.p.n}</span>{' '}</Fragment>}{s.p.text}</p>
+        {i === sections.length - 1 && (
           <p class="credit-line">Project description from <a href={project.source_group_url}>DFG Research Unit FOR 5710</a>, <a href={project.source_url}>infra-aesthetics.de/project4</a>{projMarks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}</p>
         )}
       </div>
-      <div class="pl note"></div>
+      <div class="pl note research-blue-accent"></div>
       <div class="pr note"></div>
     </section>
   ))}
