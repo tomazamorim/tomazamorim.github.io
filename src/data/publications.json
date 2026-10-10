@@ -75,7 +75,7 @@
     "doi_linked": true,
     "book_doi": null,
     "issue_doi": null,
-    "url": "https://tomazamorim.github.io/downloads/publications/VO-02-uneafro-12-anos.pdf",
+    "url": "https://tomazamorim.com/downloads/publications/VO-02-uneafro-12-anos.pdf",
     "url_label": "PDF download",
     "license": null,
     "license_conflict": false,
@@ -84,7 +84,7 @@
       "file": "/downloads/publications/VO-02-uneafro-12-anos.pdf",
       "label": "PDF"
     },
-    "bibtex": "@collection{amorim2021uneafro,\n  editor = {Amorim, Tomaz},\n  title = {Uneafro Brasil: 12 anos de luta},\n  publisher = {Uneafro Brasil; Fundação Rosa Luxemburgo},\n  address = {São Paulo},\n  year = {2021},\n  url = {https://tomazamorim.github.io/downloads/publications/VO-02-uneafro-12-anos.pdf},\n  urldate = {2026-10-10}\n}",
+    "bibtex": "@collection{amorim2021uneafro,\n  editor = {Amorim, Tomaz},\n  title = {Uneafro Brasil: 12 anos de luta},\n  publisher = {Uneafro Brasil; Fundação Rosa Luxemburgo},\n  address = {São Paulo},\n  year = {2021},\n  url = {https://tomazamorim.com/downloads/publications/VO-02-uneafro-12-anos.pdf},\n  urldate = {2026-10-10}\n}",
     "cv_only": false,
     "credit_override": "edited by Tomaz Amorim",
     "accessed": "10 Oct 2026"
@@ -102,7 +102,7 @@
     "doi_linked": true,
     "book_doi": null,
     "issue_doi": null,
-    "url": "https://tomazamorim.github.io/downloads/publications/VO-03-ponto-virgulina-afrofuturismo.pdf",
+    "url": "https://tomazamorim.com/downloads/publications/VO-03-ponto-virgulina-afrofuturismo.pdf",
     "url_label": "PDF download",
     "license": null,
     "license_conflict": false,
@@ -111,7 +111,7 @@
       "file": "/downloads/publications/VO-03-ponto-virgulina-afrofuturismo.pdf",
       "label": "PDF"
     },
-    "bibtex": "@collection{amorim2020ponto,\n  editor = {Amorim, Tomaz},\n  title = {Ponto Virgulina: revista de tradução literária. Edição Temática 1: Afrofuturismo},\n  publisher = {Ponto Virgulina},\n  address = {São Paulo},\n  year = {2020},\n  url = {https://tomazamorim.github.io/downloads/publications/VO-03-ponto-virgulina-afrofuturismo.pdf},\n  urldate = {2026-10-10},\n  note = {Translated and organized by Tomaz Amorim}\n}",
+    "bibtex": "@collection{amorim2020ponto,\n  editor = {Amorim, Tomaz},\n  title = {Ponto Virgulina: revista de tradução literária. Edição Temática 1: Afrofuturismo},\n  publisher = {Ponto Virgulina},\n  address = {São Paulo},\n  year = {2020},\n  url = {https://tomazamorim.com/downloads/publications/VO-03-ponto-virgulina-afrofuturismo.pdf},\n  urldate = {2026-10-10},\n  note = {Translated and organized by Tomaz Amorim}\n}",
     "cv_only": false,
     "credit_override": "translated and organized by Tomaz Amorim",
     "accessed": "10 Oct 2026"
