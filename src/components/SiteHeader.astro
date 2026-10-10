@@ -6,11 +6,14 @@ const main = [
   { id: 'cv', href: '/cv/', label: 'CV' },
   { id: 'publications', href: '/publications/', label: 'Publications' },
   ...(site.menu.talks ? [{ id: 'talks', href: '/talks/', label: 'Talks' }] : []),
+];
+const more = [
   { id: 'grants', href: '/grants/', label: 'Grants' },
   ...(site.menu.teaching ? [{ id: 'teaching', href: '/teaching/', label: 'Teaching' }] : []),
   // For organizers só existe quando há o que oferecer (bios aprovadas ou foto liberada)
   ...(visibleBios().length > 0 || gateOpen('PHOTO') ? [{ id: 'organizers', href: '/for-organizers/', label: 'For organizers' }] : []),
 ];
+const moreActive = more.some((m) => m.id === nav);
 const hasKeywords = visibleKeywords().length > 0;
 const hasPosts = !!feed.feed_url;  // sem feed ligado no lançamento: nem item de menu nem seção (DS 6.11)
 const research = [
@@ -25,6 +28,14 @@ const research = [
     <nav aria-label="Main">
       {main.map((m) => <a href={m.href} aria-current={nav === m.id ? 'page' : undefined}>{m.label}</a>)}
       {hasResearch() && <a class="research" href={researchHref()} aria-current={nav === 'research' ? 'page' : undefined}>Research</a>}
+      {more.length > 0 && (
+        <details class="more-menu" open={moreActive}>
+          <summary class:list={['more-trigger', moreActive ? 'active' : '']}>More</summary>
+          <div class="more-menu-list">
+            {more.map((m) => <a href={m.href} aria-current={nav === m.id ? 'page' : undefined}>{m.label}</a>)}
+          </div>
+        </details>
+      )}
     </nav>
   </header>
 ) : (
