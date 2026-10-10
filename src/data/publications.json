@@ -78,7 +78,8 @@
       "label": "PDF"
     },
     "bibtex": "@collection{amorim2021uneafro,\n  editor = {Amorim, Tomaz},\n  title = {Uneafro Brasil: 12 anos de luta},\n  publisher = {Uneafro Brasil; Fundação Rosa Luxemburgo},\n  address = {São Paulo},\n  year = {2021}\n}",
-    "cv_only": false
+    "cv_only": false,
+    "credit_override": "Edited by Tomaz Amorim"
   },
   {
     "id": "VO-03",
@@ -103,7 +104,8 @@
       "label": "PDF"
     },
     "bibtex": "@collection{amorim2020ponto,\n  editor = {Amorim, Tomaz},\n  title = {Ponto Virgulina: revista de tradução literária. Edição Temática 1: Afrofuturismo},\n  publisher = {Ponto Virgulina},\n  address = {São Paulo},\n  year = {2020},\n  note = {Revista de tradução literária; tradução e organização de Tomaz Amorim}\n}",
-    "cv_only": false
+    "cv_only": false,
+    "credit_override": "Translated and organized by Tomaz Amorim"
   },
   {
     "id": "AR-01",
