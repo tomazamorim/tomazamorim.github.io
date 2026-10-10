@@ -37,6 +37,7 @@ const spotifyShowId = (url: string) => url.match(/spotify\.com\/show\/([^?]+)/)?
             </a>}
             <div class="recording-copy">
               <strong class="recording-title"><a href={t.url} target="_blank" rel="noopener noreferrer">{t.title}</a></strong>
+              {t.commentary && <span class="recording-meta commentary" lang="pt">{t.commentary}</span>}
               <span class="recording-meta">{t.event}</span>
               <span class="recording-meta">{t.published} · {t.duration}</span>
             </div>
@@ -60,7 +61,7 @@ const spotifyShowId = (url: string) => url.match(/spotify\.com\/show\/([^?]+)/)?
               <p>{e.description}</p>
               <a class="podcast-link" href={e.url} target="_blank" rel="noopener noreferrer">Open on Spotify ↗</a>
             </div>
-            {id && <iframe class="spotify-embed" title={`Spotify player: ${e.title}`} src={`https://open.spotify.com/embed/show/${id}?utm_source=generator&theme=0`} width="100%" height="152" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" />}
+            {id && <iframe class="spotify-embed" title={`Spotify player: ${e.title}`} src={`https://open.spotify.com/embed/show/${id}?utm_source=generator&theme=0`} width="100%" height="352" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" />}
           </li>;
         })}
       </ul>
