@@ -1,4 +1,4 @@
-import { absoluteUrl, isPreview, projectPublishable } from '../lib/data';
+import { absoluteUrl, isPreview, projectPublishable, visibleBios, gateOpen } from '../lib/data';
 
 export const GET = () => {
   if (isPreview) {
@@ -14,6 +14,7 @@ export const GET = () => {
     '/teaching/',
     '/colophon/',
     ...(projectPublishable() ? ['/research/'] : []),
+    ...(visibleBios().length > 0 || gateOpen('PHOTO') ? ['/for-organizers/'] : []),
   ];
 
   const xmlEscape = (value: string) =>

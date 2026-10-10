@@ -36,5 +36,20 @@ for(const [id,title] of [['VO-02','Uneafro Brasil: 12 anos de luta'],['VO-03','P
 for(const id of ['AR-08','AR-09','AR-10'])if((articlesHtml.match(new RegExp(`id="${id}"`,'g'))||[]).length!==0)fail(`${id} must be hidden from Publications`);
 for(const [id,title] of [['OU-01','Escravidão e Ditadura: por mais Comissões da Verdade'],['OU-02','Novos mercados da violência no Brasil: as armas não letais']])if((articlesHtml.match(new RegExp(`id="${id}"`,'g'))||[]).length!==1||!articlesHtml.includes(title))fail(`2013 press item ${id} missing or duplicated`);
 const ids=[];for(const [f,s] of texts)for(const m of s.matchAll(/\sid="([^"]+)"/g))ids.push([f,m[1]]);const seen=new Map();for(const [f,id] of ids){if(seen.has(`${f}:${id}`))fail(`Duplicate HTML id #${id} in ${path.relative(root,f)}`);seen.set(`${f}:${id}`,true)}
+
+const sitemapPath = path.join(root, 'sitemap.xml');
+if (fs.existsSync(sitemapPath)) {
+  const sitemapXml = fs.readFileSync(sitemapPath, 'utf8');
+  if (!sitemapXml.includes('/for-organizers/')) fail('For Organizers page missing from sitemap.xml');
+} else fail('sitemap.xml missing from public output');
+const ogImagePath = path.join(root, 'og-image.jpg');
+if (!fs.existsSync(ogImagePath)) fail('Open Graph preview image missing from public output');
+else {
+  const bytes = fs.readFileSync(ogImagePath);
+  if (bytes.length < 15000 || bytes[0] !== 0xff || bytes[1] !== 0xd8 || bytes[2] !== 0xff) fail('Open Graph preview image is not a valid JPEG');
+}
+if (!joined.includes('property="og:image"') || !joined.includes('content="image/jpeg"')) fail('Open Graph image metadata missing');
+if (!joined.includes('name="twitter:card" content="summary_large_image"') || !joined.includes('name="twitter:image"')) fail('Twitter large-image metadata missing');
+
 if(process.exitCode)process.exit(1);
 console.log(`check:public passed: ${html.length} HTML pages, ${hosted.length} publication PDFs, CV PDF present.`);
