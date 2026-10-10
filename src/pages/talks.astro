@@ -5,7 +5,6 @@ import { talkGroups, talksTitle, site, activeMarks, markLabel, podcast } from '.
 import recordedTalks from '../data/recorded-talks.json';
 const talks = talkGroups();
 const youtubeId = (url: string) => url.match(/[?&]v=([^&]+)/)?.[1] ?? null;
-const spotifyShowId = (url: string) => url.match(/spotify\.com\/show\/([^?]+)/)?.[1] ?? null;
 ---
 <Base title={talksTitle} description={`${talksTitle} by Dr. Tomaz Amorim.`} path="/talks/" nav="talks">
   <section class="row">
