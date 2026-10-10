@@ -2,7 +2,6 @@
 import Base from '../../layouts/Base.astro';
 import Posts from '../../components/Posts.astro';
 import { project, site, activeMarks, markLabel, projectPublishable, researchLede, feed, gateOpen, esc } from '../../lib/data';
-import { termsIn } from '../../lib/research';
 
 export function getStaticPaths() {
   return projectPublishable() ? [{ params: { slug: undefined } }] : [];
@@ -10,11 +9,7 @@ export function getStaticPaths() {
 const lede = researchLede();
 const paras = project.paragraphs;
 // Keep the original Várzea color levels by paragraph, without rendering keyword text or links.
-const sections = paras.map((p) => {
-  const count = termsIn(p.text).length;
-  const level = count === 0 ? 0 : count <= 3 ? 1 : 2;
-  return { p, level };
-});
+const sections = paras.map((p, i) => ({ p, level: i % 2 === 0 ? 1 : 2 }));
 const projMarks = activeMarks(project.tbc);
 const ackMarks = activeMarks(site.funding.acknowledgement_tbc);
 const ledeMarks = activeMarks(site.research_lede_tbc);
