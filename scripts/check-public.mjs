@@ -11,7 +11,7 @@ const texts=html.map(f=>[f,fs.readFileSync(f,'utf8')]);
 const joined=texts.map(x=>x[1]).join('\n');
 const forbidden=[/A CONFIRMAR/i,/pending_approval/i,/ficha_notes/i,/KW_APPROVED/i,/lattes_candidate/i,/Conference proceedings/i,/Cited as Amorim Izabel, Tomaz/i,/<summary>Cite<\/summary>/i,/<summary>BibTeX<\/summary>/i,/\.\.\,\s*,/];
 for(const re of forbidden)if(re.test(joined))fail(`Public HTML contains forbidden/internal text: ${re}`);
-for(const route of ['index.html','cv/index.html','publications/index.html','talks/index.html','research/index.html','grants/index.html','teaching/index.html','colophon/index.html','impressum/index.html','datenschutz/index.html','for-organizers/index.html','sitemap.xml','cv/tomaz-amorim-izabel-cv.pdf'])if(!fs.existsSync(path.join(root,route)))fail(`Missing public output: ${route}`);
+for(const route of ['index.html','cv/index.html','publications/index.html','talks/index.html','research/index.html','blog/index.html','grants/index.html','teaching/index.html','colophon/index.html','impressum/index.html','datenschutz/index.html','for-organizers/index.html','sitemap.xml','cv/tomaz-amorim-izabel-cv.pdf'])if(!fs.existsSync(path.join(root,route)))fail(`Missing public output: ${route}`);
 const pdfDir=path.join(root,'downloads/publications');
 const hosted=fs.existsSync(pdfDir)?fs.readdirSync(pdfDir).filter(x=>x.toLowerCase().endsWith('.pdf')):[];
 if(hosted.length!==15)fail(`Expected 15 hosted publication PDFs, found ${hosted.length}`);
@@ -26,6 +26,8 @@ if(!joined.includes('Recorded talks and events')||!joined.includes('Sonhos Intra
 if(!joined.includes('editorial-subsection'))fail('Editorial heading anchor not updated');
 if(!joined.includes('Still under construction.'))fail('Research under-construction notice missing');
 if(!joined.includes('https://biblioteca-repositorio.clacso.edu.ar/bitstreams/15f7ea6f-6c78-4949-8004-9b4414b9c26c/download'))fail('CLACSO introduction PDF endpoint missing');
+const blogHtml=fs.readFileSync(path.join(root,'blog/index.html'),'utf8');
+if(!blogHtml.includes('Extractive Aesthetics')||!blogHtml.includes('Material and Symbolic Infrastructures in Latin American Literature')||!blogHtml.includes('Under'))fail('Blog title, subtitle, or under-construction notice missing');
 if(fs.existsSync(path.join(root,'research/keywords/index.html')))fail('Keywords index must be hidden from the public build');
 for(const file of ['AR-02-notas-sobre-o-castelo.pdf','AR-03-interrupcao-e-montagem.pdf','VO-01-esteticas-del-extractivismo-introduccion.pdf'])if(!hosted.includes(file))fail(`Missing hosted publication PDF: ${file}`);
 if(!joined.includes('Introduction PDF'))fail('Estéticas introduction PDF button missing from Publications');
@@ -41,6 +43,7 @@ const sitemapPath = path.join(root, 'sitemap.xml');
 if (fs.existsSync(sitemapPath)) {
   const sitemapXml = fs.readFileSync(sitemapPath, 'utf8');
   if (!sitemapXml.includes('/for-organizers/')) fail('For Organizers page missing from sitemap.xml');
+  if (!sitemapXml.includes('/blog/')) fail('Blog page missing from sitemap.xml');
 } else fail('sitemap.xml missing from public output');
 const ogImagePath = path.join(root, 'og-image.jpg');
 if (!fs.existsSync(ogImagePath)) fail('Open Graph preview image missing from public output');
