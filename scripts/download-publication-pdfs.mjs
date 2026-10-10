@@ -11,11 +11,7 @@ const downloads = [
   {
     filename: 'AR-03-interrupcao-e-montagem.pdf',
     url: 'https://periodicos.ufmg.br/index.php/cadernosbenjaminianos/article/view/30407/24026',
-  },
-  {
-    filename: 'CL-01-introduccion-esteticas-del-extractivismo.pdf',
-    url: 'https://biblioteca-repositorio.clacso.edu.ar/bitstreams/15f7ea6f-6c78-4949-8004-9b4414b9c26c/download',
-  },
+  }
 ];
 
 const outDir = path.resolve('public/downloads/publications');
