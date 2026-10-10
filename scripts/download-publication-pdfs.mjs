@@ -24,6 +24,8 @@ for (const item of downloads) {
   const output = path.join(outDir, item.filename);
   const result = spawnSync('curl', [
     '--fail', '--location', '--silent', '--show-error',
+    '--user-agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/130.0.0.0 Safari/537.36',
+    '--referer', 'https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270',
     '--max-time', '120', '--retry', '2', '--retry-all-errors',
     '--output', output, item.url,
   ], { encoding: 'utf8', timeout: 150_000 });
