@@ -14,7 +14,7 @@ for(const re of forbidden)if(re.test(joined))fail(`Public HTML contains forbidde
 for(const route of ['index.html','cv/index.html','publications/index.html','talks/index.html','research/index.html','grants/index.html','teaching/index.html','colophon/index.html','impressum/index.html','datenschutz/index.html','for-organizers/index.html','sitemap.xml','cv/tomaz-amorim-izabel-cv.pdf'])if(!fs.existsSync(path.join(root,route)))fail(`Missing public output: ${route}`);
 const pdfDir=path.join(root,'downloads/publications');
 const hosted=fs.existsSync(pdfDir)?fs.readdirSync(pdfDir).filter(x=>x.toLowerCase().endsWith('.pdf')):[];
-if(hosted.length!==14)fail(`Expected 15 hosted publication PDFs, found ${hosted.length}`);
+if(hosted.length!==14)fail(`Expected 14 hosted publication PDFs, found ${hosted.length}`);
 if(fs.existsSync(path.join(root,'cv/tomaz-amorim-izabel-cv.pdf'))){
   const cv=path.join(root,'cv/tomaz-amorim-izabel-cv.pdf');
   try { const info=execFileSync('pdfinfo',[cv],{encoding:'utf8'}); if(!/Pages:\s+7\b/.test(info))fail('CV PDF should have 7 pages'); } catch { console.warn('pdfinfo unavailable; skipped PDF page count'); }
