@@ -20,7 +20,7 @@ export function cvPdf(): { href: string; size: string; bytes: number } | null {
 }
 
 export function portraitDownload(): { href: string; size: string; bytes: number } {
-  const f = path.join(root, 'public', 'downloads', 'tomaz-amorim-foto-ricson-onodera-hd.jpg');
+  const f = path.join(root, 'public', 'downloads', 'tomaz-amorim-foto-ricson-onodera.jpg');
   const bytes = fs.statSync(f).size;
-  return { href: '/downloads/tomaz-amorim-foto-ricson-onodera-hd.jpg', size: kb(bytes), bytes };
+  return { href: '/downloads/tomaz-amorim-foto-ricson-onodera.jpg', size: kb(bytes), bytes };
 }
