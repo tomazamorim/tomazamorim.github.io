@@ -108,7 +108,7 @@ export function viewOf(p: Pub): View {
   if (p.doi && (p as any).doi_linked !== false) cite += ` https://doi.org/${p.doi}.`;
   else if (p.url) cite += ` ${p.url}`;
 
-  const v: View = { p, id: p.id, group, year, titleMd: title, quoted, lang: (p as any).title_lang ?? 'en', meta, credit: credit.join(' · '), cite };
+  const v: View = { p, id: p.id, group, year, titleMd: title, quoted, lang: (p as any).title_lang ?? 'en', meta, credit: ((p as any).credit_override as string | undefined) ?? credit.join(' · '), cite };
 
   if (group === 'press') {
     const venue = after.match(/\*([^*]+)\*/)?.[1] ?? '';
