@@ -33,7 +33,7 @@ jobs:
       - name: Build the public site
         env:
           SITE_MODE: public
-          SITE_URL: https://tomazamorim.github.io
+          SITE_URL: https://tomazamorim.com
           BUILD_DATE: ${{ github.event.head_commit.timestamp || github.event.repository.updated_at }}
         run: npm run build:public
       - name: Check the public output
