@@ -9,7 +9,7 @@ import { selectedItems, selectedMarks, titleHtml } from '../lib/pubs';
 const bio = visibleBios().find((b) => b.id === 'en45');
 const bioPt = visibleBios().find((b) => b.id === 'pt105');
 const pdf = cvPdf();
-const selected = selectedItems();
+const selected = selectedItems().sort((a, b) => Number(b.v.year) - Number(a.v.year) || a.v.p.order - b.v.p.order);
 const selMarks = activeMarks(selectedMarks);
 // Faixa de limiar da pesquisa: só com o lede de Tomaz (e com a pesquisa publicável). No preview, o lugar fica marcado.
 const lede = site.research_lede as string | null;
@@ -72,13 +72,45 @@ const jsonld = {
             {selected.map((s) => (
               <li class="sw-item">
                 <span class="meta">{s.typeLabel} · {s.v.year}</span>
-                <span class={`t ${s.v.quoted ? '' : 'book'}`} lang={s.v.lang} set:html={titleHtml(s.v)} />
+                <div class="sw-title-line">
+                  <span class={`t ${s.v.quoted ? '' : 'book'}`} lang={s.v.lang} set:html={titleHtml(s.v)} />
+                  {s.v.p.id === 'VO-01' && (
+                    <span class="new-release">
+                      <svg class="new-release-flame" viewBox="0 0 24 24" aria-hidden="true">
+                        <path class="flame-outer" d="M12.3 1.2C12.8 5.2 8 7.3 7.1 11.6c-.8 3.5 1.3 7.1 5.1 7.1 3.7 0 5.5-3.1 5-6.1-.3-2-1.7-3.5-2.6-4.7.1 2.3-1.1 3.5-2 4.2.2-3.6 1.9-6.5-.3-10.9Z" />
+                        <path class="flame-inner" d="M11.6 13.3c-.2 1.6-2 2.5-1.7 4.5.2 1.4 1.2 2.2 2.4 2.2 1.7 0 2.7-1.3 2.5-2.8-.1-1.2-1.1-2.1-1.4-3.2-.3 1.1-.9 1.5-1.8 2.1.2-1.1.3-1.8 0-2.8Z" />
+                      </svg>
+                      <span>Just published</span>
+                    </span>
+                  )}
+                </div>
                 {s.credit && <span class="cr" set:html={inline(s.credit, { marks: false })} />}
                 {s.access && <a class="acc" href={s.access.href}>{s.access.label}</a>}
                 {s.v.p.id === 'LV-01' && <a class="acc" href="/downloads/publications/LV-01-arquipelago-posfacio-excerpt.pdf">Read the afterword</a>}
               </li>
             ))}
           </ul>
+          <section class="coming-soon" aria-labelledby="coming-soon-heading">
+            <div class="coming-soon-head">
+              <span class="sc" id="coming-soon-heading">Coming soon</span>
+              <span class="meta">Edited volume · 2026</span>
+            </div>
+            <h3 class="coming-title" lang="pt">
+              <a href="https://lojahucitec.com.br/produto/alem-do-antropocentrismo-imaginando-as-relacoes-entre-as-especies-tomaz-amorim-susanne-klengel-e-maya-manzi-orgs/">Além do antropocentrismo: Imaginando as relações entre as espécies</a>
+            </h3>
+            <dl class="coming-details">
+              <dt>Organized by</dt><dd>Tomaz Amorim, Susanne Klengel and Maya Manzi</dd>
+              <dt>Translation</dt><dd>Alyne Azuma, Dominique Bennett and Janaina de Almeida Teles</dd>
+              <dt>Academic editor</dt><dd>Livia Azevedo Lima</dd>
+              <dt>ISBN</dt><dd>978-85-8404-644-7</dd>
+              <dt>Co-published by</dt><dd>Hucitec &amp; Mecila</dd>
+              <dt>Edition</dt><dd>1st edition</dd>
+              <dt>Publication year</dt><dd>2026</dd>
+              <dt>Pages</dt><dd>356</dd>
+              <dt>Series</dt><dd><strong>Convivialidade em Disputa</strong></dd>
+            </dl>
+            <p class="coming-link"><a href="https://lojahucitec.com.br/produto/alem-do-antropocentrismo-imaginando-as-relacoes-entre-as-especies-tomaz-amorim-susanne-klengel-e-maya-manzi-orgs/">Hucitec bookstore →</a></p>
+          </section>
           <p class="all-link"><a href="/publications/">All publications →</a></p>
         </section>
       )}
