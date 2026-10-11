@@ -39,6 +39,30 @@ for(const id of ['AR-08','AR-09','AR-10'])if((articlesHtml.match(new RegExp(`id=
 for(const [id,title] of [['OU-01','Escravidão e Ditadura: por mais Comissões da Verdade'],['OU-02','Novos mercados da violência no Brasil: as armas não letais']])if((articlesHtml.match(new RegExp(`id="${id}"`,'g'))||[]).length!==1||!articlesHtml.includes(title))fail(`2013 press item ${id} missing or duplicated`);
 const ids=[];for(const [f,s] of texts)for(const m of s.matchAll(/\sid="([^"]+)"/g))ids.push([f,m[1]]);const seen=new Map();for(const [f,id] of ids){if(seen.has(`${f}:${id}`))fail(`Duplicate HTML id #${id} in ${path.relative(root,f)}`);seen.set(`${f}:${id}`,true)}
 
+
+const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const selectedTitles = [
+  'Estéticas del extractivismo en América Latina: Literatura, cine y archivo',
+  'Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade',
+  'Arquipélago: Literatura Brasileira Contemporânea (2013-2023)',
+  'Crise da filosofia messiânica: a antropofagia matriarcal devora a Modernidade',
+];
+const selectedPositions = selectedTitles.map((title) => homepage.indexOf(title));
+if (selectedPositions.some((position) => position < 0)) fail('A Selected Work title is missing from the homepage');
+else if (selectedPositions.some((position, i) => i > 0 && position < selectedPositions[i - 1])) fail('Selected Work items are not ordered from newest to oldest');
+if (!homepage.includes('Just published') || !homepage.includes('new-release-flame')) fail('New-publication marker missing from Selected Work');
+for (const term of [
+  'Além do antropocentrismo: Imaginando as relações entre as espécies',
+  'Tomaz Amorim, Susanne Klengel and Maya Manzi',
+  'Alyne Azuma, Dominique Bennett and Janaina de Almeida Teles',
+  'Livia Azevedo Lima',
+  '978-85-8404-644-7',
+  'Hucitec &amp; Mecila',
+  '356',
+  'Convivialidade em Disputa',
+  'https://lojahucitec.com.br/produto/alem-do-antropocentrismo-imaginando-as-relacoes-entre-as-especies-tomaz-amorim-susanne-klengel-e-maya-manzi-orgs/',
+]) if (!homepage.includes(term)) fail(`Coming-soon volume metadata or link missing: ${term}`);
+
 const sitemapPath = path.join(root, 'sitemap.xml');
 if (fs.existsSync(sitemapPath)) {
   const sitemapXml = fs.readFileSync(sitemapPath, 'utf8');
