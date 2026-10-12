@@ -1502,5 +1502,30 @@
     },
     "bibtex": "@online{amorim2013novos,\n  author = {Amorim, Tomaz},\n  title = {Novos mercados da violência no Brasil: as armas não letais},\n  organization = {CartaCapital (Blog Negro Belchior)},\n  year = {2013}\n}",
     "cv_only": false
+  },
+  {
+    "id": "TH-01",
+    "order": 1,
+    "group": "thesis",
+    "kind": "Doctoral thesis",
+    "year": 2018,
+    "title_lang": "pt",
+    "ref": "Amorim, Tomaz. 2018. *Franz Kafka e Walter Benjamin: contar do tempo interrompido*. Doctoral thesis, Universidade de São Paulo.",
+    "isbn": null,
+    "doi": "10.11606/T.8.2019.tde-26022019-105905",
+    "doi_linked": true,
+    "book_doi": null,
+    "issue_doi": null,
+    "url": "https://teses.usp.br/teses/disponiveis/8/8151/tde-26022019-105905/pt-br.html",
+    "url_label": "USP Digital Library of Theses and Dissertations",
+    "license": null,
+    "license_conflict": false,
+    "pdf": {
+      "public": true,
+      "file": "/downloads/publications/TH-01-franz-kafka-walter-benjamin.pdf",
+      "label": "PDF"
+    },
+    "bibtex": "@phdthesis{amorim2018kafkabenjamin,\n  author = {Amorim, Tomaz},\n  title = {Franz Kafka e Walter Benjamin: contar do tempo interrompido},\n  school = {Universidade de São Paulo},\n  type = {Tese de doutorado},\n  address = {São Paulo},\n  year = {2018},\n  doi = {10.11606/T.8.2019.tde-26022019-105905},\n  url = {https://teses.usp.br/teses/disponiveis/8/8151/tde-26022019-105905/pt-br.html}\n}",
+    "cv_only": false
   }
 ]
