@@ -6,7 +6,7 @@ import { spawnSync } from 'node:child_process';
 
 const downloads = [
   {
-    filename: 'TD-01-franz-kafka-walter-benjamin.pdf',
+    filename: 'TH-01-franz-kafka-walter-benjamin.pdf',
     url: 'https://teses.usp.br/teses/disponiveis/8/8151/tde-26022019-105905/publico/2018_TomazAmorimFernandesIzabel_VOrig.pdf',
   },
   {
