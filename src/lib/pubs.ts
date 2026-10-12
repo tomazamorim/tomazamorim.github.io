@@ -4,11 +4,12 @@ import { visiblePubs, bibFields, inline, site, type Pub } from './data';
 
 export const OWNER = 'Amorim, Tomaz';
 
-export type GroupId = 'books' | 'edited' | 'articles' | 'chapters' | 'translations' | 'poetry' | 'press';
+export type GroupId = 'books' | 'edited' | 'articles' | 'chapters' | 'translations' | 'poetry' | 'theses' | 'press';
 export const GROUPS: { id: GroupId; label: string }[] = [
   { id: 'books', label: 'Books' },
   { id: 'edited', label: 'Edited volumes' },
   { id: 'articles', label: 'Journal articles' },
+  { id: 'theses', label: 'Theses and dissertations' },
   { id: 'chapters', label: 'Book chapters' },
   { id: 'translations', label: 'Translations' },
   { id: 'poetry', label: 'Poetry' },
@@ -23,6 +24,7 @@ export function groupOf(p: Pub): GroupId {
     case 'chapters': return 'chapters';
     case 'translations': return 'translations';
     case 'poetry': return 'poetry';
+    case 'thesis': return 'theses';
     case 'other': return 'press';
     default: return 'press'; // reviews
   }
