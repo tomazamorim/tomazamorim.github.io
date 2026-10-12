@@ -6,6 +6,10 @@ import { spawnSync } from 'node:child_process';
 
 const downloads = [
   {
+    filename: 'TD-01-franz-kafka-walter-benjamin.pdf',
+    url: 'https://teses.usp.br/teses/disponiveis/8/8151/tde-26022019-105905/publico/2018_TomazAmorimFernandesIzabel_VOrig.pdf',
+  },
+  {
     filename: 'AR-02-notas-sobre-o-castelo.pdf',
     url: 'https://www.e-publicacoes.uerj.br/matraga/article/download/73461/754/287482',
   },
