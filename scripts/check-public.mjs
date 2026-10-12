@@ -29,7 +29,7 @@ if(!joined.includes('https://biblioteca-repositorio.clacso.edu.ar/bitstreams/15f
 const blogHtml=fs.readFileSync(path.join(root,'blog/index.html'),'utf8');
 if(!blogHtml.includes('Extractive Aesthetics')||!blogHtml.includes('Material and Symbolic Infrastructures in Latin American Literature')||!blogHtml.includes('Under'))fail('Blog title, subtitle, or under-construction notice missing');
 if(fs.existsSync(path.join(root,'research/keywords/index.html')))fail('Keywords index must be hidden from the public build');
-for(const file of ['TD-01-franz-kafka-walter-benjamin.pdf','AR-02-notas-sobre-o-castelo.pdf','AR-03-interrupcao-e-montagem.pdf','VO-01-esteticas-del-extractivismo-introduccion.pdf'])if(!hosted.includes(file))fail(`Missing hosted publication PDF: ${file}`);
+for(const file of ['TH-01-franz-kafka-walter-benjamin.pdf','AR-02-notas-sobre-o-castelo.pdf','AR-03-interrupcao-e-montagem.pdf','VO-01-esteticas-del-extractivismo-introduccion.pdf'])if(!hosted.includes(file))fail(`Missing hosted publication PDF: ${file}`);
 if(!joined.includes('Introduction PDF'))fail('Estéticas introduction PDF button missing from Publications');
 if(!joined.includes('Franz Kafka e Walter Benjamin: contar do tempo interrompido') || !joined.includes('https://teses.usp.br/teses/disponiveis/8/8151/tde-26022019-105905/pt-br.html'))fail('Doctoral thesis citation or USP record link missing from Publications');
 if(!joined.includes('PDF excerpt'))fail('Arquipélago excerpt label missing');
