@@ -14,7 +14,7 @@ for(const re of forbidden)if(re.test(joined))fail(`Public HTML contains forbidde
 for(const route of ['index.html','cv/index.html','publications/index.html','talks/index.html','research/index.html','blog/index.html','grants/index.html','teaching/index.html','colophon/index.html','impressum/index.html','datenschutz/index.html','for-organizers/index.html','sitemap.xml','cv/tomaz-amorim-izabel-cv.pdf'])if(!fs.existsSync(path.join(root,route)))fail(`Missing public output: ${route}`);
 const pdfDir=path.join(root,'downloads/publications');
 const hosted=fs.existsSync(pdfDir)?fs.readdirSync(pdfDir).filter(x=>x.toLowerCase().endsWith('.pdf')):[];
-if(hosted.length!==15)fail(`Expected 15 hosted publication PDFs, found ${hosted.length}`);
+if(hosted.length!==16)fail(`Expected 16 hosted publication PDFs, found ${hosted.length}`);
 if(fs.existsSync(path.join(root,'cv/tomaz-amorim-izabel-cv.pdf'))){
   const cv=path.join(root,'cv/tomaz-amorim-izabel-cv.pdf');
   try { const info=execFileSync('pdfinfo',[cv],{encoding:'utf8'}); if(!/Pages:\s+7\b/.test(info))fail('CV PDF should have 7 pages'); } catch { console.warn('pdfinfo unavailable; skipped PDF page count'); }
@@ -29,8 +29,9 @@ if(!joined.includes('https://biblioteca-repositorio.clacso.edu.ar/bitstreams/15f
 const blogHtml=fs.readFileSync(path.join(root,'blog/index.html'),'utf8');
 if(!blogHtml.includes('Extractive Aesthetics')||!blogHtml.includes('Material and Symbolic Infrastructures in Latin American Literature')||!blogHtml.includes('Under'))fail('Blog title, subtitle, or under-construction notice missing');
 if(fs.existsSync(path.join(root,'research/keywords/index.html')))fail('Keywords index must be hidden from the public build');
-for(const file of ['AR-02-notas-sobre-o-castelo.pdf','AR-03-interrupcao-e-montagem.pdf','VO-01-esteticas-del-extractivismo-introduccion.pdf'])if(!hosted.includes(file))fail(`Missing hosted publication PDF: ${file}`);
+for(const file of ['TH-01-franz-kafka-walter-benjamin.pdf','AR-02-notas-sobre-o-castelo.pdf','AR-03-interrupcao-e-montagem.pdf','VO-01-esteticas-del-extractivismo-introduccion.pdf'])if(!hosted.includes(file))fail(`Missing hosted publication PDF: ${file}`);
 if(!joined.includes('Introduction PDF'))fail('Estéticas introduction PDF button missing from Publications');
+if(!joined.includes('Franz Kafka e Walter Benjamin: contar do tempo interrompido') || !joined.includes('https://teses.usp.br/teses/disponiveis/8/8151/tde-26022019-105905/pt-br.html'))fail('Doctoral thesis citation or USP record link missing from Publications');
 if(!joined.includes('PDF excerpt'))fail('Arquipélago excerpt label missing');
 if(!joined.includes('Read the afterword') || !joined.includes('/downloads/publications/LV-01-arquipelago-posfacio-excerpt.pdf'))fail('Arquipélago afterword link missing from Selected Work');
 const articlesHtml=fs.readFileSync(path.join(root,'publications/index.html'),'utf8');
