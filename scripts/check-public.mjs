@@ -43,10 +43,10 @@ const ids=[];for(const [f,s] of texts)for(const m of s.matchAll(/\sid="([^"]+)"/
 
 const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const selectedTitles = [
+  'Na semana que vem: História e futuro da Semana de Arte Moderna de 1922',
   'Estéticas del extractivismo en América Latina: Literatura, cine y archivo',
   'Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade',
   'Arquipélago: Literatura Brasileira Contemporânea (2013-2023)',
-  'Crise da filosofia messiânica: a antropofagia matriarcal devora a Modernidade',
 ];
 const selectedPositions = selectedTitles.map((title) => homepage.indexOf(title));
 if (selectedPositions.some((position) => position < 0)) fail('A Selected Work title is missing from the homepage');
