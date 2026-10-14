@@ -348,6 +348,31 @@
     "cv_only": false
   },
   {
+    "id": "CL-05",
+    "order": 16.5,
+    "group": "chapters",
+    "kind": "Book chapter",
+    "year": 2026,
+    "title_lang": "pt",
+    "ref": "Amorim, Tomaz. 2026. “O riso de Odradek.” In *Kafka – Espelho do ser humano*, edited by Ricardo Iannace and Ricardo Musse. Cotia: Ateliê Editorial.",
+    "isbn": null,
+    "doi": null,
+    "doi_linked": true,
+    "book_doi": null,
+    "issue_doi": null,
+    "url": null,
+    "url_label": null,
+    "license": null,
+    "license_conflict": false,
+    "pdf": {
+      "public": false,
+      "file": null,
+      "label": "PDF"
+    },
+    "bibtex": "@incollection{amorim2026riso,\n  author = {Amorim, Tomaz},\n  title = {O riso de Odradek},\n  booktitle = {Kafka -- Espelho do ser humano},\n  editor = {Iannace, Ricardo and Musse, Ricardo},\n  publisher = {Ateliê Editorial},\n  address = {Cotia},\n  year = {2026}\n}",
+    "cv_only": false
+  },
+  {
     "id": "CL-03",
     "order": 17,
     "group": "chapters",
