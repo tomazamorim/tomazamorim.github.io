@@ -373,6 +373,31 @@
     "cv_only": false
   },
   {
+    "id": "CL-07",
+    "order": 16.1,
+    "group": "chapters",
+    "kind": "Book chapter",
+    "year": 2026,
+    "title_lang": "pt",
+    "ref": "Cabezas, Laura, João Fábio Bittencourt, and Tomaz Amorim. 2026. “Apresentação.” In *Na semana que vem: História e futuro da Semana de Arte Moderna de 1922*, edited by Laura Cabezas, João Fábio Bittencourt, and Tomaz Amorim, 9–24. Campinas: Editora da Unicamp.",
+    "isbn": null,
+    "doi": null,
+    "doi_linked": true,
+    "book_doi": null,
+    "issue_doi": null,
+    "url": "https://loja.editoraunicamp.com.br/historia-da-arte/na-semana-que-vem-historia-e-futuro-da-semana-de-arte-moderna-de-1922-803/p",
+    "url_label": "Publisher’s page",
+    "license": null,
+    "license_conflict": false,
+    "pdf": {
+      "public": false,
+      "file": null,
+      "label": "PDF"
+    },
+    "bibtex": "@incollection{cabezas2026apresentacao,\n  author = {Cabezas, Laura and Bittencourt, João Fábio and Amorim, Tomaz},\n  title = {Apresentação},\n  booktitle = {Na semana que vem: História e futuro da Semana de Arte Moderna de 1922},\n  editor = {Cabezas, Laura and Bittencourt, João Fábio and Amorim, Tomaz},\n  pages = {9--24},\n  publisher = {Editora da Unicamp},\n  address = {Campinas},\n  year = {2026}\n}",
+    "cv_only": false
+  },
+  {
     "id": "CL-06",
     "order": 16.2,
     "group": "chapters",
