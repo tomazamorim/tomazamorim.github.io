@@ -31,6 +31,31 @@
     }
   },
   {
+    "id": "VO-04",
+    "order": 1,
+    "group": "edited",
+    "kind": "Edited volume",
+    "year": 2026,
+    "title_lang": "pt",
+    "ref": "Cabezas, Laura, João Fábio Bittencourt, and Tomaz Amorim, eds. 2026. *Na semana que vem: História e futuro da Semana de Arte Moderna de 1922*. Campinas: Editora da Unicamp.",
+    "isbn": "978-85-268-1944-3",
+    "doi": null,
+    "doi_linked": true,
+    "book_doi": null,
+    "issue_doi": null,
+    "url": "https://loja.editoraunicamp.com.br/historia-da-arte/na-semana-que-vem-historia-e-futuro-da-semana-de-arte-moderna-de-1922-803/p",
+    "url_label": "Publisher’s page",
+    "license": null,
+    "license_conflict": false,
+    "pdf": {
+      "public": false,
+      "file": null,
+      "label": "PDF"
+    },
+    "bibtex": "@book{cabezas2026semana,\n  editor = {Cabezas, Laura and Bittencourt, João Fábio and Amorim, Tomaz},\n  title = {Na semana que vem: História e futuro da Semana de Arte Moderna de 1922},\n  publisher = {Editora da Unicamp},\n  address = {Campinas},\n  year = {2026},\n  isbn = {978-85-268-1944-3}\n}",
+    "cv_only": false
+  },
+  {
     "id": "VO-01",
     "order": 2,
     "group": "edited",
@@ -345,6 +370,81 @@
       "label": "PDF"
     },
     "bibtex": "@incollection{amorim2026extractivismo,\n  author = {Amorim, Tomaz},\n  title = {Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade},\n  booktitle = {Estéticas del extractivismo en América Latina: Literatura, cine y archivo},\n  editor = {Amorim, Tomaz and Etzold, Jörn},\n  series = {Biblioteca Mecila-CLACSO},\n  number = {10},\n  pages = {61--119},\n  publisher = {CLACSO},\n  address = {Buenos Aires},\n  year = {2026},\n  translator = {Basso, Santiago}\n}",
+    "cv_only": false
+  },
+  {
+    "id": "CL-07",
+    "order": 16.1,
+    "group": "chapters",
+    "kind": "Book chapter",
+    "year": 2026,
+    "title_lang": "pt",
+    "ref": "Cabezas, Laura, João Fábio Bittencourt, and Tomaz Amorim. 2026. “Apresentação.” In *Na semana que vem: História e futuro da Semana de Arte Moderna de 1922*, edited by Laura Cabezas, João Fábio Bittencourt, and Tomaz Amorim, 9–24. Campinas: Editora da Unicamp.",
+    "isbn": null,
+    "doi": null,
+    "doi_linked": true,
+    "book_doi": null,
+    "issue_doi": null,
+    "url": "https://loja.editoraunicamp.com.br/historia-da-arte/na-semana-que-vem-historia-e-futuro-da-semana-de-arte-moderna-de-1922-803/p",
+    "url_label": "Publisher’s page",
+    "license": null,
+    "license_conflict": false,
+    "pdf": {
+      "public": false,
+      "file": null,
+      "label": "PDF"
+    },
+    "bibtex": "@incollection{cabezas2026apresentacao,\n  author = {Cabezas, Laura and Bittencourt, João Fábio and Amorim, Tomaz},\n  title = {Apresentação},\n  booktitle = {Na semana que vem: História e futuro da Semana de Arte Moderna de 1922},\n  editor = {Cabezas, Laura and Bittencourt, João Fábio and Amorim, Tomaz},\n  pages = {9--24},\n  publisher = {Editora da Unicamp},\n  address = {Campinas},\n  year = {2026}\n}",
+    "cv_only": false
+  },
+  {
+    "id": "CL-06",
+    "order": 16.2,
+    "group": "chapters",
+    "kind": "Book chapter",
+    "year": 2026,
+    "title_lang": "pt",
+    "ref": "Amorim, Tomaz. 2026. “Extrativismo e Modernismo: o caso da Poesia ‘Pau-Brasil’.” In *Na semana que vem: História e futuro da Semana de Arte Moderna de 1922*, edited by Laura Cabezas, João Fábio Bittencourt, and Tomaz Amorim. Campinas: Editora da Unicamp.",
+    "isbn": null,
+    "doi": null,
+    "doi_linked": true,
+    "book_doi": null,
+    "issue_doi": null,
+    "url": "https://loja.editoraunicamp.com.br/historia-da-arte/na-semana-que-vem-historia-e-futuro-da-semana-de-arte-moderna-de-1922-803/p",
+    "url_label": "Publisher’s page",
+    "license": null,
+    "license_conflict": false,
+    "pdf": {
+      "public": false,
+      "file": null,
+      "label": "PDF"
+    },
+    "bibtex": "@incollection{amorim2026extrativismo,\n  author = {Amorim, Tomaz},\n  title = {Extrativismo e Modernismo: o caso da Poesia ``Pau-Brasil''},\n  booktitle = {Na semana que vem: História e futuro da Semana de Arte Moderna de 1922},\n  editor = {Cabezas, Laura and Bittencourt, João Fábio and Amorim, Tomaz},\n  publisher = {Editora da Unicamp},\n  address = {Campinas},\n  year = {2026}\n}",
+    "cv_only": false
+  },
+  {
+    "id": "CL-05",
+    "order": 16.5,
+    "group": "chapters",
+    "kind": "Book chapter",
+    "year": 2026,
+    "title_lang": "pt",
+    "ref": "Amorim, Tomaz. 2026. “O riso de Odradek.” In *Kafka – Espelho do ser humano*, edited by Ricardo Iannace and Ricardo Musse. Cotia: Ateliê Editorial.",
+    "isbn": null,
+    "doi": null,
+    "doi_linked": true,
+    "book_doi": null,
+    "issue_doi": null,
+    "url": null,
+    "url_label": null,
+    "license": null,
+    "license_conflict": false,
+    "pdf": {
+      "public": false,
+      "file": null,
+      "label": "PDF"
+    },
+    "bibtex": "@incollection{amorim2026riso,\n  author = {Amorim, Tomaz},\n  title = {O riso de Odradek},\n  booktitle = {Kafka -- Espelho do ser humano},\n  editor = {Iannace, Ricardo and Musse, Ricardo},\n  publisher = {Ateliê Editorial},\n  address = {Cotia},\n  year = {2026}\n}",
     "cv_only": false
   },
   {

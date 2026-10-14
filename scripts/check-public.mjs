@@ -18,7 +18,7 @@ if(hosted.length!==16)fail(`Expected 16 hosted publication PDFs, found ${hosted.
 if(fs.existsSync(path.join(root,'cv/tomaz-amorim-izabel-cv.pdf'))){
   const cv=path.join(root,'cv/tomaz-amorim-izabel-cv.pdf');
   try { const info=execFileSync('pdfinfo',[cv],{encoding:'utf8'}); if(!/Pages:\s+7\b/.test(info))fail('CV PDF should have 7 pages'); } catch { console.warn('pdfinfo unavailable; skipped PDF page count'); }
-  try { const txt=execFileSync('pdftotext',['-layout',cv,'-'],{encoding:'utf8'}); const section=txt.split(/In press\s*/i)[1]?.split(/\n\s*Talks\s*\n/i)[0]||''; for(const title of ['Na Semana que vem','Extractivism and Modernism: The Case','Telluric Immigration: The Rivers','Desconstruindo o Antropocentrismo'])if(!section.includes(title))fail(`CV PDF missing accepted item: ${title}`); if(/Dossier on extractivism|Para além do antropocentrismo: convivialidades mais-que-humanas.*Forthcoming/i.test(section))fail('CV PDF contains a removed In-press item'); if(/A CONFIRMAR|Q\d{1,2}/i.test(txt))fail('CV PDF contains a placeholder'); } catch { console.warn('pdftotext unavailable; skipped CV text checks'); }
+  try { const txt=execFileSync('pdftotext',['-layout',cv,'-'],{encoding:'utf8'}); const section=txt.split(/In press\s*/i)[1]?.split(/\n\s*Talks\s*\n/i)[0]||''; for(const title of ['Extractivism and Modernism: The Case','Telluric Immigration: The Rivers','Desconstruindo o Antropocentrismo'])if(!section.includes(title))fail(`CV PDF missing accepted item: ${title}`); if(/Na Semana que vem/i.test(section.split(/\n\s*Books\s*\n/i)[0]))fail('CV PDF lists a published book as In press'); if(/Dossier on extractivism|Para além do antropocentrismo: convivialidades mais-que-humanas.*Forthcoming/i.test(section))fail('CV PDF contains a removed In-press item'); if(/A CONFIRMAR|Q\d{1,2}/i.test(txt))fail('CV PDF contains a placeholder'); } catch { console.warn('pdftotext unavailable; skipped CV text checks'); }
 }
 if(!joined.includes('Preferred citation: Amorim, Tomaz. Earlier publications may appear under historical name variants.'))fail('Preferred citation text missing from site');
 if(!joined.includes('https://ojs.ifch.unicamp.br/index.php/teoriacritica/article/view/3979'))fail('Dissonância article URL missing');
@@ -43,10 +43,10 @@ const ids=[];for(const [f,s] of texts)for(const m of s.matchAll(/\sid="([^"]+)"/
 
 const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const selectedTitles = [
+  'Na semana que vem: História e futuro da Semana de Arte Moderna de 1922',
   'Estéticas del extractivismo en América Latina: Literatura, cine y archivo',
   'Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade',
   'Arquipélago: Literatura Brasileira Contemporânea (2013-2023)',
-  'Crise da filosofia messiânica: a antropofagia matriarcal devora a Modernidade',
 ];
 const selectedPositions = selectedTitles.map((title) => homepage.indexOf(title));
 if (selectedPositions.some((position) => position < 0)) fail('A Selected Work title is missing from the homepage');
