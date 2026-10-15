@@ -92,10 +92,10 @@
     "order": 3,
     "group": "edited",
     "kind": "Edited volume",
-    "year": 2021,
+    "year": 2020,
     "title_lang": "pt",
-    "ref": "Amorim, Tomaz, ed. 2021. *Uneafro Brasil: 12 anos de luta*. São Paulo: Uneafro Brasil; Fundação Rosa Luxemburgo.",
-    "isbn": null,
+    "ref": "Amorim, Tomaz, and Vanessa Nascimento, eds. 2020. *Uneafro: 12 anos de luta*. 1st ed. São Paulo: Oralituras.",
+    "isbn": "978-65-990318-5-4",
     "doi": null,
     "doi_linked": true,
     "book_doi": null,
@@ -109,9 +109,8 @@
       "file": "/downloads/publications/VO-02-uneafro-12-anos.pdf",
       "label": "PDF"
     },
-    "bibtex": "@collection{amorim2021uneafro,\n  editor = {Amorim, Tomaz},\n  title = {Uneafro Brasil: 12 anos de luta},\n  publisher = {Uneafro Brasil; Fundação Rosa Luxemburgo},\n  address = {São Paulo},\n  year = {2021},\n  url = {https://tomazamorim.com/downloads/publications/VO-02-uneafro-12-anos.pdf},\n  urldate = {2026-10-10}\n}",
+    "bibtex": "@collection{amorim2020uneafro,\n  editor = {Amorim, Tomaz and Nascimento, Vanessa},\n  title = {Uneafro: 12 anos de luta},\n  publisher = {Oralituras},\n  address = {São Paulo},\n  year = {2020},\n  edition = {1},\n  isbn = {978-65-990318-5-4},\n  url = {https://tomazamorim.com/downloads/publications/VO-02-uneafro-12-anos.pdf},\n  urldate = {2026-10-10}\n}",
     "cv_only": false,
-    "credit_override": "edited by Tomaz Amorim",
     "accessed": "10 Oct 2026"
   },
   {
