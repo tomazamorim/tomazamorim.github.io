@@ -129,10 +129,10 @@ server.close();
 console.log('[post] pesos:', pages.length, 'páginas; maior:', kb1(Math.max(...Object.values(weights).map((w) => w.bytes))), 'KB');
 
 // 5) sitemap (só público; sem rascunhos nem páginas noindex)
+// Sem <lastmod>: a data do build marcava todas as páginas como alteradas a cada publicação, e o Google passa a ignorar um lastmod que não é confiável.
 if (mode === 'public') {
-  const today = new Date().toISOString().slice(0, 10);
   const urls = pages.filter((u) => u !== '/404.html').filter((u) => !/noindex/.test(fs.readFileSync(path.join(dir, u, 'index.html'), 'utf8')));
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${siteUrl}${u}</loc><lastmod>${today}</lastmod></url>`).join('\n')}\n</urlset>\n`;
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${siteUrl}${u}</loc></url>`).join('\n')}\n</urlset>\n`;
   fs.writeFileSync(path.join(dir, 'sitemap.xml'), xml);
   console.log('[post] sitemap.xml:', urls.length, 'URLs');
 }
