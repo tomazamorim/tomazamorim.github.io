@@ -29,13 +29,20 @@ for (const item of downloads) {
     console.log(`Using cached ${item.filename} (${cached.length.toLocaleString()} bytes)`);
     continue;
   }
-  const result = spawnSync('curl', [
+  const fetchTo = (url) => spawnSync('curl', [
     '--fail', '--location', '--silent', '--show-error',
     '--user-agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/130.0.0.0 Safari/537.36',
     '--referer', 'https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270',
-    '--max-time', '240', '--retry', '2', '--retry-all-errors',
-    '--output', output, item.url,
+    '--connect-timeout', '30', '--max-time', '240', '--retry', '2', '--retry-all-errors',
+    '--output', output, url,
   ], { encoding: 'utf8', timeout: 780_000 });
+  let result = fetchTo(item.url);
+  if (result.error || result.status !== 0) {
+    // Fonte fora do ar: usa a cópia já publicada no próprio site (mesmo arquivo, aprovado antes).
+    const mirror = `https://tomazamorim.com/downloads/publications/${item.filename}`;
+    console.warn(`Source unavailable for ${item.filename} (${(result.error?.message ?? result.stderr ?? result.status).toString().trim()}); using ${mirror}`);
+    result = fetchTo(mirror);
+  }
   if (result.error || result.status !== 0) {
     throw new Error(`PDF download failed for ${item.filename}: ${result.error?.message ?? result.stderr ?? result.status}`);
   }
