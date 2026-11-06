@@ -2,14 +2,49 @@
 import Base from '../../layouts/Base.astro';
 import Posts from '../../components/Posts.astro';
 import { project, site, activeMarks, markLabel, projectPublishable, researchLede, feed, gateOpen, esc } from '../../lib/data';
+import { entries as kwEntries, kwUrl3 } from '../../lib/kwv3';
 
 export function getStaticPaths() {
   return projectPublishable() ? [{ params: { slug: undefined } }] : [];
 }
 const lede = researchLede();
 const paras = project.paragraphs;
-// Keep the original Várzea color levels by paragraph, without rendering keyword text or links.
-const sections = paras.map((p, i) => ({ p, level: i % 2 === 0 ? 1 : 2 }));
+// Margens da cheia: as Keywords ligadas a cada parágrafo do projeto. O texto do projeto não muda;
+// quando a expressão (anchor) está no parágrafo, a primeira ocorrência vira link para o verbete.
+// Nível de cor pela quantidade de notas (DS): 1–3 → lv1; 4 ou mais → lv2.
+const MARGINS: { slug: string; anchor?: string }[][] = [
+  [{ slug: 'symbolic-infrastructure-of-extraction', anchor: 'literary and extractive infrastructures' },
+   { slug: 'extractivism', anchor: 'extractive landscapes' },
+   { slug: 'aesthetics-aesthesis', anchor: 'alternative perceptions' }],
+  [{ slug: 'extractive-view', anchor: '“extractive gaze”' },
+   { slug: 'extractive-montage', anchor: 'close readings' },
+   { slug: 'euclides-da-cunha', anchor: 'works from the early 20th century' },
+   { slug: 'oswald-de-andrade' },
+   { slug: 'prisca-agustoni', anchor: 'contemporary literature' }],
+  [{ slug: 'aesthetics-of-extractivism', anchor: 'forms and aesthetics' },
+   { slug: 'fluvicide', anchor: 'environmental destruction caused by extractivism' },
+   { slug: 'toxic-ruin' }],
+  [{ slug: 'indigenous-critique-of-modernity', anchor: 'Indigenous and Quilombola authors' },
+   { slug: 'epistemic-extractivism', anchor: 'epistemological and ontological perspectives' },
+   { slug: 'more-than-human-agency', anchor: 'plurality of worlds' },
+   { slug: 'ailton-krenak' },
+   { slug: 'territory-archive' }],
+];
+const bySlug = new Map(kwEntries.map((e) => [e.slug, e]));
+const sections = paras.map((p, i) => {
+  const notes = (MARGINS[i] ?? []).map((m) => ({ ...m, e: bySlug.get(m.slug) })).filter((m) => m.e);
+  let html = esc(p.text);
+  for (const m of notes) {
+    if (!m.anchor) continue;
+    const a = esc(m.anchor);
+    const k = html.indexOf(a);
+    if (k >= 0) html = html.slice(0, k) + `<a class="kwl" href="${kwUrl3(m.slug)}">${a}</a>` + html.slice(k + a.length);
+  }
+  const concepts = notes.filter((m) => m.e!.kind === 'concept');
+  const people = notes.filter((m) => m.e!.kind !== 'concept');
+  const level = notes.length === 0 ? 0 : notes.length >= 4 ? 2 : 1;
+  return { p, html, concepts, people, level };
+});
 const projMarks = activeMarks(project.tbc);
 const ackMarks = activeMarks(site.funding.acknowledgement_tbc);
 const ledeMarks = activeMarks(site.research_lede_tbc);
@@ -42,13 +77,23 @@ const ledeMarks = activeMarks(site.research_lede_tbc);
   {sections.map((s, i) => (
     <section class={`row lv${s.level} sp-m`}>
       <div class="bed body">
-        <p lang="en">{s.p.n && <Fragment><span class="num">{s.p.n}</span>{' '}</Fragment>}{s.p.text}</p>
+        <p lang="en">{s.p.n && <Fragment><span class="num">{s.p.n}</span>{' '}</Fragment>}<Fragment set:html={s.html} /></p>
         {i === sections.length - 1 && (
           <p class="credit-line">Project description from <a href={project.source_group_url}>DFG Research Unit FOR 5710</a>, <a href={project.source_url}>infra-aesthetics.de/project4</a>{projMarks.map((m) => <Fragment> <span class="tbc">{markLabel(m)}</span></Fragment>)}</p>
         )}
       </div>
-      <div class="pl note research-blue-accent"></div>
-      <div class="pr note"></div>
+      <div class="pl note research-blue-accent">
+        {s.people.length > 0 && <Fragment>
+          <h4>Authors &amp; images</h4>
+          <ul class="kwm">{s.people.map((m) => <li><a href={kwUrl3(m.slug)}>{m.e!.term}</a></li>)}</ul>
+        </Fragment>}
+      </div>
+      <div class="pr note">
+        {s.concepts.length > 0 && <Fragment>
+          <h4>Keywords</h4>
+          <ul class="kwm">{s.concepts.map((m) => <li><a href={kwUrl3(m.slug)}>{m.e!.term}</a></li>)}</ul>
+        </Fragment>}
+      </div>
     </section>
   ))}
 

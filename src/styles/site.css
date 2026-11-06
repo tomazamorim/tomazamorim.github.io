@@ -649,3 +649,15 @@ ul.method li{ margin: 0 0 var(--s-2); }
 @media (max-width: 1023px){ .kw-head-row .kw3-crumb{ display: none; } }
 .kw3-updated{ margin-top: var(--s-5); }
 .kw3-count{ font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); margin: 0 0 var(--s-3); }
+
+/* ---------- Research: margens da cheia com as Keywords ---------- */
+.kwm{ list-style: none; padding: 0; margin: 0 0 var(--s-3); }
+.kwm li{ margin: 0 0 4px; line-height: 1.35; }
+.kwm a{ color: var(--c-ink); text-decoration-color: var(--c-name); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.kwm a:hover{ text-decoration-thickness: 2px; }
+.row .bed.body a.kwl{ color: inherit; text-decoration-color: var(--c-name); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.row .bed.body a.kwl:hover{ text-decoration-thickness: 2px; }
+.research-blue-accent{ padding-right: 16px; }
+@media (max-width: 760px){
+  .research-blue-accent:has(*){ display: block; border-right: 0; padding-right: 0; }
+}
