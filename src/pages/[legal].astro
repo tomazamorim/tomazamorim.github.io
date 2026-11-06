@@ -21,7 +21,7 @@ const note = (text: string) => (draft ? ` <span class="tbc">[A CONFIRMAR: ${text
 const hasScript = siteHasScript();
 const hasResearchSection = !!feed.feed_url;  // seção sobre o RSS só quando o feed existir (revisor R2-14)
 ---
-<Base title={isImp ? "Impressum" : "Datenschutzerklärung"} description={isImp ? "Impressum / legal notice." : "Datenschutzerklärung / privacy statement."} path={`/${legal}/`}>
+<Base title={isImp ? "Impressum" : "Datenschutzerklärung"} description={isImp ? "Impressum / legal notice." : "Datenschutzerklärung / privacy statement."} path={`/${legal}/`} noindex={true}>
   <section class="row">
     <div class="pl"></div>
     <div class="bed">
