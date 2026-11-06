@@ -60,7 +60,7 @@ jobs:
         env:
           RCLONE_CONFIG_CONTENT: ${{ secrets.RCLONE_CONFIG }}
         run: |
-          if [ -z "$RCLONE_CONFIG_CONTENT" ]; then echo "RCLONE_CONFIG not set: Drive backup skipped"; exit 0; fi
+          if [ -z "$RCLONE_CONFIG_CONTENT" ]; then echo "::warning::RCLONE_CONFIG not set: Drive backup skipped"; exit 0; fi
           sudo apt-get install -y -qq rclone >/dev/null
           mkdir -p ~/.config/rclone
           printf '%s\n' "$RCLONE_CONFIG_CONTENT" > ~/.config/rclone/rclone.conf
@@ -80,9 +80,11 @@ jobs:
           tomazamorim-site-historico.bundle  O repositório inteiro, com todo o histórico de mudanças.
                                           Para recuperar: git clone tomazamorim-site-historico.bundle tomazamorim-site
           TXT
-          rclone copy backup "$REMOTE:Backup site tomazamorim.com/ultimo"
-          rclone copy backup "$REMOTE:Backup site tomazamorim.com/$(date -u +%Y-%m)"
+          DRIVE_FOLDER=184rnNVgc-ydV256REAuRIXFPOI4g_nMH  # pasta do site no Drive
+          rclone copy backup "$REMOTE:Backup site tomazamorim.com/ultimo" --drive-root-folder-id "$DRIVE_FOLDER"
+          rclone copy backup "$REMOTE:Backup site tomazamorim.com/$(date -u +%Y-%m)" --drive-root-folder-id "$DRIVE_FOLDER"
           echo "Drive backup done"
+          # (se o rclone falhar, o passo aparece como falho no GitHub, mas a publicação do site segue)
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
         with:
