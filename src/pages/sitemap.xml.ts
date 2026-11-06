@@ -1,3 +1,4 @@
+import { entries as kwEntries, kwUrl3 } from '../lib/kwv3';
 import { absoluteUrl, isPreview, projectPublishable, visibleBios, gateOpen } from '../lib/data';
 
 export const GET = () => {
@@ -14,6 +15,7 @@ export const GET = () => {
     '/teaching/',
     '/colophon/',
     ...(projectPublishable() ? ['/research/'] : []),
+    ...(kwEntries.length > 0 ? ['/research/keywords/', ...kwEntries.map((e) => kwUrl3(e.slug))] : []),
     '/blog/',
     ...(visibleBios().length > 0 || gateOpen('PHOTO') ? ['/for-organizers/'] : []),
   ];

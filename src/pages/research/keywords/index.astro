@@ -1,0 +1,36 @@
+---
+// Keywords v3: índice.
+import Base from '../../../layouts/Base.astro';
+import { entries, GROUPS, gloss, kwUrl3 } from '../../../lib/kwv3';
+const groups = GROUPS.map((g) => ({ ...g, list: entries.filter((e) => e.kind === g.kind) }));
+---
+<Base title="Keywords" description="Keywords of the research on extractivism and infrastructure in Brazilian literature." season="flood" nav="keywords" path="/research/keywords/">
+  <section class="row lv0 sp-m">
+    <div class="pl"></div>
+    <div class="bed">
+      <span class="sc">Research</span>
+      <h1 class="title">Keywords</h1>
+      <p class="kw3-intro">Concepts, ideas and images that are emerging from the research on extractivism and infrastructure in Brazilian literature, gathered here from its publications. This is an open format, still in development: a way of organizing the critical points of the research and of exchanging with other researchers.</p>
+      <p class="kw3-count">{entries.length} entries</p>
+      <ul class="kw3-jump">{groups.map((g) => <li><a href={`#${g.id}`}>{g.label}</a> <span class="n">{g.list.length}</span></li>)}</ul>
+    </div>
+    <div class="pr"></div>
+  </section>
+  {groups.map((g, gi) => (
+    <section class={`row lv${gi % 2 === 0 ? 1 : 2} sp-m`} id={g.id}>
+      <div class="pl note"><p class="kw3-glabel">{g.label}</p></div>
+      <div class="bed">
+        <h2 class="sec">{g.label}</h2>
+        <ul class="kwx">
+          {g.list.map((e) => (
+            <li>
+              <div class="top"><a href={kwUrl3(e.slug)}>{e.term}</a></div>
+              <p class="gl" lang="en" set:html={gloss(e)} />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="pr"></div>
+    </section>
+  ))}
+</Base>

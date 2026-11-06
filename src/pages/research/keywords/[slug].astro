@@ -1,0 +1,55 @@
+---
+// Keywords v3: um verbete por página (dados em src/data/keywords-v3.json).
+import Base from '../../../layouts/Base.astro';
+import { entries, md, sideItem, KIND_LABEL, kwUrl3, type KwEntry } from '../../../lib/kwv3';
+
+export function getStaticPaths() {
+  return entries.map((e) => ({ params: { slug: e.slug }, props: { e } }));
+}
+const { e } = Astro.props as { e: KwEntry };
+const i = entries.findIndex((x) => x.slug === e.slug);
+const prev = entries[(i - 1 + entries.length) % entries.length];
+const next = entries[(i + 1) % entries.length];
+const SIDE = ['Related concepts', 'Authors & images', 'Publications & forthcoming', 'Talks'];
+const side = SIDE.filter((k) => (e.sidebar as Record<string, string[]>)[k]?.length).map((k) => ({ k, items: (e.sidebar as Record<string, string[]>)[k] }));
+---
+<Base title={e.term} description={`Keyword: ${e.term}`} season="flood" nav="keywords" path={kwUrl3(e.slug)}>
+  <section class="row lv1 sp-m kw-head-row">
+    <div class="pl"><p class="kw3-crumb"><a href="/research/keywords/">← Keywords</a></p></div>
+    <div class="bed">
+      <p class="kw-kind">{KIND_LABEL[e.kind]}</p>
+      <h1 class="title kw-term">{e.term}</h1>
+    </div>
+    <div class="pr"></div>
+  </section>
+
+  <section class="row lv0 sp-m kw3-body">
+    <div class="pl"></div>
+    <div class="bed body kw3-text">
+      {e.paragraphs.map((p) => <p lang="en" set:html={md(p, e.slug)} />)}
+      <div class="kw3-refs">
+        <p class="kw-h">References</p>
+        <ul>{e.references.map((r) => <li set:html={md(r)} />)}</ul>
+      </div>
+      <p class="updated kw3-updated">Updated on {(e as any).updated}</p>
+    </div>
+    <aside class="pr note kw3-side" aria-label="Constellation">
+      {side.map((s) => (
+        <div class="kw3-sgroup">
+          <h4>{s.k}</h4>
+          <ul>{s.items.map((it) => <li set:html={sideItem(it)} />)}</ul>
+        </div>
+      ))}
+    </aside>
+  </section>
+
+  <section class="row lv0 sp-s">
+    <div class="pl"></div>
+    <div class="bed kw3-nav">
+      <a href={kwUrl3(prev.slug)}>← {prev.term}</a>
+      <a href="/research/keywords/">All keywords</a>
+      <a href={kwUrl3(next.slug)}>{next.term} →</a>
+    </div>
+    <div class="pr"></div>
+  </section>
+</Base>

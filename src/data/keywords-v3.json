@@ -1,0 +1,835 @@
+{
+ "version": "v3 (18 Oct 2026)",
+ "entries": [
+  {
+   "n": 1,
+   "term": "Extractivism",
+   "slug": "extractivism",
+   "kind": "concept",
+   "paragraphs": [
+    "In Latin American political economy, extractivism designates the continuous removal of raw materials that are processed and valued elsewhere. In Amorim's research it names, above all, a mode of relation: in extractive infrastructures \"las áreas y los seres vivos que las habitan se tratan como medios, no como fines\" [the areas and the living beings that inhabit them are treated as means, not as ends] (Amorim 2026a, 70). Extractivism must therefore be read as \"uma prática total, em que se extraem não apenas materiais, mas relações\" [a total practice, in which not only materials but relations are extracted] (Amorim 2026b, 342): rubber or silver are removed together with the bonds that tie Indigenous peoples to their territories.",
+    "Literature enters this history as one of the places where land is made available for extraction. Before the mine or the railway, a **symbolic infrastructure of extraction** has to be built, and in that process the aesthetic and cosmological relations between what is extracted, those who extract and the territory itself \"suelen ser destruidas, borradas y/o olvidadas\" [are usually destroyed, erased and/or forgotten] (Amorim and Etzold 2026, 10). Yet the same texts also bear witness to the **more-than-human agency** that this reduction never fully subdues."
+   ],
+   "updated": "6 November 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Extractive view",
+     "Symbolic infrastructure of extraction",
+     "Ontological impoverishment",
+     "Epistemic extractivism"
+    ],
+    "Authors & images": [
+     "Euclides da Cunha",
+     "Oswald de Andrade",
+     "Toxic ruin"
+    ],
+    "Publications & forthcoming": [
+     "Amorim & Etzold, “Introducción” (2026), pp. 9–14",
+     "Amorim, “Extractivismo y modernismo” (2026), p. 70",
+     "Amorim, “Extrativismo e Modernismo” (2026), p. 342",
+     "Amorim & Etzold, eds., *Estéticas del extractivismo en América Latina* (2026)",
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“Names of Peoples, Names of Places” — Race/Genre as Infrastructure, Bochum, 2026",
+     "“Extrativismo e Infraestrutura na Literatura Brasileira” — CEBRAP, São Paulo, 2026",
+     "“Underground Relations” — GSSC, Cologne, 2024",
+     "“Aesthetics of Extractivism” — MECAM, Tunis, 2025"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2026a. \"Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade.\" Translated by Santiago Basso. In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 61–119. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270.",
+    "Amorim, Tomaz. 2026b. \"Extrativismo e Modernismo: o caso da Poesia 'Pau-Brasil'.\" In *Na semana que vem: História e futuro da Semana de Arte Moderna de 1922*, edited by Laura Cabezas, João Fábio Bittencourt, and Tomaz Amorim, 339–364. Campinas: Editora da Unicamp.",
+    "Amorim, Tomaz, and Jörn Etzold. 2026. \"Introducción.\" In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 9–42. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270."
+   ]
+  },
+  {
+   "n": 2,
+   "term": "Extractive view",
+   "slug": "extractive-view",
+   "kind": "concept",
+   "paragraphs": [
+    "The extractive view is the way of seeing that prepares a territory for extraction by converting it into a reserve of commodities. Amorim takes the notion from Macarena Gómez-Barris's work on the extractive zone and gives it a literary inflection: \"O gesto extrativista na literatura poderia ser entendido como uma estetização do território (para parodiar Walter Benjamin): retratar o território ao modo da propaganda, como quem quer vendê-lo\" [The extractivist gesture in literature could be understood as an aestheticization of the territory (to parody Walter Benjamin): portraying the territory in the manner of propaganda, as one who wants to sell it] (Amorim 2026b, 348). Like the colonial letters of discovery, read as investment prospectuses, such a view flattens material specificity and relational plurality into a language legible only from outside.",
+    "In *Pau-Brasil* this view is borrowed and exposed at once. **Oswald de Andrade**'s montage lifts the chroniclers' gaze out of their prose, where women, fruit and minerals follow one another like items on a shopping list, and distorts it through irony: it \"visibiliza el aparato colonial en lugar de presentarlo como algo natural. Muestra la construcción de la mirada\" [makes the colonial apparatus visible instead of presenting it as natural. It shows the construction of the gaze] (Amorim 2026a, 111). In **Euclides da Cunha** the same optic appears in another key, \"not a corporate but an anguished literary one, which registers in passing the very cost it is authorizing\" (Amorim, forthcoming)."
+   ],
+   "updated": "6 November 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Extractivism",
+     "Aesthetics of Extractivism",
+     "Extractive montage",
+     "Symbolic infrastructure of extraction",
+     "Toponymy"
+    ],
+    "Authors & images": [
+     "Oswald de Andrade",
+     "Euclides da Cunha"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Extrativismo e Modernismo” (2026), p. 348",
+     "Amorim, “Extractivismo y modernismo” (2026), p. 111",
+     "Amorim & Etzold, “Introducción” (2026), p. 13",
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“Names of Peoples, Names of Places” — Race/Genre as Infrastructure, Bochum, 2026",
+     "“Underground Relations” — GSSC, Cologne, 2024",
+     "“Imigração telúrica” — Unicamp, Campinas, 2026"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2026a. \"Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade.\" Translated by Santiago Basso. In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 61–119. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270.",
+    "Amorim, Tomaz. 2026b. \"Extrativismo e Modernismo: o caso da Poesia 'Pau-Brasil'.\" In *Na semana que vem: História e futuro da Semana de Arte Moderna de 1922*, edited by Laura Cabezas, João Fábio Bittencourt, and Tomaz Amorim, 339–364. Campinas: Editora da Unicamp.",
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica).",
+    "Gómez-Barris, Macarena. 2017. *The Extractive Zone: Social Ecologies and Decolonial Perspectives*. Durham, NC: Duke University Press. (Cited via Amorim 2026a.)"
+   ]
+  },
+  {
+   "n": 3,
+   "term": "Aesthetics of Extractivism",
+   "slug": "aesthetics-of-extractivism",
+   "kind": "concept",
+   "paragraphs": [
+    "Aesthetics of Extractivism names both the field of Amorim's research and the volume he co-edited with Jörn Etzold. Its premise is that aesthetics and extraction are not separate spheres: \"Ambas pertenecen a una misma forma de concebir y construir mundos de vida\" [Both belong to one and the same way of conceiving and building life-worlds] (Amorim and Etzold 2026, 12). The field accordingly works on three levels: **aesthesis**, the sensible constitution of the worlds that extractivism destroys and creates; aesthetics as a theory of art, which is itself a practice of lifting things out of their context; and the institutions that certify certain works as art (15–23).",
+    "Within this field Amorim formulates the notion of aesthetic extractivism, tested on *Pau-Brasil*: \"así como la economía colonial se basaba en la extracción de materias primas para el consumo extranjero, el proyecto modernista de Oswald opera mediante una forma de 'extractivismo estético'\" [just as the colonial economy relied on the extraction of raw materials for foreign consumption, Oswald's modernist project operates through a form of 'aesthetic extractivism'] (Amorim 2026a, 111). The same **extractive montage**, however, can be turned against its model: \"Este contra-extractivismo utiliza el arma del dominador para revelar las mismas heridas que la historia oficial pretendía ocultar\" [This counter-extractivism uses the weapon of the dominator to reveal the very wounds that official history sought to conceal] (Amorim 2026a, 110)."
+   ],
+   "updated": "24 October 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Aesthetics / Aesthesis",
+     "Extractive view",
+     "Extractive montage",
+     "Epistemic extractivism",
+     "Extractivism"
+    ],
+    "Authors & images": [
+     "Oswald de Andrade"
+    ],
+    "Publications & forthcoming": [
+     "Amorim & Etzold, eds., *Estéticas del extractivismo en América Latina* (2026)",
+     "Amorim & Etzold, “Introducción” (2026), pp. 9–23",
+     "Amorim, “Extractivismo y modernismo” (2026), pp. 110, 111",
+     "Amorim, “Coffee Poetics in Brazilian Modernism” (2025)"
+    ],
+    "Talks": [
+     "“Aesthetics of Extractivism” — MECAM, Tunis, 2025",
+     "“Underground Relations” — GSSC, Cologne, 2024",
+     "“Extrativismo e Infraestrutura na Literatura Brasileira” — CEBRAP, São Paulo, 2026"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2025a. \"Coffee Poetics in Brazilian Modernism.\" In *Lateinamerika denken und beschreiben: Festschrift für Susanne Klengel*, edited by Joanna M. Moszczyńska and Philipp Seidel, 1:235–245. Berlin: Frank & Timme. https://library.oapen.org/handle/20.500.12657/109755.",
+    "Amorim, Tomaz. 2026a. \"Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade.\" Translated by Santiago Basso. In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 61–119. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270.",
+    "Amorim, Tomaz, and Jörn Etzold. 2026. \"Introducción.\" In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 9–42. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270."
+   ]
+  },
+  {
+   "n": 4,
+   "term": "Epistemic extractivism",
+   "slug": "epistemic-extractivism",
+   "kind": "concept",
+   "paragraphs": [
+    "Epistemic extractivism designates the appropriation of living knowledges as raw material. Drawing on Silvia Rivera Cusicanqui and Ramón Grosfoguel, the introduction to *Para além do antropocentrismo* distinguishes it from epistemic violence, which works by negation or exclusion: extractivism \"caracteriza-se pela cooptação e exploração com apagamento de autoria\" [is characterized by co-optation and exploitation with the erasure of authorship] (Amorim, Klengel, and Manzi, forthcoming, ms. 6). For Amorim the concept follows from the total character of **extractivism**: \"the reduction of a river to a resource is inseparable from the reduction of the many knowledges of a territory to a single, profitable one\" (Amorim, forthcoming).",
+    "The concept frames the current critique of São Paulo modernism, which brought Indigenous, African and popular materials into Brazilian discourse while its actors and audiences remained largely confined to elites. In this sense the concept \"revela las dinámicas de dominación, apropiación y borramiento\" [reveals the dynamics of domination, appropriation and erasure] (Amorim 2026a, 73). Amorim does not apply it as a blanket verdict, however: **Oswald de Andrade**'s reading of Tupinambá antropofagia ritual is read as non-extractive, since the devourer is also devoured, and Jaider Esbell's writing turns the archival object into a literary subject."
+   ],
+   "updated": "6 November 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Extractivism",
+     "Aesthetics of Extractivism",
+     "Indigenous critique of modernity"
+    ],
+    "Authors & images": [
+     "Oswald de Andrade",
+     "Maximiano José Roberto"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Extractivismo y modernismo” (2026), p. 73",
+     "Amorim, Klengel & Manzi, “Introdução,” *Para além do antropocentrismo* (forthcoming), ms. 6",
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“The Indigenous Critique of Modernity” — Leuphana, Lüneburg, 2026",
+     "“Rios sem historia(dores)” — Motyrõ, Paris, 2026"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2026a. \"Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade.\" Translated by Santiago Basso. In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 61–119. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270.",
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica).",
+    "Amorim, Tomaz, Susanne Klengel, and Maya Manzi. Forthcoming. \"Introdução: Para além do antropocentrismo: convivialidades mais-que-humanas.\" São Paulo: Hucitec; Mecila."
+   ]
+  },
+  {
+   "n": 5,
+   "term": "Ontological impoverishment",
+   "slug": "ontological-impoverishment",
+   "kind": "concept",
+   "paragraphs": [
+    "Ontological impoverishment, or ontological reduction (the two terms are used interchangeably), names what extraction does to what a territory and its beings can be. It is \"the ontological reduction that defines extractivism as a mode of relating to territory\" (Amorim, forthcoming): a being is stripped, without knowing it, of the relations with other times, places and beings that constituted it, and is left with a non-relational ontology.",
+    "Dantas Motta's *Epístola do São Francisco para os que vivem sob sua jurisdição no Vale* (1955), spoken by the river itself, draws on Franciscan theology to separate poverty, a simplicity completed by contact with the cosmos, from misery, the reduction of the self to itself: \"toda unidade é estéril\" [all unity is sterile] (Motta 1955). Made one, the river mourns the moon, the herons and the stars that once composed it. On the Rio Doce after the Fundão collapse, the mud of **Prisca Agustoni**'s poems \"sterilizes, ontologically impoverishing what the land can still be\" (Amorim, forthcoming), ending in **toxic ruin**; Krenak kinship with Watu keeps open what extraction seeks to close."
+   ],
+   "updated": "6 November 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Extractivism",
+     "Fluvicide",
+     "Symbolic infrastructure of extraction"
+    ],
+    "Authors & images": [
+     "Prisca Agustoni",
+     "Ailton Krenak",
+     "Toxic ruin",
+     "Telluric immigration"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“Fluvicide, or When Dead Rivers Speak” — University of Ghana, Accra, 2025",
+     "“Names of Peoples, Names of Places” — Race/Genre as Infrastructure, Bochum, 2026",
+     "“Telluric Immigration” — Mecila Annual Meeting, São Paulo, 2026",
+     "“Imigração telúrica” — Unicamp, Campinas, 2026"
+    ]
+   },
+   "references": [
+    "Agustoni, Prisca. 2022. *O gosto amargo dos metais*. Rio de Janeiro: 7Letras.",
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica).",
+    "Motta, Dantas. 1955. *Epístola do São Francisco para os que vivem sob sua jurisdição no Vale*. São Paulo: Livraria Martins Editora."
+   ]
+  },
+  {
+   "n": 6,
+   "term": "Fluvicide",
+   "slug": "fluvicide",
+   "kind": "concept",
+   "paragraphs": [
+    "Fluvicide, the killing of a river, was coined by Tyson R. Roberts in 1996 to describe the destruction of a river's aquatic life by a hydropower project. The anthropologist Fábio Zuker widened the term to an attempt \"to kill a river, to exterminate the complex and intertwined forms of human and non-human life that are constituted along with it\" (Zuker 2022, quoted in Amorim, forthcoming). Amorim adopts this broader sense: what dies is a river \"and of the manifold worlds that coexist within it\" (Amorim, forthcoming).",
+    "His case is the Rio Doce, poisoned in 2015 when the Fundão tailings dam collapsed, and written from within in **Prisca Agustoni**'s *O gosto amargo dos metais*. For the Borum-Krenak the river is Watu, a grandfather, so its death is a bereavement as well as an environmental disaster: \"From a more-than-human person, the river is transformed into toxic mud, producing both material and ontological ruin\" (Amorim, forthcoming). Fluvicide thus binds **ontological impoverishment** to **toxic ruin**, and it names a loss that the vocabulary of environmental damage cannot register."
+   ],
+   "updated": "24 October 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Ontological impoverishment",
+     "More-than-human agency",
+     "Extractivism"
+    ],
+    "Authors & images": [
+     "Prisca Agustoni",
+     "Ailton Krenak",
+     "Toxic ruin"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“Fluvicide, or When Dead Rivers Speak” — University of Ghana, Accra, 2025",
+     "“Imigração telúrica” — Unicamp, Campinas, 2026",
+     "“Telluric Immigration” — Mecila Annual Meeting, São Paulo, 2026",
+     "“Telluric migration” — Ringvorlesung “Transitorische Räume”, Bochum, 2026"
+    ]
+   },
+   "references": [
+    "Agustoni, Prisca. 2022. *O gosto amargo dos metais*. Rio de Janeiro: 7Letras.",
+    "Amorim, Tomaz. 2025b. \"Fluvicide, or When Dead Rivers Speak.\" Paper presented at the workshop \"Extractivism: Towards a Gendered and Transdisciplinary Approach at the Threshold between Land and Sea,\" University of Ghana, Accra, July 14–19.",
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica).",
+    "Roberts, Tyson R. 1996. \"Fluvicide: An Independent Environmental Assessment of Nam Theun 2 Hydropower Project in Laos, with Particular Reference to Aquatic Biology and Fishes.\" Unpublished report. Bangkok. (Cited via Amorim, forthcoming.)",
+    "Zuker, Fábio. 2022. \"'Imagina tudo isso aqui virando soja?': Monocultura e infraestrutura no Baixo Tapajós.\" In *Infraestrutura para produção de commodities e povos etnicamente diferenciados*, edited by Marcos Cristiano Zucarelli et al. Rio de Janeiro: Mórula. (Cited via Amorim, forthcoming.)"
+   ]
+  },
+  {
+   "n": 7,
+   "term": "Territory-archive",
+   "slug": "territory-archive",
+   "kind": "concept",
+   "paragraphs": [
+    "Territory-archive approaches rivers, stones and place names as material media of history, keeping records that colonial writing declared absent. Amorim is developing the idea, still as a working hypothesis, from the archive of the upper Uaupés, against **Euclides da Cunha**'s *terra sem história* [land without history] and Ermanno Stradelli's claim that the peoples of the region had no historians. In the Pitiápo, a Wanano narrative collected by **Maximiano José Roberto**, conquest gives the river a second name without erasing the first: \"O nome antigo continua ali. O apagamento virá depois, com o processo colonial\" [The old name is still there. The erasure will come later, with the colonial process] (Amorim 2026d).",
+    "The archive is also mineral. A Kubeo elder read the rock inscriptions of the upper Uaupés as histories, and a carving that now lies far from the riverbed records the river's former course: \"A pedra funciona como outro suporte da história, uma cronologia material\" [The stone works as another medium of history, a material chronology] (Amorim 2026d). To read such an archive is to attend to **more-than-human agency** and **toponymy** at once, since the marks of the past are dispersed across different supports: \"Algumas dessas marcas estão nos livros. Outras estão nas pedras\" [Some of these marks are in books. Others are in stones] (Amorim 2026d)."
+   ],
+   "updated": "24 October 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Toponymy",
+     "More-than-human agency",
+     "Epistemic extractivism",
+     "Indigenous critique of modernity"
+    ],
+    "Authors & images": [
+     "Maximiano José Roberto",
+     "Euclides da Cunha",
+     "Telluric immigration"
+    ],
+    "Talks": [
+     "“Rios sem historia(dores)” — Motyrõ, Paris, 2026"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2026d. \"Rios sem historia(dores): os arquivos fluviais de Euclides da Cunha e Maximiano José Roberto (1890–1909).\" Paper presented at the international colloquium \"Motyrõ: Arts et savoirs autochtones dans la contemporanéité,\" Maison des Sciences de l'Homme, Paris, October 7–8."
+   ]
+  },
+  {
+   "n": 8,
+   "term": "Toponymy",
+   "slug": "toponymy",
+   "kind": "concept",
+   "paragraphs": [
+    "Toponymy, in Amorim's research, is the study of naming as an infrastructure of possession. Of colonialism, Amorim writes: \"Bautiza, en el doble sentido de nombrar al recién nacido y cristianizar, como si no hubiera habido nadie allí antes\" [It baptizes, in the double sense of naming the newborn and Christianizing, as if there had been no one there before] (Amorim 2026a, 78n12): Pindorama, the land of palm trees, becomes Brasil, the name of a tree turned commodity. The naming of places runs parallel to the naming of peoples into races: \"Naming the spaces of 'discovery' is the first gesture of constructing a new history. It is a classificatory infrastructure\" (Amorim 2026c).",
+    "The operation is traced case by case. **Euclides da Cunha** reads the settlement names along the Purus as the first writing of a land without history, effacing the Indigenous occupation that preceded them. In the Pitiápo, by contrast, conquest renames a river while the older name survives, the founding case of the **territory-archive**. **Prisca Agustoni**'s refrain answers administrative naming from the other side: \"To say «Watu» rather than «Rio Doce» is to refuse the cartographic act by which the river was made an object of administration\" (Amorim, forthcoming)."
+   ],
+   "updated": "24 October 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Territory-archive",
+     "Extractive view",
+     "Symbolic infrastructure of extraction",
+     "Epistemic extractivism"
+    ],
+    "Authors & images": [
+     "Euclides da Cunha",
+     "Oswald de Andrade",
+     "Maximiano José Roberto",
+     "Prisca Agustoni"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Extractivismo y modernismo” (2026), p. 78, n. 12",
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“Names of Peoples, Names of Places” — Race/Genre as Infrastructure, Bochum, 2026",
+     "“Rios sem historia(dores)” — Motyrõ, Paris, 2026"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2026a. \"Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade.\" Translated by Santiago Basso. In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 61–119. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270.",
+    "Amorim, Tomaz. 2026c. \"Names of Peoples, Names of Places: Extractivism and Race in Euclides da Cunha and Oswald de Andrade.\" Paper presented at the workshop \"Race/Genre as Infrastructure,\" Ruhr-Universität Bochum, June 26.",
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica)."
+   ]
+  },
+  {
+   "n": 9,
+   "term": "More-than-human agency",
+   "slug": "more-than-human-agency",
+   "kind": "concept",
+   "paragraphs": [
+    "More-than-human agency names the capacity of rivers, soils and other beings to shape events and relations. In Amorim's reading it is an interpretive claim grounded in literary form, not an ethnographic assertion: the literature that prepares extraction \"registers, often against its own intentions, the agency of the more-than-human world it seeks to subdue\" (Amorim, forthcoming). **Euclides da Cunha**'s Amazon defeats the expectations of its observer, and his prose stages \"the instant at which the sovereignty project of the state collides with the geopolitical agency of nature itself\" (Amorim, forthcoming).",
+    "Cunha's river, however, still acts as a sovereign subject, an adversary or a restless artist. The Pitiápo, a Wanano narrative collected by **Maximiano José Roberto**, offers another model, in which the river has a mother: \"Sua agência não é a de um sujeito soberano que age sobre um mundo passivo, nem a passividade da matéria à espera de ordem. É relacional\" [Its agency is neither that of a sovereign subject acting upon a passive world nor the passivity of matter awaiting orders. It is relational] (Amorim 2026d). Agency here is a web of reactions rather than the deed of a hero, which is also why the narrative belongs to the **territory-archive**."
+   ],
+   "updated": "24 October 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Territory-archive",
+     "Fluvicide",
+     "Ontological impoverishment"
+    ],
+    "Authors & images": [
+     "Euclides da Cunha",
+     "Maximiano José Roberto",
+     "Telluric immigration"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“Rios sem historia(dores)” — Motyrõ, Paris, 2026",
+     "“Imigração telúrica” — Unicamp, Campinas, 2026",
+     "“Telluric Immigration” — Mecila Annual Meeting, São Paulo, 2026"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2026d. \"Rios sem historia(dores): os arquivos fluviais de Euclides da Cunha e Maximiano José Roberto (1890–1909).\" Paper presented at the international colloquium \"Motyrõ: Arts et savoirs autochtones dans la contemporanéité,\" Maison des Sciences de l'Homme, Paris, October 7–8.",
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica)."
+   ]
+  },
+  {
+   "n": 10,
+   "term": "Symbolic infrastructure of extraction",
+   "slug": "symbolic-infrastructure-of-extraction",
+   "kind": "concept",
+   "paragraphs": [
+    "The symbolic infrastructure of extraction is the set of representations and classifications that make a territory available for extraction. For Amorim, literature helps to build it: \"before, or alongside, the installation of its material infrastructure, a symbolic infrastructure had to be built, one that reduces the manifold entanglements of a landscape to the single function of yielding a commodity\" (Amorim, forthcoming). The two planes are entangled, since \"every material infrastructure is also a regime of visibility and classification\" (Amorim 2026c).",
+    "**Euclides da Cunha** describes the Amazon as a land without history and answers its erosion with a railway; José de Alencar's novels assign a type of worker to each biome. Literature is not a mere accomplice, however. The text is also a producer of the social, \"a veces brindando apoyo ideológico, otras veces ofreciendo crítica\" [at times providing ideological support, at other times offering critique] (Amorim 2026a, 67), and the same pages can expose the **extractive view** they help to build. The concept organizes Amorim's DFG project, which follows literary and extractive infrastructures from the early stages of high modernism to contemporary writing that confronts the environmental destruction caused by extractivism (Amorim n.d.)."
+   ],
+   "updated": "24 October 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Extractive view",
+     "Toponymy",
+     "Extractivism",
+     "Epistemic extractivism",
+     "Ontological impoverishment"
+    ],
+    "Authors & images": [
+     "Euclides da Cunha",
+     "Oswald de Andrade",
+     "Prisca Agustoni"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Extractivismo y modernismo” (2026), p. 67",
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“Names of Peoples, Names of Places” — Race/Genre as Infrastructure, Bochum, 2026",
+     "“Extrativismo e Infraestrutura na Literatura Brasileira” — CEBRAP, São Paulo, 2026"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2026a. \"Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade.\" Translated by Santiago Basso. In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 61–119. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270.",
+    "Amorim, Tomaz. 2026c. \"Names of Peoples, Names of Places: Extractivism and Race in Euclides da Cunha and Oswald de Andrade.\" Paper presented at the workshop \"Race/Genre as Infrastructure,\" Ruhr-Universität Bochum, June 26.",
+    "Amorim, Tomaz. n.d. \"Extractivism and Infrastructure in Brazilian Literature.\" Project 4, DFG Research Unit FOR 5710 \"Infrastructure: Aesthetics and Supply,\" Ruhr-Universität Bochum. Accessed October 7, 2026. https://infra-aesthetics.de/project4/.",
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica)."
+   ]
+  },
+  {
+   "n": 11,
+   "term": "Indigenous critique of modernity",
+   "slug": "indigenous-critique-of-modernity",
+   "kind": "concept",
+   "paragraphs": [
+    "The Indigenous critique of modernity names the arguments Indigenous thinkers directed against European political economy, and their selective absorption by the Enlightenment. Amorim's Leuphana lecture opens with **Oswald de Andrade**'s claim, in the *Manifesto Antropófago* (1928), that without the Carib revolution Europe would not even have its declaration of the rights of man. Testing David Graeber and David Wengrow's thesis, it finds that Kondiaronk's voice in Lahontan's *Dialogues* (1703) and Guaman Poma de Ayala's *Nueva corónica* (c. 1615) \"converge on the same diagnosis: the European political economy is organized around a fetish that cannibalizes both the land and its peoples\" (Amorim 2026e).",
+    "The two critiques are not interchangeable: \"Even when the indigenous critique is authentic, its circulation depends on the ventriloquist's hand\" (Amorim 2026e), whereas Guaman Poma writes in his own name. Underneath both lies a different relation to land: \"Enquanto o olhar extrativista opera a divisão radical entre sujeito e objeto, a prática indígena não moderna produz e é produzida no contato com esse território\" [While the extractivist gaze carries out a radical division between subject and object, non-modern Indigenous practice produces and is produced in contact with this territory] (Amorim 2026b, 345). The lecture closes with Jaider Esbell's *Carta ao Velho Mundo*, in which a European encyclopedia of art is rewritten from within."
+   ],
+   "updated": "24 October 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Epistemic extractivism",
+     "Extractive view",
+     "Toponymy"
+    ],
+    "Authors & images": [
+     "Oswald de Andrade"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Extrativismo e Modernismo” (2026), p. 345",
+     "Amorim, “Crise da filosofia messiânica” (2020), p. 15"
+    ],
+    "Talks": [
+     "“The Indigenous Critique of Modernity” — Leuphana, Lüneburg, 2026"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2020. \"Crise da filosofia messiânica: A antropofagia matriarcal devora a Modernidade.\" *Dissonância: Revista de Teoria Crítica* 4. Advance online publication, 1–49. https://ojs.ifch.unicamp.br/index.php/teoriacritica/article/view/3979.",
+    "Amorim, Tomaz. 2026b. \"Extrativismo e Modernismo: o caso da Poesia 'Pau-Brasil'.\" In *Na semana que vem: História e futuro da Semana de Arte Moderna de 1922*, edited by Laura Cabezas, João Fábio Bittencourt, and Tomaz Amorim, 339–364. Campinas: Editora da Unicamp.",
+    "Amorim, Tomaz. 2026e. \"The Indigenous Critique of Modernity: Spotlights and Blindspots.\" Paper presented at \"Enlightenment in the Contact Zone,\" Leuphana Universität Lüneburg, May 28.",
+    "Graeber, David, and David Wengrow. 2022. *O despertar de tudo*. Translated by Claudio Marcondes and Denise Bottmann. São Paulo: Companhia das Letras. (Cited via Amorim 2026e.)",
+    "Guaman Poma de Ayala, Felipe. 1980. *El primer nueva corónica y buen gobierno*. Critical edition by John V. Murra and Rolena Adorno. Mexico City: Siglo Veintiuno. (Cited via Amorim 2026e.)",
+    "Lahontan, Baron de. 1905. *New Voyages to North-America*. Edited by Reuben Gold Thwaites. Vol. 2. Chicago: A. C. McClurg. (Cited via Amorim 2026e.)"
+   ]
+  },
+  {
+   "n": 12,
+   "term": "Aesthetics / Aesthesis",
+   "slug": "aesthetics-aesthesis",
+   "kind": "concept",
+   "paragraphs": [
+    "Aesthetics, in this research, is used in the double sense the word has carried since Alexander Gottlieb Baumgarten: a theory of art and a theory of sensible perception, or aesthesis. Amorim and Etzold insist on the second: \"La estética tiene sus raíces en la aisthesis, que designa la percepción sensible del mundo\" [Aesthetics has its roots in aisthesis, which designates the sensible perception of the world] (Amorim and Etzold 2026, 15). Amorim's own definition holds both together: \"Entendidas simultáneamente como ámbitos de las artes y de las percepciones sensoriales\" [Understood simultaneously as realms of the arts and of sensory perceptions] (Amorim 2026a, 72n9).",
+    "The analysis therefore moves from the perceptions of subjects in extraction zones to the planetary scale of global exchange. The poisoned Rio Doce is its limit case: a river lost to smell, touch, taste and hearing. Aesthesis also orients the search for alternatives, since works by Indigenous and Quilombola authors are read as \"infrastructures for world-making, extending beyond the literary text to reorganize readers' perceptions\" (Amorim n.d.). Both senses of the word meet in the **Aesthetics of Extractivism**."
+   ],
+   "updated": "24 October 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Aesthetics of Extractivism",
+     "Extractive view",
+     "Extractive montage",
+     "Fluvicide"
+    ],
+    "Authors & images": [
+     "Prisca Agustoni",
+     "Toxic ruin"
+    ],
+    "Publications & forthcoming": [
+     "Amorim & Etzold, “Introducción” (2026), pp. 10, 15–23",
+     "Amorim, “Extractivismo y modernismo” (2026), p. 72, n. 9",
+     "Amorim & Etzold, eds., *Estéticas del extractivismo en América Latina* (2026)"
+    ],
+    "Talks": [
+     "“Fluvicide, or When Dead Rivers Speak” — University of Ghana, Accra, 2025",
+     "“Aesthetics of Extractivism” — MECAM, Tunis, 2025"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2025b. \"Fluvicide, or When Dead Rivers Speak.\" Paper presented at the workshop \"Extractivism: Towards a Gendered and Transdisciplinary Approach at the Threshold between Land and Sea,\" University of Ghana, Accra, July 14–19.",
+    "Amorim, Tomaz. 2026a. \"Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade.\" Translated by Santiago Basso. In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 61–119. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270.",
+    "Amorim, Tomaz. n.d. \"Extractivism and Infrastructure in Brazilian Literature.\" Project 4, DFG Research Unit FOR 5710 \"Infrastructure: Aesthetics and Supply,\" Ruhr-Universität Bochum. Accessed October 7, 2026. https://infra-aesthetics.de/project4/.",
+    "Amorim, Tomaz, and Jörn Etzold. 2026. \"Introducción.\" In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 9–42. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270."
+   ]
+  },
+  {
+   "n": 13,
+   "term": "Extractive montage",
+   "slug": "extractive-montage",
+   "kind": "concept",
+   "paragraphs": [
+    "Extractive montage names the point, in Amorim's reading of **Oswald de Andrade**'s *Pau-Brasil* (1925), where an avant-garde technique and an economic model coincide. In the section \"História do Brasil\" [History of Brazil], Oswald cuts fragments from colonial chroniclers such as Pero Vaz de Caminha and Fernão Dias Paes and recombines them, sometimes preserving the original spelling. Taking extractivism as a formal model of relation, Amorim observes that \"parece mesmo que o procedimento de montagem (procedimento central para compreensão dos modernismos) repete formalmente a operação extrativista\" [it does seem that the montage procedure (a procedure central to understanding the modernisms) formally repeats the extractivist operation] (Amorim 2026b, 351): a symbolic element is removed from its place of origin, transported and altered within a new ensemble.",
+    "The procedure cuts both ways. Montage \"funciona como un aparato industrial que transforma el pasado no moderno en una mercancía futurista\" [works as an industrial apparatus that transforms the non-modern past into a futuristic commodity] (Amorim 2026a, 111), refining chronicles, Indigenous heritage and Afro-Brazilian labour into poetry for export. Yet \"ao retirar as frases do fluxo retórico e harmonioso das crônicas, Oswald conseguiria justamente ressaltar a mirada colonizante\" [by removing the sentences from the rhetorical and harmonious flow of the chronicles, Oswald would manage precisely to bring out the colonizing gaze] (Amorim 2026b, 352), turning irony against the **extractive view**. *Pau-Brasil* both repeats and exposes the operation it borrows."
+   ],
+   "updated": "6 November 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Extractive view",
+     "Aesthetics of Extractivism",
+     "Epistemic extractivism",
+     "Symbolic infrastructure of extraction"
+    ],
+    "Authors & images": [
+     "Oswald de Andrade"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Extrativismo e Modernismo” (2026), pp. 351–352",
+     "Amorim, “Extractivismo y modernismo” (2026), p. 111",
+     "Amorim, “Interrupção e montagem” (2020)"
+    ],
+    "Talks": [
+     "“Names of Peoples, Names of Places” — Race/Genre as Infrastructure, Bochum, 2026",
+     "“Oswald de Bolso” — Na Semana que vem, Campinas, 2022"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2026a. \"Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade.\" Translated by Santiago Basso. In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 61–119. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270.",
+    "Amorim, Tomaz. 2026b. \"Extrativismo e Modernismo: o caso da Poesia 'Pau-Brasil'.\" In *Na semana que vem: História e futuro da Semana de Arte Moderna de 1922*, edited by Laura Cabezas, João Fábio Bittencourt, and Tomaz Amorim, 339–364. Campinas: Editora da Unicamp.",
+    "Andrade, Oswald de. 1925. *Pau Brasil*. Paris: Au Sans Pareil."
+   ]
+  },
+  {
+   "n": 15,
+   "term": "Euclides da Cunha",
+   "slug": "euclides-da-cunha",
+   "kind": "interlocutor",
+   "paragraphs": [
+    "Euclides da Cunha, born in 1866 and formed by civil engineering and military positivism, wrote the Amazonian essays of *À margem da história*, published posthumously in 1909, while heading from late 1904 the Brazilian–Peruvian commission that surveyed the headwaters of the Purus. He writes as the republican engineer who calls the Amazon a land without history and answers erosion with a railway, a **symbolic infrastructure of extraction**. Yet his \"most important moments occur when literary expression exceeds his political convictions\" (Amorim, forthcoming).",
+    "Amorim reads him against two other archives. On the upper Uaupés, the narratives collected by **Maximiano José Roberto** keep the histories Cunha declared absent. On the Rio Doce, **Prisca Agustoni** takes up the hybrid temporality Cunha found in the river, and its function as a **territory-archive**, at once content and container of Krenak collective memory; for the Krenak, as **Ailton Krenak** writes, Watu is a grandfather. Cunha's own text is divided, for \"o mesmo texto que pede ferrovias concede ao rio uma soberania que o desenvolvimento da República não controla\" [the same text that calls for railways grants the river a sovereignty that the development of the Republic does not control] (Amorim 2026d), and his image of the departing land, \"A terra abandona o homem. Vai em busca de outras latitudes\" [The land abandons man. It goes in search of other latitudes] (Cunha 2018, 34, quoted in Amorim, forthcoming), is the starting point of **telluric immigration**."
+   ],
+   "updated": "6 November 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Symbolic infrastructure of extraction",
+     "More-than-human agency",
+     "Extractive view",
+     "Territory-archive"
+    ],
+    "Authors & images": [
+     "Telluric immigration",
+     "Maximiano José Roberto",
+     "Prisca Agustoni",
+     "Ailton Krenak"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“Rios sem historia(dores)” — Motyrõ, Paris, 2026",
+     "“Names of Peoples, Names of Places” — Race/Genre as Infrastructure, Bochum, 2026",
+     "“Imigração telúrica” — Unicamp, Campinas, 2026",
+     "“Telluric Immigration” — Mecila Annual Meeting, São Paulo, 2026",
+     "“Telluric Immigration” — FOR 5710 Group Colloquium, Bochum, 2026",
+     "“Telluric migration” — Medienwissenschaft Colloquium, Bochum, 2026",
+     "“Telluric migration” — Colloquium, Lüneburg, 2026",
+     "“Telluric migration” — Ringvorlesung “Transitorische Räume”, Bochum, 2026"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2026d. \"Rios sem historia(dores): os arquivos fluviais de Euclides da Cunha e Maximiano José Roberto (1890–1909).\" Paper presented at the international colloquium \"Motyrõ: Arts et savoirs autochtones dans la contemporanéité,\" Maison des Sciences de l'Homme, Paris, October 7–8.",
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica).",
+    "Cunha, Euclides da. 2018. *À margem da história*. Critical edition by Leopoldo M. Bernucci, Francisco Foot Hardman, and Felipe Pereira Rissato. São Paulo: Editora Unesp. (Cited via Amorim, forthcoming, and Amorim 2026d.)"
+   ]
+  },
+  {
+   "n": 16,
+   "term": "Maximiano José Roberto",
+   "slug": "maximiano-jose-roberto",
+   "kind": "interlocutor",
+   "paragraphs": [
+    "As far as the sources allow, Maximiano José Roberto was an Indigenous intellectual, translator and leader of maternal Tariana descent from the upper Uaupés. Between 1887 and 1890 he collected Kubeo, Tukano, Wanano, Tariana and Baré narratives and worked with Ermanno Stradelli; his manuscript of the Jurupari legend appeared in Italian under Stradelli's name alone. In Amorim's phrase, \"Maximiano parece estar em todas as partes, menos nas capas dos livros\" [Maximiano seems to be everywhere except on the covers of books] (Amorim 2026d).",
+    "Homage speaks of him in the language of mining, a figure of **epistemic extractivism**: \"O intelectual indígena aparece como jazida\" [The Indigenous intellectual appears as an ore deposit] (Amorim 2026d). Restoring his name does not settle the matter, because \"o que está em jogo são as condições pelas quais certos modos de produzir conhecimento são reconhecidos como literatura, autoria ou história\" [what is at stake are the conditions under which certain ways of producing knowledge are recognized as literature, authorship or history] (Amorim 2026d). Amorim reads the Pitiápo he collected against **Euclides da Cunha**'s essays of the same years. Where the engineer saw rivers without history, the Wanano narrative gives the river a mother and keeps its older name. The letters MR and the year 1891 carved on a Uaupés rock, which the sources attribute to him, belong to the same **territory-archive**."
+   ],
+   "updated": "24 October 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Epistemic extractivism",
+     "Territory-archive",
+     "More-than-human agency",
+     "Toponymy"
+    ],
+    "Authors & images": [
+     "Euclides da Cunha"
+    ],
+    "Talks": [
+     "“Rios sem historia(dores)” — Motyrõ, Paris, 2026"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2026d. \"Rios sem historia(dores): os arquivos fluviais de Euclides da Cunha e Maximiano José Roberto (1890–1909).\" Paper presented at the international colloquium \"Motyrõ: Arts et savoirs autochtones dans la contemporanéité,\" Maison des Sciences de l'Homme, Paris, October 7–8.",
+    "Frignati, Emilio. 2022. \"La fabrique d'un mythe: Maximiano José Roberto et la légende de Yuruparí.\" *L'Homme* 242: 91–120. (Cited via Amorim 2026d.)",
+    "Frignati, Emilio. 2023. \"Escribir desde y sobre los márgenes: Maximiano José Roberto y las figuras femeninas de la leyenda de Yuruparí.\" *Nuevo Mundo Mundos Nuevos*. (Cited via Amorim 2026d.)",
+    "Koch-Grünberg, Theodor. 1910. *Zwei Jahre unter den Indianern*. Vol. 2. Stuttgart: Strecker & Schröder. (Cited via Frignati 2023, in Amorim 2026d.)"
+   ]
+  },
+  {
+   "n": 17,
+   "term": "Prisca Agustoni",
+   "slug": "prisca-agustoni",
+   "kind": "interlocutor",
+   "paragraphs": [
+    "Prisca Agustoni, an Italo-Swiss poet who writes in Portuguese, published *O gosto amargo dos metais* (2022) after the 2015 collapse of the Fundão tailings dam had poured mining waste into the Rio Doce. Hers is the position of a contemporary witness writing after a catastrophe still under way. The book stages **fluvicide** from within: its refrain restores the river's Borum name, Watu, and its imagery inverts Cunha's Edenic excess into a \"Gênese de lama\" [Genesis of mud] (Agustoni 2022, 41, quoted in Amorim, forthcoming).",
+    "Amorim reads the book in confluence with **Euclides da Cunha**. The land in motion returns, but its mobility \"no longer fertilizes distant shores: it sterilizes the ground on which it settles\" (Amorim, forthcoming). Against Cunha's scandal of a land abandoning its nation, the refrain names \"a civilização das raízes flutuantes\" [the civilization of floating roots] (Agustoni 2022, 14, quoted in Amorim, forthcoming), a civilization never premised on fixity. In the final movement of the collection, women guard what little clean water remains; drawing on **hydrofeminism**, Amorim reads this as a division of labour produced by the disaster rather than a symbolic bond between women and water."
+   ],
+   "updated": "6 November 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Fluvicide",
+     "Hydrofeminism",
+     "Toponymy",
+     "Ontological impoverishment"
+    ],
+    "Authors & images": [
+     "Toxic ruin",
+     "Telluric immigration",
+     "Euclides da Cunha",
+     "Ailton Krenak"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“Fluvicide, or When Dead Rivers Speak” — University of Ghana, Accra, 2025",
+     "“Imigração telúrica” — Unicamp, Campinas, 2026",
+     "“Telluric Immigration” — Mecila Annual Meeting, São Paulo, 2026",
+     "“Telluric Immigration” — FOR 5710 Group Colloquium, Bochum, 2026",
+     "“Telluric migration” — Medienwissenschaft Colloquium, Bochum, 2026",
+     "“Telluric migration” — Colloquium, Lüneburg, 2026",
+     "“Telluric migration” — Ringvorlesung “Transitorische Räume”, Bochum, 2026"
+    ]
+   },
+   "references": [
+    "Agustoni, Prisca. 2022. *O gosto amargo dos metais*. Rio de Janeiro: 7Letras.",
+    "Amorim, Tomaz. 2025b. \"Fluvicide, or When Dead Rivers Speak.\" Paper presented at the workshop \"Extractivism: Towards a Gendered and Transdisciplinary Approach at the Threshold between Land and Sea,\" University of Ghana, Accra, July 14–19.",
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica)."
+   ]
+  },
+  {
+   "n": 18,
+   "term": "Oswald de Andrade",
+   "slug": "oswald-de-andrade",
+   "kind": "interlocutor",
+   "paragraphs": [
+    "Oswald de Andrade, poet of the São Paulo avant-garde and heir to the city's coffee planters, is read above all through *Pau-Brasil* (1925), whose title ironically names Brazil's first export commodity. Through **extractive montage** the book passes from exporting raw material to exporting verse, and in doing so it exploits the image of the subaltern while keeping the microphone for the elite narrator; one of its lines makes enslaved bodies a measure of wealth: \"O ouro da carne preta e musculosa\" [The gold of black and muscular flesh] (Andrade 1925, 37, quoted in Amorim 2026b, 353).",
+    "Read beside **Euclides da Cunha**, whose prose asks for railways to master the Amazon, Oswald stages the same infrastructure from another angle. An epigraph from Blaise Cendrars, in which a Black worker turns the switch of the locomotive, opens \"the virtuality of another Modernism: one that does not serve to lubricate the tracks of extractivist progress\" (Amorim 2026c), a path Amorim had earlier traced in Oswald's antropofagia matriarcal (Amorim 2020). Whether peripheral modernism can escape the extractive logic or is \"condenado simplemente a imitarla, ironizarla y, en última instancia, acelerarla\" [condemned merely to imitate it, ironize it and, ultimately, accelerate it] remains open, and no univocal answer is possible (Amorim 2026a, 110)."
+   ],
+   "updated": "6 November 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Extractive montage",
+     "Extractive view",
+     "Aesthetics of Extractivism",
+     "Necronviviality",
+     "Toponymy"
+    ],
+    "Authors & images": [
+     "Euclides da Cunha"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Extrativismo e Modernismo” (2026), p. 353",
+     "Amorim, “Extractivismo y modernismo” (2026), p. 110",
+     "Amorim, “Crise da filosofia messiânica” (2020), p. 15",
+     "Amorim, “Coffee Poetics in Brazilian Modernism” (2025)",
+     "Cabezas, Bittencourt & Amorim, “Apresentação” (2026), pp. 9–24"
+    ],
+    "Talks": [
+     "“Names of Peoples, Names of Places” — Race/Genre as Infrastructure, Bochum, 2026",
+     "“The Indigenous Critique of Modernity” — Leuphana, Lüneburg, 2026",
+     "“Oswald de Bolso” — Na Semana que vem, Campinas, 2022"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2020. \"Crise da filosofia messiânica: A antropofagia matriarcal devora a Modernidade.\" *Dissonância: Revista de Teoria Crítica* 4. Advance online publication, 1–49. https://ojs.ifch.unicamp.br/index.php/teoriacritica/article/view/3979.",
+    "Amorim, Tomaz. 2026a. \"Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade.\" Translated by Santiago Basso. In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 61–119. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270.",
+    "Amorim, Tomaz. 2026b. \"Extrativismo e Modernismo: o caso da Poesia 'Pau-Brasil'.\" In *Na semana que vem: História e futuro da Semana de Arte Moderna de 1922*, edited by Laura Cabezas, João Fábio Bittencourt, and Tomaz Amorim, 339–364. Campinas: Editora da Unicamp.",
+    "Amorim, Tomaz. 2026c. \"Names of Peoples, Names of Places: Extractivism and Race in Euclides da Cunha and Oswald de Andrade.\" Paper presented at the workshop \"Race/Genre as Infrastructure,\" Ruhr-Universität Bochum, June 26.",
+    "Andrade, Oswald de. 1925. *Pau Brasil*. Paris: Au Sans Pareil."
+   ]
+  },
+  {
+   "n": 19,
+   "term": "Ailton Krenak",
+   "slug": "ailton-krenak",
+   "kind": "interlocutor",
+   "paragraphs": [
+    "Ailton Krenak, Indigenous thinker of the Rio Doce valley, appears in Amorim's research as a body of thought rather than an object of analysis: Krenak cosmology is \"the epistemological and ontological theory through which what rivers can be becomes thinkable\" (Amorim, forthcoming). Krenak describes Watu as a grandfather and names what makes destruction possible: \"Quando despersonalizamos o rio, a montanha, [...] nós liberamos esses lugares para que se tornem resíduos da atividade industrial e extrativista\" [When we depersonalize the river, the mountain, … we release these places to become residues of industrial and extractivist activity] (Krenak 2019, 24, quoted in Amorim, forthcoming).",
+    "His is one voice among several, set beside the Krenak elders' testimonies after the Fundão collapse, which speak of bereavement rather than damage, and Shirley Krenak's description of Watu as an elder brother. Against **Euclides da Cunha**, who could imagine a river's kinship only as abandonment, and against the elegy of **fluvicide**, of a river put into a coma, as in some of **Prisca Agustoni**'s poems, Krenak described in a 2021 lecture a river withdrawn to the water table, submerged rather than annihilated. Amorim concludes that kinship with Watu \"is a claim about the world, not about belief\" (Amorim, forthcoming), one that resists **ontological impoverishment** and the killing of rivers."
+   ],
+   "updated": "6 November 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Fluvicide",
+     "Ontological impoverishment",
+     "More-than-human agency"
+    ],
+    "Authors & images": [
+     "Prisca Agustoni",
+     "Euclides da Cunha",
+     "Toxic ruin"
+    ],
+    "Publications & forthcoming": [
+     "Amorim & Etzold, “Introducción” (2026), pp. 10, 31",
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“Fluvicide, or When Dead Rivers Speak” — University of Ghana, Accra, 2025",
+     "“Names of Peoples, Names of Places” — Race/Genre as Infrastructure, Bochum, 2026",
+     "“Imigração telúrica” — Unicamp, Campinas, 2026",
+     "“Telluric Immigration” — Mecila Annual Meeting, São Paulo, 2026"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica).",
+    "Amorim, Tomaz, and Jörn Etzold. 2026. \"Introducción.\" In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 9–42. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270.",
+    "Clínica de Direitos Humanos da UFMG. 2017. \"Direito das populações atingidas pelo rompimento da barragem de Fundão: povo Krenak.\" Belo Horizonte: UFMG. (Cited via Amorim, forthcoming.)",
+    "Krenak, Ailton. 2019. *Ideias para adiar o fim do mundo*. São Paulo: Companhia das Letras. (Cited via Amorim, forthcoming.)",
+    "Krenak, Ailton. 2021. \"Aula Espetáculo: Os rios e as cidades.\" Lecture, YouTube, November 29. (Cited via Amorim, forthcoming.)"
+   ]
+  },
+  {
+   "n": 20,
+   "term": "Toxic ruin",
+   "slug": "toxic-ruin",
+   "kind": "image",
+   "paragraphs": [
+    "A mountain broken into billions of chips and carried off in ore wagons, leaving in the poet's body \"mísero pó de ferro, e este não passa\" [wretched iron dust, and this does not pass] (Drummond 1992, 629, quoted in Amorim 2026b, 347); a century later, a river that can no longer be smelled, touched, drunk or heard. Between Carlos Drummond de Andrade's Itabira and **Prisca Agustoni**'s Rio Doce, toxic ruin names what remains of a territory once extraction has transformed the relations it sustained. It closes the arc that begins with **Euclides da Cunha**: the earth in motion he feared as a national threat returns as mining waste, and the infrastructure that was meant to master it has been built and has failed.",
+    "The ruin is both material and ontological. When extraction ends or is interrupted, \"what remains is a permanent non-place: the extractivist 'zone'\" (Amorim 2025b). The image gathers **fluvicide** and **ontological impoverishment** into a single landscape. Yet ruin is not the last word. Drawing on **Ailton Krenak**'s account of the river withdrawn to the water table, Amorim reads its retreat as \"a form of waiting rather than of death\" (Amorim, forthcoming)."
+   ],
+   "updated": "24 October 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Fluvicide",
+     "Ontological impoverishment",
+     "Aesthetics / Aesthesis"
+    ],
+    "Authors & images": [
+     "Telluric immigration",
+     "Prisca Agustoni",
+     "Euclides da Cunha",
+     "Ailton Krenak"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Extrativismo e Modernismo” (2026), p. 347",
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“Fluvicide, or When Dead Rivers Speak” — University of Ghana, Accra, 2025",
+     "“Imigração telúrica” — Unicamp, Campinas, 2026",
+     "“Telluric Immigration” — Mecila Annual Meeting, São Paulo, 2026"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2025b. \"Fluvicide, or When Dead Rivers Speak.\" Paper presented at the workshop \"Extractivism: Towards a Gendered and Transdisciplinary Approach at the Threshold between Land and Sea,\" University of Ghana, Accra, July 14–19.",
+    "Amorim, Tomaz. 2026b. \"Extrativismo e Modernismo: o caso da Poesia 'Pau-Brasil'.\" In *Na semana que vem: História e futuro da Semana de Arte Moderna de 1922*, edited by Laura Cabezas, João Fábio Bittencourt, and Tomaz Amorim, 339–364. Campinas: Editora da Unicamp.",
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica).",
+    "Andrade, Carlos Drummond de. 1992. *Poesia completa e prosa*. Rio de Janeiro: Nova Aguilar. (Cited via Amorim 2026b.)"
+   ]
+  },
+  {
+   "n": 21,
+   "term": "Telluric immigration",
+   "slug": "telluric-immigration",
+   "kind": "image",
+   "paragraphs": [
+    "Coined by **Euclides da Cunha** in *À margem da história* (1909), telluric immigration names the Amazonian sediment that the river tears from its banks and deposits on the shores of the other hemisphere. Cunha sees in it \"a terra sem a pátria. É o efeito maravilhoso de uma espécie de imigração telúrica\" [the land without the homeland. It is the marvellous effect of a kind of telluric immigration] (Cunha 2018, 34, quoted in Amorim, forthcoming). Amorim reads the word as a slip: for the state the soil emigrates, yet \"by calling it «telluric immigration», Euclides da Cunha unconsciously grants the Earth its own sovereign trajectory\" (Amorim, forthcoming).",
+    "In Cunha the land in motion threatens national sovereignty and must be mastered by infrastructure. In November 2015 it returns inverted: the mining waste released by the Fundão dam travels some 660 kilometres down the Rio Doce to the Atlantic, and satellite images show the mouths of the Amazon and the Doce stained the same brown, one fertilizing the ocean, the other poisoning it. In **Prisca Agustoni**'s poems the moving earth sterilizes instead of fertilizing. The phrase thus \"names not only a recurring image but the aesthetic and ontological history of extractivism itself\" (Amorim, forthcoming), from **more-than-human agency** to **toxic ruin**."
+   ],
+   "updated": "24 October 2026",
+   "sidebar": {
+    "Related concepts": [
+     "More-than-human agency",
+     "Fluvicide",
+     "Extractive view",
+     "Territory-archive"
+    ],
+    "Authors & images": [
+     "Toxic ruin",
+     "Euclides da Cunha",
+     "Prisca Agustoni",
+     "Ailton Krenak"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ],
+    "Talks": [
+     "“Rios sem historia(dores)” — Motyrõ, Paris, 2026",
+     "“Fluvicide, or When Dead Rivers Speak” — University of Ghana, Accra, 2025",
+     "“Imigração telúrica” — Unicamp, Campinas, 2026",
+     "“Telluric Immigration” — Mecila Annual Meeting, São Paulo, 2026",
+     "“Telluric Immigration” — FOR 5710 Group Colloquium, Bochum, 2026",
+     "“Telluric migration” — Medienwissenschaft Colloquium, Bochum, 2026",
+     "“Telluric migration” — Colloquium, Lüneburg, 2026",
+     "“Telluric migration” — Ringvorlesung “Transitorische Räume”, Bochum, 2026"
+    ]
+   },
+   "references": [
+    "Agustoni, Prisca. 2022. *O gosto amargo dos metais*. Rio de Janeiro: 7Letras.",
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica).",
+    "Cunha, Euclides da. 2018. *À margem da história*. Critical edition by Leopoldo M. Bernucci, Francisco Foot Hardman, and Felipe Pereira Rissato. São Paulo: Editora Unesp. (Cited via Amorim, forthcoming, and Amorim 2026d.)"
+   ]
+  },
+  {
+   "n": 22,
+   "term": "Necronviviality",
+   "slug": "necronviviality",
+   "kind": "concept",
+   "paragraphs": [
+    "Necronviviality (Spanish necronvivialidad) is Amorim's term for conviviality regulated by the management of death, the point at which the conviviality-inequality nexus implodes. The term emerges from a reading of *Pau-Brasil* with Achille Mbembe: **Oswald de Andrade**'s montage, while exposing the carnival of Brazilian history, \"también revela el mecanismo de una violencia convivencial —que podríamos llamar 'necronvivialidad'— que no rompe el orden establecido, sino que lo repite\" [also reveals the mechanism of a convivial violence (which one could call 'necronviviality') that does not break the established order but repeats it] (Amorim 2026a, 97).",
+    "From the poems the term widens to the present. Neoextractivism no longer appears as a transitional stage but as \"una estructura permanente de convivialidad bajo una desigualdad extrema: un estado caracterizado por el mantenimiento mínimo de la vida y la gestión rutinaria de la muerte de humanos, no humanos y territorios enteros\" [a permanent structure of conviviality under extreme inequality: a state characterized by the minimal maintenance of life and the routine management of death of humans, non-humans and entire territories] (Amorim 2026a, 113). Necronviviality is therefore not a darker version of harmony. It names coexistence under domination, the extreme form of more-than-human conviviality and inequality, and it reaches rivers and territories as well as people."
+   ],
+   "updated": "24 October 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Extractive montage",
+     "Extractivism"
+    ],
+    "Authors & images": [
+     "Oswald de Andrade",
+     "Toxic ruin"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Extractivismo y modernismo” (2026), pp. 97, 113",
+     "Amorim, Klengel & Manzi, “Introdução,” *Para além do antropocentrismo* (forthcoming), ms. 8"
+    ]
+   },
+   "references": [
+    "Amorim, Tomaz. 2026a. \"Extractivismo y modernismo: el caso de Pau-Brasil de Oswald de Andrade.\" Translated by Santiago Basso. In *Estéticas del extractivismo en América Latina: Literatura, cine y archivo*, edited by Tomaz Amorim and Jörn Etzold, 61–119. Biblioteca Mecila-CLACSO 10. Buenos Aires: CLACSO; São Paulo: Mecila. https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270.",
+    "Amorim, Tomaz, Susanne Klengel, and Maya Manzi. Forthcoming. \"Introdução: Para além do antropocentrismo: convivialidades mais-que-humanas.\" São Paulo: Hucitec; Mecila.",
+    "Mbembe, Achille. 2001. *On the Postcolony*. Berkeley: University of California Press. (Cited via Amorim 2026a.)"
+   ]
+  },
+  {
+   "n": 24,
+   "term": "Hydrofeminism",
+   "slug": "hydrofeminism",
+   "kind": "concept",
+   "paragraphs": [
+    "Hydrofeminism gathers feminist approaches that think bodies, water and territory together. Astrida Neimanis proposes, in an almost ontological register, that we understand ourselves as bodies of water, constituted by and permeable to the waters that pass through us, so that \"the contamination of a river is never external to the bodies that depend on it\" (Amorim, forthcoming). Latin American hydrofeminisms turn this view into a practice of *cuerpo-territorio* [body-territory]. Lorena Cabnal's notion of the body as first territory names the continuity between the violation of land and the violation of the bodies that inhabit it, a continuity tied both to the ancestral relation with territory and to present-day struggles against extractivism and neo-extractivism, in which water crises are lived through gendered responsibilities for care and provision.",
+    "Amorim brings this vocabulary to the final movement of **Prisca Agustoni**'s *O gosto amargo dos metais*, where water, women's bodies, memory and territory become difficult to separate. Women reappear there as custodians of scarce water, carrying, storing and guarding what water remains: \"são úmidas outra vez / e mornas as mãos\" [moist again / and warm are the hands] (Agustoni 2022, quoted in Amorim, forthcoming). What the poems record is \"not a symbolic association of women with water but a division of labour produced by the disaster itself, in which the work of sustaining life after the mud falls to those who were already responsible for it\" (Amorim, forthcoming)."
+   ],
+   "updated": "6 November 2026",
+   "sidebar": {
+    "Related concepts": [
+     "Fluvicide",
+     "Extractivism",
+     "Ontological impoverishment",
+     "More-than-human agency"
+    ],
+    "Authors & images": [
+     "Prisca Agustoni",
+     "Toxic ruin"
+    ],
+    "Publications & forthcoming": [
+     "Amorim, “Telluric Immigration,” *Revista de Filosofía* (forthcoming)"
+    ]
+   },
+   "references": [
+    "Agustoni, Prisca. 2022. *O gosto amargo dos metais*. Rio de Janeiro: 7Letras.",
+    "Amorim, Tomaz. Forthcoming. \"Telluric Immigration: The Rivers of Euclides da Cunha and Prisca Agustoni.\" *Revista de Filosofía* (Universidad de Costa Rica).",
+    "Cabnal, Lorena. 2010. \"Acercamiento a la construcción de la propuesta de pensamiento epistémico de las mujeres indígenas feministas comunitarias de Abya Yala.\" In *Feminismos diversos: el feminismo comunitario*, 11–25. Madrid: ACSUR-Las Segovias.",
+    "Hernando-Arrese, Maite, María Ignacia Ibarra, Mina Lorena Navarro, and Paola Bolados. 2026. \"Hidrofeminismos en América Latina: Cuerpos, territorios y políticas del agua.\" *Ecología Política* 71: 4. https://doi.org/10.53368/ep71hfed.",
+    "Neimanis, Astrida. 2017. *Bodies of Water: Posthuman Feminist Phenomenology*. London: Bloomsbury."
+   ]
+  }
+ ]
+}

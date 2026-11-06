@@ -621,3 +621,31 @@ ul.method li{ margin: 0 0 var(--s-2); }
 
 /* ---------- Home: next talk (one upcoming talk at a time, from talks.json) ---------- */
 .next-talk .next-talk-title { font-style: normal; }
+/* ---------- Keywords v3 ---------- */
+.kw3-intro{ font-size: var(--t-lead); line-height: var(--lh-lead); margin: var(--s-4) 0 var(--s-3); max-width: 34em; }
+.kw3-jump{ list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; font-family: var(--f-note); font-size: var(--t-label); }
+.kw3-jump .n{ color: var(--c-muted); }
+.kw3-glabel{ font-family: var(--f-sc); letter-spacing: .04em; }
+.kw3-crumb{ font-family: var(--f-note); font-size: var(--t-label); margin: 6px 0 0; }
+.kw3-crumb a{ color: var(--c-ink); }
+.kw3-text p{ font-size: var(--t-body, 19px); }
+.kw3-text a.kwl{ color: var(--c-link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.kw3-cite, .kw3-refs{ margin-top: var(--s-6); font-size: 16px; line-height: 1.5; }
+.kw3-cite p:not(.kw-h){ margin: 0; }
+.kw3-refs ul{ list-style: none; margin: 0; padding: 0; }
+.kw3-refs li{ border-top: var(--b-hair); padding: var(--s-2) 0; padding-left: 1.5em; text-indent: -1.5em; overflow-wrap: anywhere; }
+.kw3-side{ padding-top: 6px; }
+.kw3-sgroup{ margin: 0 0 var(--s-5); }
+.kw3-sgroup ul{ list-style: none; margin: 0; padding: 0; }
+.kw3-sgroup li{ margin: 0 0 6px; line-height: 1.4; }
+.kw3-sgroup a{ color: var(--c-link); }
+.kw3-nav{ display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: var(--f-note); font-size: var(--t-label); border-top: var(--b-hair); padding-top: var(--s-3); }
+.kw3-nav a{ color: var(--c-ink); }
+@media (max-width: 1023px){
+  .kw3-body{ display: block; }
+  .kw3-body > .pr{ max-width: none; margin-top: var(--s-6); border-top: var(--b-hair); padding-top: var(--s-4); }
+}
+.kw3-cite, .kw3-refs, .kw3-side{ overflow-wrap: anywhere; }
+@media (max-width: 1023px){ .kw-head-row .kw3-crumb{ display: none; } }
+.kw3-updated{ margin-top: var(--s-5); }
+.kw3-count{ font-family: var(--f-note); font-size: var(--t-label); color: var(--c-muted); margin: 0 0 var(--s-3); }
