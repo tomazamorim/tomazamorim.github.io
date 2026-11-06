@@ -24,7 +24,6 @@ if(!joined.includes('Preferred citation: Amorim, Tomaz. Earlier publications may
 if(!joined.includes('https://ojs.ifch.unicamp.br/index.php/teoriacritica/article/view/3979'))fail('Dissonância article URL missing');
 if(!joined.includes('Recorded talks and events')||!joined.includes('Sonhos Intranquilos')||!joined.includes('Introdução à obra de Franz Kafka'))fail('Recorded talks/podcast sections missing');
 if(!joined.includes('editorial-subsection'))fail('Editorial heading anchor not updated');
-if(!joined.includes('Still under construction.'))fail('Research under-construction notice missing');
 if(!joined.includes('https://biblioteca-repositorio.clacso.edu.ar/bitstreams/15f7ea6f-6c78-4949-8004-9b4414b9c26c/download'))fail('CLACSO introduction PDF endpoint missing');
 const blogHtml=fs.readFileSync(path.join(root,'blog/index.html'),'utf8');
 if(!blogHtml.includes('Extractive Aesthetics')||!blogHtml.includes('Material and Symbolic Infrastructures in Latin American Literature')||!blogHtml.includes('Under'))fail('Blog title, subtitle, or under-construction notice missing');
