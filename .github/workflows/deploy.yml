@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history, for the Drive backup
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -50,6 +52,37 @@ jobs:
           npm run build:public
       - name: Check the public output
         run: npm run check:public
+      - name: Back up the site to Google Drive
+        # Each publish copies the source (with full history) and the built site to the owner's Drive.
+        # Needs the repository secret RCLONE_CONFIG (an rclone.conf with one Google Drive remote).
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        env:
+          RCLONE_CONFIG_CONTENT: ${{ secrets.RCLONE_CONFIG }}
+        run: |
+          if [ -z "$RCLONE_CONFIG_CONTENT" ]; then echo "RCLONE_CONFIG not set: Drive backup skipped"; exit 0; fi
+          sudo apt-get install -y -qq rclone >/dev/null
+          mkdir -p ~/.config/rclone
+          printf '%s\n' "$RCLONE_CONFIG_CONTENT" > ~/.config/rclone/rclone.conf
+          REMOTE=$(grep -m1 -o '^\[[^]]*\]' ~/.config/rclone/rclone.conf | tr -d '[]')
+          mkdir -p backup
+          git bundle create backup/tomazamorim-site-historico.bundle --all
+          git archive --format=zip -o backup/tomazamorim-site-codigo.zip HEAD
+          (cd dist/public && zip -qr ../../backup/tomazamorim-site-pronto.zip .)
+          cat > backup/LEIA-ME.txt <<TXT
+          Backup do site tomazamorim.com
+          Versão (commit): $GITHUB_SHA
+          Data (UTC): $(date -u '+%Y-%m-%d %H:%M')
+
+          tomazamorim-site-pronto.zip     O site como está no ar. Basta enviar o conteúdo a qualquer hospedagem
+                                          de site estático (Netlify, Cloudflare Pages, GitHub Pages) e apontar o domínio.
+          tomazamorim-site-codigo.zip     O código-fonte desta versão (para refazer e editar o site).
+          tomazamorim-site-historico.bundle  O repositório inteiro, com todo o histórico de mudanças.
+                                          Para recuperar: git clone tomazamorim-site-historico.bundle tomazamorim-site
+          TXT
+          rclone copy backup "$REMOTE:Backup site tomazamorim.com/ultimo"
+          rclone copy backup "$REMOTE:Backup site tomazamorim.com/$(date -u +%Y-%m)"
+          echo "Drive backup done"
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
         with:
