@@ -48,9 +48,9 @@
     "license": null,
     "license_conflict": false,
     "pdf": {
-      "public": false,
-      "file": null,
-      "label": "PDF"
+      "public": true,
+      "file": "/downloads/publications/VO-04-na-semana-que-vem-excerpt.pdf",
+      "label": "PDF excerpt"
     },
     "bibtex": "@book{cabezas2026semana,\n  editor = {Cabezas, Laura and Bittencourt, João Fábio and Amorim, Tomaz},\n  title = {Na semana que vem: História e futuro da Semana de Arte Moderna de 1922},\n  publisher = {Editora da Unicamp},\n  address = {Campinas},\n  year = {2026},\n  isbn = {978-85-268-1944-3}\n}",
     "cv_only": false
