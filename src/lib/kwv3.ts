@@ -7,12 +7,12 @@ export const kwUrl3 = (slug: string) => `/research/keywords/${slug}/`;
 
 export const KIND_LABEL: Record<string, string> = {
   concept: 'Concept',
-  interlocutor: 'Interlocutor / Archive',
+  interlocutor: 'Author',
   image: 'Image',
 };
 export const GROUPS = [
   { id: 'concepts', kind: 'concept', label: 'Concepts' },
-  { id: 'interlocutors', kind: 'interlocutor', label: 'Interlocutors and archives' },
+  { id: 'authors', kind: 'interlocutor', label: 'Authors' },
   { id: 'images', kind: 'image', label: 'Images' },
 ];
 
