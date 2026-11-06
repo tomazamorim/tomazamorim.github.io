@@ -23,13 +23,19 @@ const outDir = path.resolve('public/downloads/publications');
 await fs.mkdir(outDir, { recursive: true });
 for (const item of downloads) {
   const output = path.join(outDir, item.filename);
+  // Cópia já presente (cache do CI): reaproveita, para o build não depender de o repositório de origem responder.
+  const cached = await fs.readFile(output).catch(() => null);
+  if (cached && cached.length >= 1000 && cached.subarray(0, 5).toString('ascii') === '%PDF-') {
+    console.log(`Using cached ${item.filename} (${cached.length.toLocaleString()} bytes)`);
+    continue;
+  }
   const result = spawnSync('curl', [
     '--fail', '--location', '--silent', '--show-error',
     '--user-agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/130.0.0.0 Safari/537.36',
     '--referer', 'https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/281270',
-    '--max-time', '120', '--retry', '2', '--retry-all-errors',
+    '--max-time', '240', '--retry', '2', '--retry-all-errors',
     '--output', output, item.url,
-  ], { encoding: 'utf8', timeout: 150_000 });
+  ], { encoding: 'utf8', timeout: 780_000 });
   if (result.error || result.status !== 0) {
     throw new Error(`PDF download failed for ${item.filename}: ${result.error?.message ?? result.stderr ?? result.status}`);
   }
