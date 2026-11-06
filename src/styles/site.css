@@ -618,3 +618,6 @@ ul.method li{ margin: 0 0 var(--s-2); }
   }
 }
 
+
+/* ---------- Home: next talk (one upcoming talk at a time, from talks.json) ---------- */
+.next-talk .next-talk-title { font-style: normal; }

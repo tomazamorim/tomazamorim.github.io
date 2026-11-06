@@ -6,6 +6,8 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '30 0 * * *'  # daily rebuild: an upcoming talk moves to the past list the day after it happens
 
 permissions:
   contents: read
@@ -35,7 +37,9 @@ jobs:
           SITE_MODE: public
           SITE_URL: https://tomazamorim.com
           BUILD_DATE: ${{ github.event.head_commit.timestamp || github.event.repository.updated_at }}
-        run: npm run build:public
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = schedule ]; then export BUILD_DATE="$(git log -1 --format=%cI)"; fi
+          npm run build:public
       - name: Check the public output
         run: npm run check:public
       - name: Upload site artifact

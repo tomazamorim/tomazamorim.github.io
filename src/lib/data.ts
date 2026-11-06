@@ -154,7 +154,12 @@ export function talkGroupsOf(list: Talk[]): TalkGroup[] {
   }
   return out;
 }
-export const talkGroups = (): TalkGroup[] => talkGroupsOf(visibleTalks());
+/** Falas futuras (data >= dia do build, pelo relógio real): vão para "Upcoming" em /talks/ e para o bloco "Next talk" da capa.
+ *  O deploy roda todo dia (cron em deploy.yml), então a fala passa sozinha para a lista comum no dia seguinte. */
+export const todayISO = new Date().toISOString().slice(0, 10);
+export const upcomingTalks = (): Talk[] => visibleTalks().filter((t) => t.date >= todayISO).sort((a, b) => a.date.localeCompare(b.date));
+export const nextTalk = (): Talk | undefined => upcomingTalks()[0];
+export const talkGroups = (): TalkGroup[] => talkGroupsOf(visibleTalks().filter((t) => t.date < todayISO));
 
 /** A lista de falas é completa? (release.json -> lists_complete.talks). Enquanto não for, o título é "Selected talks". */
 export const talksComplete: boolean = !!(release as any).lists_complete?.talks;

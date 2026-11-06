@@ -2,13 +2,14 @@
 import Base from '../layouts/Base.astro';
 import Portrait from '../components/Portrait.astro';
 import Marks from '../components/Marks.astro';
-import { site, visibleBios, activeMarks, markLabel, isPreview, absoluteUrl, projectVisible, inline } from '../lib/data';
+import { site, visibleBios, activeMarks, markLabel, isPreview, absoluteUrl, projectVisible, inline, nextTalk } from '../lib/data';
 import { cvPdf } from '../lib/files';
 import { selectedItems, selectedMarks, titleHtml } from '../lib/pubs';
 
 const bio = visibleBios().find((b) => b.id === 'en45');
 const bioPt = visibleBios().find((b) => b.id === 'pt105');
 const pdf = cvPdf();
+const next = nextTalk();  // só uma fala futura por vez: a mais próxima
 const selected = selectedItems().sort((a, b) => Number(b.v.year) - Number(a.v.year) || a.v.p.order - b.v.p.order);
 const selMarks = activeMarks(selectedMarks);
 // Faixa de limiar da pesquisa: só com o lede de Tomaz (e com a pesquisa publicável). No preview, o lugar fica marcado.
@@ -112,6 +113,22 @@ const jsonld = {
             <p class="coming-link"><a href="https://lojahucitec.com.br/produto/alem-do-antropocentrismo-imaginando-as-relacoes-entre-as-especies-tomaz-amorim-susanne-klengel-e-maya-manzi-orgs/">Hucitec bookstore →</a></p>
           </section>
           <p class="all-link"><a href="/publications/">All publications →</a></p>
+        </section>
+      )}
+
+      {next && (
+        <section class="coming-soon next-talk" aria-labelledby="next-talk-heading">
+          <div class="coming-soon-head">
+            <span class="sc" id="next-talk-heading">Next talk</span>
+            <span class="meta">Talk · {next.date_label}</span>
+          </div>
+          <h3 class="coming-title next-talk-title" lang={next.title_lang}><a href="/talks/#upcoming-talks">{next.title}</a></h3>
+          <dl class="coming-details">
+            <dt>Event</dt><dd>{next.event}</dd>
+            {next.institution && <Fragment><dt>Institution</dt><dd>{next.institution}</dd></Fragment>}
+            <dt>Date &amp; place</dt><dd>{next.date_label} · {next.city}</dd>
+          </dl>
+          <p class="coming-link"><a href="/talks/">All talks →</a></p>
         </section>
       )}
 

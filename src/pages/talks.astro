@@ -1,9 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import TalkItem from '../components/TalkItem.astro';
-import { talkGroups, talksTitle, site, activeMarks, markLabel, podcast } from '../lib/data';
+import { talkGroups, upcomingTalks, talksTitle, site, activeMarks, markLabel, podcast } from '../lib/data';
 import recordedTalks from '../data/recorded-talks.json';
 const talks = talkGroups();
+const upcoming = upcomingTalks();
 const youtubeId = (url: string) => url.match(/[?&]v=([^&]+)/)?.[1] ?? null;
 ---
 <Base title={talksTitle} description={`${talksTitle} by Dr. Tomaz Amorim.`} path="/talks/" nav="talks">
@@ -15,9 +16,18 @@ const youtubeId = (url: string) => url.match(/[?&]v=([^&]+)/)?.[1] ?? null;
     </div>
     <div class="pr"></div>
   </section>
-  <section class="row sp-m">
+  {upcoming.length > 0 && <section class="row sp-m" aria-labelledby="upcoming-talks">
     <div class="pl"></div>
     <div class="bed">
+      <h2 class="group" id="upcoming-talks">Upcoming</h2>
+      <ul class="items talk-list upcoming-list">{upcoming.map((t) => <TalkItem t={t} />)}</ul>
+    </div>
+    <div class="pr"></div>
+  </section>}
+  <section class="row sp-m" aria-labelledby={upcoming.length > 0 ? 'past-talks' : undefined}>
+    <div class="pl"></div>
+    <div class="bed">
+      {upcoming.length > 0 && <h2 class="group" id="past-talks">Past talks</h2>}
       <ul class="items talk-list">{talks.map((g) => <TalkItem t={g.main} also={g.also} />)}</ul>
     </div>
     <div class="pr"></div>
