@@ -57,6 +57,7 @@ jobs:
         # Needs the repository secret RCLONE_CONFIG (an rclone.conf with one Google Drive remote).
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         continue-on-error: true
+        timeout-minutes: 10
         env:
           RCLONE_CONFIG_CONTENT: ${{ secrets.RCLONE_CONFIG }}
         run: |
