@@ -36,7 +36,7 @@ const publishesAs = gateOpen('PUBAS');
               : <li id={v.id}>
                 <span class="d">{v.press!.date}</span>{v.press!.venue && <Fragment> · <i>{v.press!.venue}</i></Fragment>} · {v.press!.url
                   ? <a href={v.press!.url} lang={v.lang} set:html={titleHtml(v)} />
-                  : <span lang={v.lang} set:html={titleHtml(v)} />}
+                  : <span lang={v.lang} set:html={titleHtml(v)} />}{v.credit && <Fragment>, <span set:html={inline(v.credit, { marks: false })} /></Fragment>}
               </li>
             ))}
           </ul>

@@ -728,6 +728,32 @@
     ]
   },
   {
+    "id": "RV-35",
+    "order": 34.5,
+    "group": "other",
+    "kind": "Essay, interview or opinion",
+    "year": 2026,
+    "title_lang": "en",
+    "ref": "Amorim, Tomaz. 2026. “The Tapirapé Masks: Infrastructures of Memory and Diplomacy.” *TRAFO – Blog for Transregional Research*, 5 Nov 2026.",
+    "isbn": null,
+    "doi": "10.58079/172m1",
+    "doi_linked": true,
+    "book_doi": null,
+    "issue_doi": null,
+    "url": "https://trafo.hypotheses.org/70182",
+    "url_label": "TRAFO",
+    "license": null,
+    "license_conflict": false,
+    "pdf": {
+      "public": false,
+      "file": null,
+      "label": "PDF"
+    },
+    "bibtex": "@online{amorim2026tapirape35,\n  author = {Amorim, Tomaz},\n  title = {The Tapirapé Masks: Infrastructures of Memory and Diplomacy},\n  organization = {TRAFO – Blog for Transregional Research},\n  date = {2026-11-05},\n  doi = {10.58079/172m1},\n  url = {https://trafo.hypotheses.org/70182},\n  note = {Interview with Ana Coutinho}\n}",
+    "cv_only": false,
+    "credit_override": "in conversation with Ana Coutinho"
+  },
+  {
     "id": "RV-33",
     "order": 35,
     "group": "other",
